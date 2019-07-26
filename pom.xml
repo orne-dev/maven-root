@@ -1,0 +1,102 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>net.hif-soft</groupId>
+  <artifactId>root-pom</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <name>HIF-Soft Root POM</name>
+  <description>HIF-Soft Root POM</description>
+  <url>https://repo/hif-soft.net/wamphiry/dev/hif-soft-poms.git</url>
+  <developers>
+    <developer>
+      <id>wamphiry</id>
+      <name>(w) Iker Hernaez</name>
+      <email>i.hernaez@hif-soft.net</email>
+    </developer>
+  </developers>
+  <scm>
+    <url>http://github.com/ihernaez/hif-soft-root-poms/tree/master</url>
+    <connection>scm:git:git://github.com:ihernaez/hif-soft-root-poms.git</connection>
+    <developerConnection>scm:git:ssh://git@repo.hif-soft.net:9000/wamphiry/dev/hif-soft-root-poms.git</developerConnection>
+    <tag>HEAD</tag>
+  </scm>
+
+  <distributionManagement>
+    <snapshotRepository>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+    </snapshotRepository>
+    <repository>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+    </repository>
+  </distributionManagement>
+
+  <properties>
+    <plugins.clean.version>3.1.0</plugins.clean.version>
+    <plugins.resources.version>3.1.0</plugins.resources.version>
+    <plugins.dependency.version>3.1.1</plugins.dependency.version>
+    <plugins.gpg.version>1.8</plugins.gpg.version>
+    <plugins.install.version>2.5.2</plugins.install.version>
+    <plugins.deploy.version>2.8.2</plugins.deploy.version>
+    <plugins.site.version>3.7.1</plugins.site.version>
+  </properties>
+
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-clean-plugin</artifactId>
+          <version>${plugins.clean.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-resources-plugin</artifactId>
+          <version>${plugins.resources.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-dependency-plugin</artifactId>
+          <version>${plugins.dependency.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-install-plugin</artifactId>
+          <version>${plugins.install.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-gpg-plugin</artifactId>
+          <version>${plugins.gpg.version}</version>
+          <executions>
+            <execution>
+              <id>sign-artifacts</id>
+              <phase>verify</phase>
+              <goals>
+                <goal>sign</goal>
+              </goals>
+              <configuration>
+                <keyname>${gpg.keyname}</keyname>
+                <passphraseServerId>${gpg.keyname}</passphraseServerId>
+              </configuration>
+            </execution>
+          </executions>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <version>${plugins.deploy.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-site-plugin</artifactId>
+          <version>${plugins.site.version}</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+
+</project>
