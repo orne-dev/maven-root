@@ -8,7 +8,7 @@
 
   <name>Orne Root POM</name>
   <description>Orne Root POM</description>
-  <url>https://repo.orne.dev/wamphiry/dev/orne-root-poms.git</url>
+  <url>http://projects.orne.dev/root-poms/</url>
   <developers>
     <developer>
       <id>wamphiry</id>
