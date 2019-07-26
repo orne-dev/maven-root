@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>net.hif-soft</groupId>
+    <groupId>dev.orne</groupId>
     <artifactId>root-pom</artifactId>
     <version>1.0.0-SNAPSHOT</version>
   </parent>
