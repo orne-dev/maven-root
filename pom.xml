@@ -21,6 +21,15 @@
       <email>i.hernaez@orne.dev</email>
     </developer>
   </developers>
+
+  <licenses>
+    <license>
+      <name>MIT License</name>
+      <url>http://opensource.org/licenses/mit.php</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
   <scm>
     <url>http://github.com/ihernaez/orne-root-poms/tree/master</url>
     <connection>scm:git:git://github.com:ihernaez/orne-root-poms.git</connection>
