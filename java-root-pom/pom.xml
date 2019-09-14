@@ -10,6 +10,9 @@
   <artifactId>java-root-pom</artifactId>
   <packaging>pom</packaging>
 
+  <name>Orne Java Root POM</name>
+  <description>Orne Java Root POM</description>
+
   <properties>
     <java.source.version>1.8</java.source.version>
     <java.target.version>1.8</java.target.version>
