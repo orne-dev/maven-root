@@ -60,6 +60,7 @@
     <plugin.help.version>3.2.0</plugin.help.version>
     <plugins.antrun.version>1.8</plugins.antrun.version>
     <plugins.resources.version>3.1.0</plugins.resources.version>
+    <plugins.license.version>1.20</plugins.license.version>
     <plugin.versions.version>2.7</plugin.versions.version>
     <plugins.dependency.version>3.1.1</plugins.dependency.version>
     <plugin.enforcer.version>3.0.0-M2</plugin.enforcer.version>
@@ -71,6 +72,8 @@
     <plugins.deploy.version>3.0.0-M1</plugins.deploy.version>
     <plugins.site.version>3.8.2</plugins.site.version>
     <plugin.project-info-reports.version>3.0.0</plugin.project-info-reports.version>
+
+    <license.licenseName>mit</license.licenseName>
   </properties>
 
   <build>
@@ -95,6 +98,14 @@
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-resources-plugin</artifactId>
           <version>${plugins.resources.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>license-maven-plugin</artifactId>
+          <version>${plugins.license.version}</version>
+          <configuration>
+            <licenseName>${license.licenseName}</licenseName>
+          </configuration>
         </plugin>
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
