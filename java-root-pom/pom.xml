@@ -94,7 +94,8 @@
               </configuration>
             </execution>
             <execution>
-              <id>update-license-headers</id>
+              <id>update-source-license-headers</id>
+              <phase>process-sources</phase>
               <goals>
                 <goal>update-file-header</goal>
               </goals>
