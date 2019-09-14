@@ -9,11 +9,15 @@
   <name>Orne Root POM</name>
   <description>Orne Root POM</description>
   <url>http://projects.orne.dev/root-poms/</url>
+  <organization>
+    <name>Orne Developments</name>
+    <url>https://orne.dev</url>
+  </organization>
   <developers>
     <developer>
       <id>wamphiry</id>
       <name>(w) Iker Hernaez</name>
-      <email>i.hernaez@hif-soft.net</email>
+      <email>i.hernaez@orne.dev</email>
     </developer>
   </developers>
   <scm>
