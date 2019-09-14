@@ -8,6 +8,7 @@
 
   <name>Orne Root POM</name>
   <description>Orne Root POM</description>
+  <inceptionYear>2019</inceptionYear>
   <url>http://projects.orne.dev/root-poms/</url>
   <organization>
     <name>Orne Developments</name>
