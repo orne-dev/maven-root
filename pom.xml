@@ -50,7 +50,8 @@
     <plugins.gpg.version>1.8</plugins.gpg.version>
     <plugins.install.version>2.5.2</plugins.install.version>
     <plugins.deploy.version>2.8.2</plugins.deploy.version>
-    <plugins.site.version>3.7.1</plugins.site.version>
+    <plugins.site.version>3.8.2</plugins.site.version>
+    <plugin.project-info-reports.version>3.0.0</plugin.project-info-reports.version>
   </properties>
 
   <build>
@@ -118,8 +119,26 @@
           <artifactId>maven-site-plugin</artifactId>
           <version>${plugins.site.version}</version>
         </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-project-info-reports-plugin</artifactId>
+          <version>${plugin.project-info-reports.version}</version>
+        </plugin>
       </plugins>
     </pluginManagement>
   </build>
+
+  <reporting>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-project-info-reports-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>versions-maven-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </reporting>
 
 </project>
