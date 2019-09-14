@@ -10,6 +10,14 @@
   <description>Orne Root POM</description>
   <inceptionYear>2019</inceptionYear>
   <url>http://projects.orne.dev/root-poms/</url>
+
+  <licenses>
+    <license>
+      <name>MIT License</name>
+      <url>http://opensource.org/licenses/mit.php</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
   <organization>
     <name>Orne Developments</name>
     <url>https://orne.dev</url>
@@ -21,14 +29,6 @@
       <email>i.hernaez@orne.dev</email>
     </developer>
   </developers>
-
-  <licenses>
-    <license>
-      <name>MIT License</name>
-      <url>http://opensource.org/licenses/mit.php</url>
-      <distribution>repo</distribution>
-    </license>
-  </licenses>
 
   <scm>
     <url>http://github.com/ihernaez/orne-root-poms/tree/master</url>
