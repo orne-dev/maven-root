@@ -69,6 +69,7 @@
           <configuration>
             <source>${java.source.version}</source>
             <target>${java.target.version}</target>
+            <encoding>${project.build.sourceEncoding}</encoding>
           </configuration>
         </plugin>
         <plugin>
