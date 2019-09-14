@@ -31,6 +31,7 @@
     <plugins.source.version>3.1.0</plugins.source.version>
     <plugins.javadoc.version>3.1.1</plugins.javadoc.version>
     <plugin.clirr.version>2.8</plugin.clirr.version>
+    <plugin.jxr.version>3.0.0</plugin.jxr.version>
 
     <ut.skip>false</ut.skip>
     <ut.reportDir>${project.build.directory}/ut-reports</ut.reportDir>
@@ -241,6 +242,11 @@
               </goals>
             </execution>
           </executions>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-jxr-plugin</artifactId>
+          <version>${plugin.jxr.version}</version>
         </plugin>
       </plugins>
     </pluginManagement>
