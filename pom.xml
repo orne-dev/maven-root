@@ -48,13 +48,16 @@
     
     <plugins.clean.version>3.1.0</plugins.clean.version>
     <plugin.help.version>3.2.0</plugin.help.version>
+    <plugins.antrun.version>1.8</plugins.antrun.version>
     <plugins.resources.version>3.1.0</plugins.resources.version>
     <plugin.versions.version>2.7</plugin.versions.version>
     <plugins.dependency.version>3.1.1</plugins.dependency.version>
     <plugin.enforcer.version>3.0.0-M2</plugin.enforcer.version>
     <plugins.gpg.version>1.6</plugins.gpg.version>
+    <plugins.assembly.version>3.1.1</plugins.assembly.version>
     <plugins.install.version>3.0.0-M1</plugins.install.version>
     <plugin.gitflow.version>1.13.0</plugin.gitflow.version>
+    <plugins.release.version>2.5.3</plugins.release.version>
     <plugins.deploy.version>3.0.0-M1</plugins.deploy.version>
     <plugins.site.version>3.8.2</plugins.site.version>
     <plugin.project-info-reports.version>3.0.0</plugin.project-info-reports.version>
@@ -72,6 +75,11 @@
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-help-plugin</artifactId>
           <version>${plugin.help.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-antrun-plugin</artifactId>
+          <version>${plugins.antrun.version}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -117,6 +125,11 @@
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-assembly-plugin</artifactId>
+          <version>${plugins.assembly.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-install-plugin</artifactId>
           <version>${plugins.install.version}</version>
         </plugin>
@@ -135,6 +148,11 @@
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-release-plugin</artifactId>
+          <version>${plugins.release.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-deploy-plugin</artifactId>
           <version>${plugins.deploy.version}</version>
         </plugin>
@@ -150,28 +168,6 @@
         </plugin>
       </plugins>
     </pluginManagement>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-resources-plugin</artifactId>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-dependency-plugin</artifactId>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-install-plugin</artifactId>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-deploy-plugin</artifactId>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-site-plugin</artifactId>
-      </plugin>
-    </plugins>
   </build>
 
   <reporting>
