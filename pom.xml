@@ -73,6 +73,7 @@
     <plugins.project-info-reports.version>3.0.0</plugins.project-info-reports.version>
 
     <license.licenseName>gpl_v3</license.licenseName>
+    <gpg.keyname>releases@orne.dev</gpg.keyname>
 
     <enforcer.dependencies.excludes>${project.groupId}:*</enforcer.dependencies.excludes>
   </properties>
