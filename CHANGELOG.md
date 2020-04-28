@@ -1,6 +1,6 @@
 # 0.1.0
 
-## :package dev.orne:root-pom
+## :package: dev.orne:root-pom
 
 01. :gift: Added `org.apache.maven.plugins:maven-clean-plugin:3.1.0` configuration.
 01. :gift: Added `org.apache.maven.plugins:maven-help-plugin:3.2.0` configuration.
