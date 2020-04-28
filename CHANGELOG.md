@@ -1,4 +1,4 @@
-# :pack: 1.0.0
+# :pack: 0.1.0
 
 ## dev.orne:root-pom
 
