@@ -2,7 +2,6 @@
 
 ## dev.orne:root-pom
 
-01. :wrench: Requires Maven version `3.5.4`.
 01. :gift: Added `org.apache.maven.plugins:maven-clean-plugin:3.1.0` configuration.
 01. :gift: Added `org.apache.maven.plugins:maven-help-plugin:3.2.0` configuration.
 01. :gift: Added `org.apache.maven.plugins:maven-antrun-plugin:3.0.0` configuration.
@@ -12,6 +11,7 @@
     01. Publishes default reports.
 01. :gift: Added `org.apache.maven.plugins:maven-dependency-plugin:3.1.2` configuration.
 01. :gift: Added `org.apache.maven.plugins:maven-enforcer-plugin:3.0.0-M3` configuration.
+    01. :wrench: Requires Maven version `3.5.4`.
 01. :gift: Added `org.apache.maven.plugins:maven-gpg-plugin:1.6` configuration.
 01. :gift: Added `org.apache.maven.plugins:maven-assembly-plugin:3.2.0` configuration.
 01. :gift: Added `org.apache.maven.plugins:maven-install-plugin:3.0.0-M1` configuration.
