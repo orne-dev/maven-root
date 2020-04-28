@@ -117,90 +117,24 @@
           <artifactId>maven-surefire-plugin</artifactId>
           <version>${plugins.surefire.version}</version>
           <configuration>
-            <skip>${ut.skip}</skip>
+            <skip>true</skip>
             <reportsDirectory>${ut.reportDir}</reportsDirectory>
-            <argLine>${ut.coverage.agent.arg}</argLine>
           </configuration>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-failsafe-plugin</artifactId>
           <version>${plugins.failsafe.version}</version>
-          <executions>
-            <execution>
-              <id>integration-test</id>
-              <phase>integration-test</phase>
-              <goals>
-                <goal>integration-test</goal>
-              </goals>
-            </execution>
-            <execution>
-              <id>verify</id>
-              <phase>verify</phase>
-              <goals>
-                <goal>verify</goal>
-              </goals>
-            </execution>
-          </executions>
           <configuration>
-            <skip>${it.skip}</skip>
+            <skip>true</skip>
             <reportsDirectory>${it.reportDir}</reportsDirectory>
             <summaryFile>${it.reportDir}/failsafe-summary.xml</summaryFile>
-            <argLine>${it.coverage.agent.arg}</argLine>
           </configuration>
         </plugin>
         <plugin>
           <groupId>org.jacoco</groupId>
           <artifactId>jacoco-maven-plugin</artifactId>
           <version>${plugins.jacoco.version}</version>
-          <executions>
-            <execution>
-              <id>prepare-ut-agent</id>
-              <phase>process-test-classes</phase>
-              <goals>
-                <goal>prepare-agent</goal>
-              </goals>
-              <configuration>
-                <skip>${ut.skip}</skip>
-                <propertyName>ut.coverage.agent.arg</propertyName>
-                <append>true</append>
-              </configuration>
-            </execution>
-            <execution>
-              <id>generate-ut-coverage-report</id>
-              <phase>verify</phase>
-              <goals>
-                <goal>report</goal>
-              </goals>
-              <configuration>
-                <skip>${ut.skip}</skip>
-                <outputDirectory>${ut.coverage.reportDir}</outputDirectory>
-              </configuration>
-            </execution>
-            <execution>
-              <id>prepare-it-agent</id>
-              <phase>pre-integration-test</phase>
-              <goals>
-                <goal>prepare-agent-integration</goal>
-              </goals>
-              <configuration>
-                <skip>${it.skip}</skip>
-                <propertyName>it.coverage.agent.arg</propertyName>
-                <append>true</append>
-              </configuration>
-            </execution>
-            <execution>
-              <id>generate-it-coverage-report</id>
-              <phase>verify</phase>
-              <goals>
-                <goal>report-integration</goal>
-              </goals>
-              <configuration>
-                <skip>${it.skip}</skip>
-                <outputDirectory>${it.coverage.reportDir}</outputDirectory>
-              </configuration>
-            </execution>
-          </executions>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -284,6 +218,44 @@
         </plugin>
       </plugins>
     </pluginManagement>
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>license-maven-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-source-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-failsafe-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.jacoco</groupId>
+        <artifactId>jacoco-maven-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>clirr-maven-plugin</artifactId>
+      </plugin>
+    </plugins>
   </build>
 
   <reporting>
@@ -297,46 +269,6 @@
         <artifactId>maven-jxr-plugin</artifactId>
       </plugin>
       <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-surefire-report-plugin</artifactId>
-        <reportSets>
-          <reportSet>
-            <id>unit-tests</id>
-            <reports>
-              <report>report-only</report>
-            </reports>
-            <configuration>
-              <reportsDirectories>
-                <reportsDirectory>${ut.reportDir}</reportsDirectory>
-              </reportsDirectories>
-            </configuration>
-          </reportSet>
-          <reportSet>
-            <id>integration-tests</id>
-            <reports>
-              <report>failsafe-report-only</report>
-            </reports>
-            <configuration>
-              <reportsDirectories>
-                <reportsDirectory>${it.reportDir}</reportsDirectory>
-              </reportsDirectories>
-            </configuration>
-          </reportSet>
-        </reportSets>
-      </plugin>
-      <plugin>
-        <groupId>org.jacoco</groupId>
-        <artifactId>jacoco-maven-plugin</artifactId>
-        <reportSets>
-          <reportSet>
-            <reports>
-              <report>report</report>
-              <report>report-integration</report>
-            </reports>
-          </reportSet>
-        </reportSets>
-      </plugin>
-      <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>clirr-maven-plugin</artifactId>
       </plugin>
@@ -344,6 +276,206 @@
   </reporting>
 
   <profiles>
+    <profile>
+      <id>ut</id>
+      <build>
+        <pluginManagement>
+          <plugins>
+            <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-surefire-plugin</artifactId>
+              <configuration>
+                <skip>${ut.skip}</skip>
+                <argLine>${ut.coverage.agent.arg}</argLine>
+              </configuration>
+            </plugin>
+            <plugin>
+              <groupId>org.jacoco</groupId>
+              <artifactId>jacoco-maven-plugin</artifactId>
+              <executions>
+                <execution>
+                  <id>prepare-ut-agent</id>
+                  <phase>process-test-classes</phase>
+                  <goals>
+                    <goal>prepare-agent</goal>
+                  </goals>
+                  <configuration>
+                    <skip>${ut.skip}</skip>
+                    <propertyName>jacoco.agent.ut.arg</propertyName>
+                    <append>true</append>
+                  </configuration>
+                </execution>
+                <execution>
+                  <id>generate-ut-coverage-report</id>
+                  <phase>verify</phase>
+                  <goals>
+                    <goal>report</goal>
+                  </goals>
+                  <configuration>
+                    <skip>${ut.skip}</skip>
+                    <outputDirectory>${ut.coverage.reportDir}</outputDirectory>
+                  </configuration>
+                </execution>
+              </executions>
+            </plugin>
+          </plugins>
+        </pluginManagement>
+      </build>
+      <reporting>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-report-plugin</artifactId>
+            <reportSets>
+              <reportSet>
+                <id>unit-tests</id>
+                <configuration>
+                  <skipSurefireReport>${ut.skip}</skipSurefireReport>
+                  <reportsDirectories>
+                    <reportsDirectory>${ut.reportDir}</reportsDirectory>
+                  </reportsDirectories>
+                </configuration>
+                <reports>
+                  <report>report-only</report>
+                </reports>
+              </reportSet>
+            </reportSets>
+          </plugin>
+          <plugin>
+            <groupId>org.jacoco</groupId>
+            <artifactId>jacoco-maven-plugin</artifactId>
+            <reportSets>
+              <reportSet>
+                <id>unit-tests-coverage-report</id>
+                <configuration>
+                  <skip>${ut.skip}</skip>
+                </configuration>
+                <reports>
+                  <report>report</report>
+                </reports>
+              </reportSet>
+            </reportSets>
+          </plugin>
+        </plugins>
+      </reporting>
+    </profile>
+    <profile>
+      <id>it</id>
+      <build>
+        <pluginManagement>
+          <plugins>
+            <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-failsafe-plugin</artifactId>
+              <executions>
+                <execution>
+                  <id>integration-test</id>
+                  <phase>integration-test</phase>
+                  <goals>
+                    <goal>integration-test</goal>
+                  </goals>
+                </execution>
+                <execution>
+                  <id>verify</id>
+                  <phase>verify</phase>
+                  <goals>
+                    <goal>verify</goal>
+                  </goals>
+                </execution>
+              </executions>
+              <configuration>
+                <skip>${it.skip}</skip>
+                <reportsDirectory>${it.reportDir}</reportsDirectory>
+                <summaryFile>${it.reportDir}/failsafe-summary.xml</summaryFile>
+                <argLine>${it.coverage.agent.arg}</argLine>
+              </configuration>
+            </plugin>
+            <plugin>
+              <groupId>org.jacoco</groupId>
+              <artifactId>jacoco-maven-plugin</artifactId>
+              <executions>
+                <execution>
+                  <id>prepare-it-agent</id>
+                  <phase>pre-integration-test</phase>
+                  <goals>
+                    <goal>prepare-agent-integration</goal>
+                  </goals>
+                  <configuration>
+                    <skip>${it.skip}</skip>
+                    <propertyName>jacoco.agent.it.arg</propertyName>
+                    <append>true</append>
+                  </configuration>
+                </execution>
+                <execution>
+                  <id>generate-it-coverage-report</id>
+                  <phase>verify</phase>
+                  <goals>
+                    <goal>report-integration</goal>
+                  </goals>
+                  <configuration>
+                    <skip>${it.skip}</skip>
+                    <outputDirectory>${it.coverage.reportDir}</outputDirectory>
+                  </configuration>
+                </execution>
+              </executions>
+            </plugin>
+          </plugins>
+        </pluginManagement>
+      </build>
+      <reporting>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-report-plugin</artifactId>
+            <reportSets>
+              <reportSet>
+                <id>integration-tests-report</id>
+                <configuration>
+                  <skipFailsafeReport>${it.skip}</skipFailsafeReport>
+                  <reportsDirectories>
+                    <reportsDirectory>${it.reportDir}</reportsDirectory>
+                  </reportsDirectories>
+                </configuration>
+                <reports>
+                  <report>failsafe-report-only</report>
+                </reports>
+              </reportSet>
+            </reportSets>
+          </plugin>
+          <plugin>
+            <groupId>org.jacoco</groupId>
+            <artifactId>jacoco-maven-plugin</artifactId>
+            <reportSets>
+                <reportSet>
+                  <id>integration-tests-coverage-report</id>
+                  <configuration>
+                    <skip>${it.skip}</skip>
+                  </configuration>
+                  <reports>
+                    <report>report-integration</report>
+                  </reports>
+              </reportSet>
+            </reportSets>
+          </plugin>
+        </plugins>
+      </reporting>
+    </profile>
+    <profile>
+      <id>pre-release</id>
+      <build>
+        <pluginManagement>
+          <plugins>
+            <plugin>
+              <groupId>org.codehaus.mojo</groupId>
+              <artifactId>clirr-maven-plugin</artifactId>
+              <configuration>
+                <failOnError>false</failOnError>
+              </configuration>
+            </plugin>
+          </plugins>
+        </pluginManagement>
+      </build>
+    </profile>
     <profile>
       <id>release</id>
       <build>
