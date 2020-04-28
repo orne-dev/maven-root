@@ -13,7 +13,7 @@
   <name>Orne Root POM</name>
   <description>Orne Root POM</description>
   <inceptionYear>2019</inceptionYear>
-  <url>http://projects.orne.dev/root-poms/</url>
+  <url>http://projects.orne.dev/maven/root-poms/</url>
 
   <licenses>
     <license>
@@ -35,9 +35,9 @@
   </developers>
 
   <scm>
-    <url>http://github.com/ihernaez/orne-root-poms/tree/master</url>
-    <connection>scm:git:git://github.com:ihernaez/orne-root-poms.git</connection>
-    <developerConnection>scm:git:ssh://git@repo.orne.dev:9000/wamphiry/dev/orne-root-poms.git</developerConnection>
+    <url>http://github.com/orne-dev/maven-root/tree/master</url>
+    <connection>scm:git:git://github.com:orne-dev/maven-root.git</connection>
+    <developerConnection>scm:git:ssh://git@git.orne.dev:9000/java/root.git</developerConnection>
     <tag>HEAD</tag>
   </scm>
 
