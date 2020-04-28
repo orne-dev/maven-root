@@ -153,11 +153,10 @@
             <digitsOnlyDevVersion>true</digitsOnlyDevVersion>
             <useSnapshotInRelease>true</useSnapshotInRelease>
             <useSnapshotInHotfix>true</useSnapshotInHotfix>
-            <preReleaseGoals>clean verify</preReleaseGoals>
-            <preReleaseGoals>clean verify</preReleaseGoals>
-            <postReleaseGoals>deploy</postReleaseGoals>
-            <preHotfixGoals>clean verify</preHotfixGoals>
-            <postHotfixGoals>deploy</postHotfixGoals>
+            <preReleaseGoals>clean verify -Ppre-release</preReleaseGoals>
+            <postReleaseGoals>clean verify deploy -Prelease</postReleaseGoals>
+            <preHotfixGoals>clean verify -Ppre-release</preHotfixGoals>
+            <postHotfixGoals>clean verify deploy -Prelease</postHotfixGoals>
             <pushRemote>false</pushRemote>
           </configuration>
         </plugin>
