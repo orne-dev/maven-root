@@ -69,15 +69,12 @@
     <plugins.install.version>3.0.0-M1</plugins.install.version>
     <plugins.gitflow.version>1.14.0</plugins.gitflow.version>
     <plugins.deploy.version>3.0.0-M1</plugins.deploy.version>
-    <plugins.nexus-staging.version>1.6.8</plugins.nexus-staging.version>
     <plugins.site.version>3.9.0</plugins.site.version>
     <plugins.project-info-reports.version>3.0.0</plugins.project-info-reports.version>
 
     <license.licenseName>gpl_v3</license.licenseName>
 
     <enforcer.dependencies.excludes>${project.groupId}:*</enforcer.dependencies.excludes>
-    <ossrh.server.id>ossrh</ossrh.server.id>
-    <ossrh.nexus.url>https://oss.sonatype.org/</ossrh.nexus.url>
   </properties>
 
   <build>
@@ -163,12 +160,6 @@
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-deploy-plugin</artifactId>
           <version>${plugins.deploy.version}</version>
-        </plugin>
-        <plugin>
-          <groupId>org.sonatype.plugins</groupId>
-          <artifactId>nexus-staging-maven-plugin</artifactId>
-          <version>${plugins.nexus-staging.version}</version>
-          <extensions>true</extensions>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -311,22 +302,6 @@
                 </configuration>
               </execution>
             </executions>
-          </plugin>
-        </plugins>
-      </build>
-    </profile>
-    <profile>
-      <id>ossrh</id>
-      <build>
-        <plugins>
-          <plugin>
-            <groupId>org.sonatype.plugins</groupId>
-            <artifactId>nexus-staging-maven-plugin</artifactId>
-            <configuration>
-              <serverId>${ossrh.server.id}</serverId>
-              <nexusUrl>${ossrh.nexus.url}</nexusUrl>
-              <autoReleaseAfterClose>true</autoReleaseAfterClose>
-            </configuration>
           </plugin>
         </plugins>
       </build>

@@ -17,7 +17,6 @@
 01. :gift: Added `org.apache.maven.plugins:maven-install-plugin:3.0.0-M1` configuration.
 01. :gift: Added `com.amashchenko.maven.plugin:gitflow-maven-plugin:1.14.0` configuration.
 01. :gift: Added `org.apache.maven.plugins:maven-deploy-plugin:3.0.0-M1` configuration.
-01. :gift: Added `org.sonatype.plugins:nexus-staging-maven-plugin:1.6.8` configuration.
 01. :gift: Added `org.apache.maven.plugins:maven-site-plugin:3.9.0` configuration.
 01. :gift: Added `org.apache.maven.plugins:maven-project-info-reports-plugin:3.0.0` configuration.
     01. Publishes default reports.
@@ -34,8 +33,6 @@
         01. Requires non `SNAPSHOT` dependency versions.
         01. Requires upper bound dependency versions.
     01. Performs `gpg:sign`
-01. :gift: Added `ossrh` profile.
-    01. Uses `nexus-staging-maven-plugin` for deployment.
 
 ## dev.orne:java-root-pom
 
