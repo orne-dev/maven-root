@@ -61,21 +61,21 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     
     <plugins.clean.version>3.1.0</plugins.clean.version>
-    <plugin.help.version>3.2.0</plugin.help.version>
-    <plugins.antrun.version>1.8</plugins.antrun.version>
+    <plugins.help.version>3.2.0</plugins.help.version>
+    <plugins.antrun.version>3.0.0</plugins.antrun.version>
     <plugins.resources.version>3.1.0</plugins.resources.version>
-    <plugins.license.version>1.20</plugins.license.version>
-    <plugin.versions.version>2.7</plugin.versions.version>
-    <plugins.dependency.version>3.1.1</plugins.dependency.version>
-    <plugin.enforcer.version>3.0.0-M2</plugin.enforcer.version>
+    <plugins.license.version>2.0.0</plugins.license.version>
+    <plugins.versions.version>2.7</plugins.versions.version>
+    <plugins.dependency.version>3.1.2</plugins.dependency.version>
+    <plugins.enforcer.version>3.0.0-M3</plugins.enforcer.version>
     <plugins.gpg.version>1.6</plugins.gpg.version>
-    <plugins.assembly.version>3.1.1</plugins.assembly.version>
+    <plugins.assembly.version>3.2.0</plugins.assembly.version>
     <plugins.install.version>3.0.0-M1</plugins.install.version>
-    <plugin.gitflow.version>1.13.0</plugin.gitflow.version>
-    <plugins.release.version>2.5.3</plugins.release.version>
+    <plugins.gitflow.version>1.14.0</plugins.gitflow.version>
+    <plugins.release.version>3.0.0-M1</plugins.release.version>
     <plugins.deploy.version>3.0.0-M1</plugins.deploy.version>
-    <plugins.site.version>3.8.2</plugins.site.version>
-    <plugin.project-info-reports.version>3.0.0</plugin.project-info-reports.version>
+    <plugins.site.version>3.9.0</plugins.site.version>
+    <plugins.project-info-reports.version>3.0.0</plugins.project-info-reports.version>
 
     <license.licenseName>mit</license.licenseName>
   </properties>
@@ -91,7 +91,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-help-plugin</artifactId>
-          <version>${plugin.help.version}</version>
+          <version>${plugins.help.version}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -114,7 +114,7 @@
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>versions-maven-plugin</artifactId>
-          <version>${plugin.versions.version}</version>
+          <version>${plugins.versions.version}</version>
           <configuration>
             <generateBackupPoms>false</generateBackupPoms>
             <updateMatchingVersions>true</updateMatchingVersions>
@@ -128,7 +128,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-enforcer-plugin</artifactId>
-          <version>${plugin.enforcer.version}</version>
+          <version>${plugins.enforcer.version}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -161,7 +161,7 @@
         <plugin>
           <groupId>com.amashchenko.maven.plugin</groupId>
           <artifactId>gitflow-maven-plugin</artifactId>
-          <version>${plugin.gitflow.version}</version>
+          <version>${plugins.gitflow.version}</version>
           <configuration>
             <commitDevelopmentVersionAtStart>true</commitDevelopmentVersionAtStart>
             <versionDigitToIncrement>1</versionDigitToIncrement>
@@ -189,7 +189,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-project-info-reports-plugin</artifactId>
-          <version>${plugin.project-info-reports.version}</version>
+          <version>${plugins.project-info-reports.version}</version>
         </plugin>
       </plugins>
     </pluginManagement>
