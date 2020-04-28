@@ -73,6 +73,7 @@
     <plugins.project-info-reports.version>3.0.0</plugins.project-info-reports.version>
 
     <license.licenseName>gpl_v3</license.licenseName>
+    <gpg.keyname>releases@orne.dev</gpg.keyname>
 
     <enforcer.dependencies.excludes>${project.groupId}:*</enforcer.dependencies.excludes>
   </properties>
@@ -153,6 +154,10 @@
             <digitsOnlyDevVersion>true</digitsOnlyDevVersion>
             <useSnapshotInRelease>true</useSnapshotInRelease>
             <useSnapshotInHotfix>true</useSnapshotInHotfix>
+            <preReleaseGoals>clean verify -Ppre-release</preReleaseGoals>
+            <postReleaseGoals>clean verify deploy -Prelease</postReleaseGoals>
+            <preHotfixGoals>clean verify -Ppre-release</preHotfixGoals>
+            <postHotfixGoals>clean verify deploy -Prelease</postHotfixGoals>
             <pushRemote>false</pushRemote>
           </configuration>
         </plugin>
