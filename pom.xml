@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <prerequisites>
-    <maven>3.3.9</maven>
+    <maven>3.5.4</maven>
   </prerequisites>
 
   <groupId>dev.orne</groupId>
