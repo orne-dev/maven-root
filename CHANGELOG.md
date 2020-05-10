@@ -1,6 +1,15 @@
-# :pack: 1.0.0
+# 0.1.1
 
-## dev.orne:root-pom
+## :package: dev.orne:java-root-pom
+
+01. :gift: Added `java.version` property
+    01. Property `java.source.version` now inherits from `java.version` by default
+    01. Property `java.target.version` now inherits from `java.version` by default
+01. :bug: Fixed `jacoco-maven-plugin` configuration
+
+# 0.1.0 (2020-04-28)
+
+## :package: dev.orne:root-pom
 
 01. :gift: Added `org.apache.maven.plugins:maven-clean-plugin:3.1.0` configuration.
 01. :gift: Added `org.apache.maven.plugins:maven-help-plugin:3.2.0` configuration.
@@ -34,7 +43,7 @@
         01. Requires upper bound dependency versions.
     01. Performs `gpg:sign`
 
-## dev.orne:java-root-pom
+## :package: dev.orne:java-root-pom
 
 01. :gift: Added `org.slf4j:slf4j-api:1.7.30` dependency management.
 01. :gift: Added `org.slf4j:jcl-over-slf4j:1.7.30` dependency management.
