@@ -1,10 +1,11 @@
-# 0.2.0
+# 0.1.1
 
 ## :package: dev.orne:java-root-pom
 
 01. :gift: Added `java.version` property
     01. Property `java.source.version` now inherits from `java.version` by default
     01. Property `java.target.version` now inherits from `java.version` by default
+01. :bug: Fixed `jacoco-maven-plugin` configuration
 
 # 0.1.0 (2020-04-28)
 
