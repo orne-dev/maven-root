@@ -1,4 +1,11 @@
-# 0.1.1
+# 0.2.0
+
+## :package: dev.orne:archetype-pom
+
+01. :gift: Added `org.apache.maven.plugins:maven-archetype-plugin:3.1.2` configuration.
+01. :gift: Allowed empty directories in `maven-resources-plugin` configuration.
+
+# 0.1.1 (2020-05-10)
 
 ## :package: dev.orne:java-root-pom
 

@@ -50,6 +50,7 @@
 
   <modules>
     <module>java-root-pom</module>
+    <module>archetype-pom</module>
   </modules>
 
   <properties>
