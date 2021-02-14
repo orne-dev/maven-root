@@ -14,7 +14,7 @@
   <description>Orne Archetype Root POM</description>
 
   <properties>
-    <plugin.maven-archetype-plugin.version>3.1.2</plugin.maven-archetype-plugin.version>
+    <plugin.maven-archetype-plugin.version>3.2.0</plugin.maven-archetype-plugin.version>
   </properties>
 
   <build>
@@ -39,6 +39,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-resources-plugin</artifactId>
+          <version>${plugins.resources.version}</version>
           <configuration>
             <includeEmptyDirs>true</includeEmptyDirs>
           </configuration>
