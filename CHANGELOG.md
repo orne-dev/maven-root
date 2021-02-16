@@ -24,6 +24,7 @@
 01. :wrench: Updated `org.apache.maven.plugins:maven-failsafe-plugin` to version 3.0.0-M5.
 01. :wrench: Updated `org.apache.maven.plugins:maven-surefire-report-plugin` to version 3.0.0-M5.
 01. :wrench: Updated `org.jacoco:jacoco-maven-plugin` to version 0.8.6.
+01. :gift: Added `org.junit-pioneer:junit-pioneer:1.3.0` dependency management.
 
 # 0.1.1 (2020-05-10)
 
