@@ -9,6 +9,8 @@
 01. :wrench: Updated `org.apache.maven.plugins:maven-project-info-reports-plugin` to version 3.1.1.
 01. :wrench: Updated `org.apache.maven.plugins:maven-site-plugin` to version 3.9.1.
     01. Added `org.apache.maven.skins:maven-fluido-skin:1.9` version management.
+    01. Disabled site deployment in favor of `maven-scm-publish-plugin`.
+01. :gift: Added `org.apache.maven.plugins:maven-scm-publish-plugin:3.1.0` configuration.
 
 ## :package: dev.orne:archetype-pom
 
