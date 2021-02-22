@@ -63,11 +63,17 @@
     <plugins.site.fluido.version>1.9</plugins.site.fluido.version>
     <plugins.project-info-reports.version>3.1.1</plugins.project-info-reports.version>
     <plugins.scm.publish.version>3.1.0</plugins.scm.publish.version>
+    <plugins.sonar.version>3.8.0.2131</plugins.sonar.version>
 
     <license.licenseName>gpl_v3</license.licenseName>
     <gpg.keyname>releases@orne.dev</gpg.keyname>
 
     <enforcer.dependencies.excludes>${project.groupId}:*</enforcer.dependencies.excludes>
+
+    <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+    <sonar.organization>orne-dev</sonar.organization>
+    <sonar.projectKey>maven-root</sonar.projectKey>
+    <sonar.moduleKey>${project.groupId}:${project.artifactId}</sonar.moduleKey>
   </properties>
 
   <build>
@@ -187,6 +193,14 @@
             <scmBranch>gh-pages</scmBranch>
             <checkinComment>Project site version ${project.version}</checkinComment>
             <tryUpdate>true</tryUpdate>
+          </configuration>
+        </plugin>
+        <plugin>
+          <groupId>org.sonarsource.scanner.maven</groupId>
+          <artifactId>sonar-maven-plugin</artifactId>
+          <version>${plugins.sonar.version}</version>
+          <configuration>
+            <goalPrefix>sonar</goalPrefix>
           </configuration>
         </plugin>
       </plugins>
