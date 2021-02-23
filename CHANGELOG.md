@@ -12,6 +12,7 @@
     01. Disabled site deployment in favor of `maven-scm-publish-plugin`.
 01. :gift: Added `org.apache.maven.plugins:maven-scm-publish-plugin:3.1.0` configuration.
 01. :gift: Added `org.sonarsource.scanner.maven:sonar-maven-plugin:3.8.0.2131` configuration.
+01. :gift: Added `org.apiguardian:apiguardian-api:1.1.1` dependency management.
 
 ## :package: dev.orne:archetype-pom
 
