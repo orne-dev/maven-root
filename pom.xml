@@ -72,7 +72,6 @@
 
     <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     <sonar.organization>orne-dev</sonar.organization>
-    <sonar.projectKey>maven-root</sonar.projectKey>
     <sonar.moduleKey>${project.groupId}:${project.artifactId}</sonar.moduleKey>
   </properties>
 
