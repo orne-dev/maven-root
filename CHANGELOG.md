@@ -29,6 +29,10 @@
 01. :wrench: Updated `org.apache.maven.plugins:maven-surefire-report-plugin` to version 3.0.0-M5.
 01. :wrench: Updated `org.jacoco:jacoco-maven-plugin` to version 0.8.6.
 01. :gift: Added `org.junit-pioneer:junit-pioneer:1.3.0` dependency management.
+01. :gift: Added `org.revapi:revapi-maven-plugin:0.13.2` configuration.
+    01. Added `org.revapi:revapi-java:0.23.2` configuration.
+    01. Publishes `revapi` report.
+    01. :boom: Removed `org.codehaus.mojo:clirr-maven-plugin` configuration.
 
 # 0.1.1 (2020-05-10)
 

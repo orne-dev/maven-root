@@ -35,7 +35,8 @@
     <plugins.jar.version>3.2.0</plugins.jar.version>
     <plugins.source.version>3.2.1</plugins.source.version>
     <plugins.javadoc.version>3.2.0</plugins.javadoc.version>
-    <plugins.clirr.version>2.8</plugins.clirr.version>
+    <plugins.revapi.version>0.13.2</plugins.revapi.version>
+    <plugins.revapi.java.version>0.23.2</plugins.revapi.java.version>
     <plugins.jxr.version>3.0.0</plugins.jxr.version>
 
     <ut.skip>false</ut.skip>
@@ -44,7 +45,8 @@
     <it.skip>false</it.skip>
     <it.reportDir>${project.build.directory}/it-reports</it.reportDir>
     <it.coverage.reportDir>${project.build.directory}/it-coverage-reports</it.coverage.reportDir>
-    <clirr.reportPath>${project.build.directory}/clirr-report.txt</clirr.reportPath>
+
+    <revapi.config.file>${project.basedir}/revapi.config.json</revapi.config.file>
   </properties>
 
   <dependencyManagement>
@@ -226,19 +228,26 @@
           </configuration>
         </plugin>
         <plugin>
-          <groupId>org.codehaus.mojo</groupId>
-          <artifactId>clirr-maven-plugin</artifactId>
-          <version>${plugins.clirr.version}</version>
+          <groupId>org.revapi</groupId>
+          <artifactId>revapi-maven-plugin</artifactId>
+          <version>${plugins.revapi.version}</version>
+          <dependencies>
+            <dependency>
+              <groupId>org.revapi</groupId>
+              <artifactId>revapi-java</artifactId>
+              <version>${plugins.revapi.java.version}</version>
+            </dependency>
+          </dependencies>
           <configuration>
-            <textOutputFile>${clirr.reportPath}</textOutputFile>
-            <linkXRef>true</linkXRef>
-            <failOnError>false</failOnError>
+            <analysisConfigurationFiles>
+              <configurationFile>${revapi.config.file}</configurationFile>
+            </analysisConfigurationFiles>
           </configuration>
           <executions>
             <execution>
-              <id>check-api-compatibility</id>
+              <id>api-check</id>
               <goals>
-                <goal>check-no-fork</goal>
+                <goal>check</goal>
               </goals>
             </execution>
           </executions>
@@ -289,8 +298,8 @@
         <artifactId>jacoco-maven-plugin</artifactId>
       </plugin>
       <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>clirr-maven-plugin</artifactId>
+        <groupId>org.revapi</groupId>
+        <artifactId>revapi-maven-plugin</artifactId>
       </plugin>
     </plugins>
   </build>
@@ -306,8 +315,15 @@
         <artifactId>maven-jxr-plugin</artifactId>
       </plugin>
       <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>clirr-maven-plugin</artifactId>
+        <groupId>org.revapi</groupId>
+        <artifactId>revapi-maven-plugin</artifactId>
+        <reportSets>
+          <reportSet>
+            <reports>
+              <report>report</report>
+            </reports>
+          </reportSet>
+        </reportSets>
       </plugin>
     </plugins>
   </reporting>
@@ -503,54 +519,6 @@
           </plugin>
         </plugins>
       </reporting>
-    </profile>
-    <profile>
-      <id>pre-release</id>
-      <build>
-        <pluginManagement>
-          <plugins>
-            <plugin>
-              <groupId>org.codehaus.mojo</groupId>
-              <artifactId>clirr-maven-plugin</artifactId>
-              <configuration>
-                <failOnError>false</failOnError>
-              </configuration>
-            </plugin>
-          </plugins>
-        </pluginManagement>
-      </build>
-    </profile>
-    <profile>
-      <id>release</id>
-      <build>
-        <pluginManagement>
-          <plugins>
-            <plugin>
-              <groupId>org.codehaus.mojo</groupId>
-              <artifactId>clirr-maven-plugin</artifactId>
-              <configuration>
-                <failOnError>true</failOnError>
-              </configuration>
-            </plugin>
-          </plugins>
-        </pluginManagement>
-      </build>
-    </profile>
-    <profile>
-      <id>major-release</id>
-      <build>
-        <pluginManagement>
-          <plugins>
-            <plugin>
-              <groupId>org.codehaus.mojo</groupId>
-              <artifactId>clirr-maven-plugin</artifactId>
-              <configuration>
-                <failOnError>false</failOnError>
-              </configuration>
-            </plugin>
-          </plugins>
-        </pluginManagement>
-      </build>
     </profile>
   </profiles>
 
