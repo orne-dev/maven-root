@@ -240,7 +240,7 @@
           </dependencies>
           <configuration>
             <analysisConfigurationFiles>
-              <configurationFile>${revapi.config.file}</configurationFile>
+              <file>${revapi.config.file}</file>
             </analysisConfigurationFiles>
           </configuration>
           <executions>
