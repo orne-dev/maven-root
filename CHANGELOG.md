@@ -14,7 +14,7 @@
 01. :gift: Added `org.sonarsource.scanner.maven:sonar-maven-plugin:3.8.0.2131` configuration.
 01. :gift: Added `org.apiguardian:apiguardian-api:1.1.1` dependency management.
 
-## :package: dev.orne:archetype-pom
+## :package: dev.orne:archetype-root-pom
 
 01. :gift: Created module.
 01. :gift: Added `org.apache.maven.plugins:maven-archetype-plugin:3.2.0` configuration.
