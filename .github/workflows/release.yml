@@ -1,9 +1,9 @@
-name: Release CI
+name: Last version CI
 on:
   push:
     branches:
-      - $default-branch
-      - support/*
+      - main
+      - 'support/*'
 jobs:
   build:
     runs-on: ubuntu-latest

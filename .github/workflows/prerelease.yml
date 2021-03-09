@@ -2,15 +2,15 @@ name: Release and hotfix CI
 on:
   push:
     branches:
-      - release/*
-      - hotfix/*
+      - 'release/*'
+      - 'hotfix/*'
     paths-ignore:
       - '**/*.md'
       - 'src/site/**/*'
   pull_request:
     branches:
-      - release/*
-      - hotfix/*
+      - 'release/*'
+      - 'hotfix/*'
     types:
       - opened
       - synchronize
