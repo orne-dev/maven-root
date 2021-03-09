@@ -47,6 +47,10 @@
     <it.coverage.reportDir>${project.build.directory}/it-coverage-reports</it.coverage.reportDir>
 
     <revapi.config.file>${project.basedir}/revapi.config.json</revapi.config.file>
+    <release.verify.goals>clean verify -Put,it,pre-release</release.verify.goals>
+    <release.perform.goals>clean verify site site:stage scm-publish:publish-scm deploy -Put,it,release</release.perform.goals>
+    <hotfix.verify.goals>clean verify -Put,it,pre-release</hotfix.verify.goals>
+    <hotfix.perform.goals>clean verify deploy -Put,it,release</hotfix.perform.goals>
   </properties>
 
   <dependencyManagement>

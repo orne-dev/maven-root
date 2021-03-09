@@ -47,6 +47,7 @@ Provides the next features:
     - Dependency version upper bound verification
     - Dependency release version verification
     - GPG signing of released artifacts
+- Automatic Maven site publishing in `gh-pages` branch
 
 ## Root POM for Java projects
 
@@ -89,6 +90,7 @@ Provides the next features:
     - Dependency version upper bound verification
     - Dependency release version verification
     - GPG signing of released artifacts
+- Automatic Maven site publishing in `gh-pages` branch
 
 ## Root POM for Maven archetype projects
 
@@ -127,6 +129,7 @@ Provides the next features:
     - Dependency release version verification
     - GPG signing of released artifacts
 - Maven archetypes packaging and testing
+- Automatic Maven site publishing in `gh-pages` branch
 
 [orne.dev]: https://orne.dev
 [project.license]: http://www.gnu.org/licenses/gpl-3.0.txt

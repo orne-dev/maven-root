@@ -67,6 +67,10 @@
 
     <license.licenseName>gpl_v3</license.licenseName>
     <gpg.keyname>releases@orne.dev</gpg.keyname>
+    <release.verify.goals>clean verify -Ppre-release</release.verify.goals>
+    <release.perform.goals>clean verify site site:stage scm-publish:publish-scm deploy -Prelease</release.perform.goals>
+    <hotfix.verify.goals>clean verify -Ppre-release</hotfix.verify.goals>
+    <hotfix.perform.goals>clean verify deploy -Prelease</hotfix.perform.goals>
 
     <enforcer.dependencies.excludes>${project.groupId}:*</enforcer.dependencies.excludes>
 
@@ -151,10 +155,10 @@
             <digitsOnlyDevVersion>true</digitsOnlyDevVersion>
             <useSnapshotInRelease>true</useSnapshotInRelease>
             <useSnapshotInHotfix>true</useSnapshotInHotfix>
-            <preReleaseGoals>clean verify -Ppre-release</preReleaseGoals>
-            <postReleaseGoals>clean verify deploy -Prelease</postReleaseGoals>
-            <preHotfixGoals>clean verify -Ppre-release</preHotfixGoals>
-            <postHotfixGoals>clean verify deploy -Prelease</postHotfixGoals>
+            <preReleaseGoals>${release.verify.goals}</preReleaseGoals>
+            <postReleaseGoals>${release.perform.goals}</postReleaseGoals>
+            <preHotfixGoals>${hotfix.verify.goals}</preHotfixGoals>
+            <postHotfixGoals>${hotfix.perform.goals}</postHotfixGoals>
             <pushRemote>false</pushRemote>
           </configuration>
         </plugin>
