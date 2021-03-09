@@ -1,7 +1,9 @@
 name: Release CI
 on:
   push:
-    branches: [ $default-branch ]
+    branches:
+      - $default-branch
+      - support/*
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -23,20 +25,11 @@ jobs:
           path: ~/.sonar/cache
           key: ${{ runner.os }}-sonar
           restore-keys: ${{ runner.os }}-sonar
-      - name: Verify and build site
-        run: mvn -B clean verify site site:stage -Put,it,release
+      - name: Verify
+        run: mvn -B clean verify -Put,it,release
       - name: Sonar analysis
-        if: ${{ success() }}
+        if: success()
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: mvn -B sonar:sonar
-      - name: Deploy to GitHub Pages
-        if: ${{ success() }}
-        uses: crazy-max/ghaction-github-pages@v2
-        with:
-          target_branch: gh-pages
-          build_dir: target/staging
-          keep_history: true
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

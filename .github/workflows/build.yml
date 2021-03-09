@@ -42,7 +42,7 @@ jobs:
       - name: Verify
         run: mvn -B clean verify -Put,it
       - name: Sonar analysis
-        if: ${{ success() }}
+        if: success()
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
