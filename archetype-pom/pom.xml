@@ -12,7 +12,7 @@
 
   <name>Orne Archetype Root POM</name>
   <description>Orne Archetype Root POM</description>
-  <url>http://projects.orne.dev/maven/root/archetype/</url>
+  <url>https://orne-dev.github.io/maven-root/archetype/</url>
 
   <properties>
     <plugin.maven-archetype-plugin.version>3.2.0</plugin.maven-archetype-plugin.version>

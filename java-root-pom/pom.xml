@@ -12,7 +12,7 @@
 
   <name>Orne Java Root POM</name>
   <description>Orne Java Root POM</description>
-  <url>http://projects.orne.dev/maven/root/java/</url>
+  <url>https://orne-dev.github.io/maven-root/java/</url>
 
   <properties>
     <java.version>1.8</java.version>

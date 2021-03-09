@@ -9,7 +9,7 @@
   <name>Orne Root POM</name>
   <description>Orne Root POM</description>
   <inceptionYear>2019</inceptionYear>
-  <url>http://projects.orne.dev/maven/root/</url>
+  <url>https://orne-dev.github.io/maven-root/</url>
 
   <licenses>
     <license>
