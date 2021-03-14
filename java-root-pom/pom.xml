@@ -51,6 +51,10 @@
     <release.perform.goals>clean verify site site:stage scm-publish:publish-scm deploy -Put,it,release</release.perform.goals>
     <hotfix.verify.goals>clean verify -Put,it,pre-release</hotfix.verify.goals>
     <hotfix.perform.goals>clean verify deploy -Put,it,release</hotfix.perform.goals>
+
+    <sonar.java.source>${java.version}</sonar.java.source>
+    <sonar.junit.reportPaths>${ut.reportDir},${it.reportDir}</sonar.junit.reportPaths>
+    <sonar.coverage.jacoco.xmlReportPaths>${ut.coverage.reportDir},${it.coverage.reportDir}</sonar.coverage.jacoco.xmlReportPaths>
   </properties>
 
   <dependencyManagement>
