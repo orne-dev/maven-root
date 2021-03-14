@@ -185,6 +185,7 @@
           <artifactId>maven-scm-publish-plugin</artifactId>
           <version>${plugins.scm.publish.version}</version>
           <configuration>
+            <serverId>github</serverId>
             <scmBranch>gh-pages</scmBranch>
             <checkinComment>Project site version ${project.version}</checkinComment>
             <tryUpdate>true</tryUpdate>
