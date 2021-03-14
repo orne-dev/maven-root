@@ -15,8 +15,8 @@ jobs:
           server-id: github
       - name: Configure Git user
         run: |
-          git config user.email "actions@github.com"
           git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
       - name: Cache Maven packages
         uses: actions/cache@v2
         with:
