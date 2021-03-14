@@ -24,8 +24,10 @@ jobs:
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
       - name: Generate site
+        env:
+          BRANCH_NAME: ${{ github.ref }}
         run: |
-          echo "Generating test site for release ${github.ref#test/}"
+          echo "Generating test site for release ${GITHUB_REF#refs/heads/test/}"
           mvn -B clean verify site site:stage -Put,it,release
       - name: Publish site
         if: success()
