@@ -36,6 +36,10 @@
     <developerConnection>scm:git:ssh://github.com:orne-dev/maven-root.git</developerConnection>
     <tag>HEAD</tag>
   </scm>
+  <issueManagement>
+    <system>GitHub Issues</system>
+    <url>http://github.com/orne-dev/maven-root/issues</url>
+  </issueManagement>
 
   <modules>
     <module>java-root-pom</module>
