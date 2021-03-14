@@ -61,7 +61,7 @@
     <license.licenseName>gpl_v3</license.licenseName>
     <gpg.keyname>releases@orne.dev</gpg.keyname>
     <release.verify.goals>clean verify -Ppre-release</release.verify.goals>
-    <release.perform.goals>clean verify site site:stage scm-publish:publish-scm deploy -Prelease</release.perform.goals>
+    <release.perform.goals>clean verify deploy -Prelease</release.perform.goals>
     <hotfix.verify.goals>clean verify -Ppre-release</hotfix.verify.goals>
     <hotfix.perform.goals>clean verify deploy -Prelease</hotfix.perform.goals>
 

@@ -1,4 +1,4 @@
-name: Last version CI
+name: Release analysis CI
 on:
   push:
     branches:

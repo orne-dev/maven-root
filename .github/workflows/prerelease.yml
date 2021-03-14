@@ -1,4 +1,4 @@
-name: Release and hotfix CI
+name: Pre-release analysis CI
 on:
   push:
     branches:
