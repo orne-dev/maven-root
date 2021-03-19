@@ -1,4 +1,40 @@
-# 0.1.1
+# 0.2.0
+
+## :package: dev.orne:root-pom
+
+01. :wrench: Updated `org.apache.maven.plugins:maven-resources-plugin` to version 3.2.0.
+01. :wrench: Updated `org.codehaus.mojo:versions-maven-plugin` to version 2.8.1.
+01. :wrench: Updated `org.apache.maven.plugins:maven-assembly-plugin` to version 3.3.0.
+01. :wrench: Updated `com.amashchenko.maven.plugin:gitflow-maven-plugin` to version 1.15.1.
+01. :wrench: Updated `org.apache.maven.plugins:maven-project-info-reports-plugin` to version 3.1.1.
+01. :wrench: Updated `org.apache.maven.plugins:maven-site-plugin` to version 3.9.1.
+    01. Added `org.apache.maven.skins:maven-fluido-skin:1.9` version management.
+    01. Disabled site deployment in favor of `maven-scm-publish-plugin`.
+01. :gift: Added `org.apache.maven.plugins:maven-scm-publish-plugin:3.1.0` configuration.
+01. :gift: Added `org.sonarsource.scanner.maven:sonar-maven-plugin:3.8.0.2131` configuration.
+01. :gift: Added `org.apiguardian:apiguardian-api:1.1.1` dependency management.
+
+## :package: dev.orne:archetype-root-pom
+
+01. :gift: Created module.
+01. :gift: Added `org.apache.maven.plugins:maven-archetype-plugin:3.2.0` configuration.
+01. :gift: Allowed empty directories in `maven-resources-plugin` configuration.
+
+## :package: dev.orne:java-root-pom
+
+01. :wrench: Updated `org.junit.jupiter:junit-jupiter` to version 5.7.1.
+01. :wrench: Updated `org.mockito:mockito-core` to version 3.7.7.
+01. :wrench: Updated `org.apache.maven.plugins:maven-surefire-plugin` to version 3.0.0-M5.
+01. :wrench: Updated `org.apache.maven.plugins:maven-failsafe-plugin` to version 3.0.0-M5.
+01. :wrench: Updated `org.apache.maven.plugins:maven-surefire-report-plugin` to version 3.0.0-M5.
+01. :wrench: Updated `org.jacoco:jacoco-maven-plugin` to version 0.8.6.
+01. :gift: Added `org.junit-pioneer:junit-pioneer:1.3.0` dependency management.
+01. :gift: Added `org.revapi:revapi-maven-plugin:0.13.2` configuration.
+    01. Added `org.revapi:revapi-java:0.23.2` configuration.
+    01. Publishes `revapi` report.
+    01. :boom: Removed `org.codehaus.mojo:clirr-maven-plugin` configuration.
+
+# 0.1.1 (2020-05-10)
 
 ## :package: dev.orne:java-root-pom
 

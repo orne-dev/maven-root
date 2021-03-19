@@ -3,14 +3,18 @@
 
   <groupId>dev.orne</groupId>
   <artifactId>root-pom</artifactId>
-  <version>0.1.1</version>
+  <version>0.2.0</version>
   <packaging>pom</packaging>
 
   <name>Orne Root POM</name>
   <description>Orne Root POM</description>
   <inceptionYear>2019</inceptionYear>
-  <url>http://projects.orne.dev/maven/root-poms/</url>
+  <url>https://orne-dev.github.io/maven-root/</url>
 
+  <organization>
+    <name>Orne Developments</name>
+    <url>https://github.com/orne-dev</url>
+  </organization>
   <licenses>
     <license>
       <name>GNU General Public License (GPL) version 3.0</name>
@@ -18,38 +22,17 @@
       <distribution>repo</distribution>
     </license>
   </licenses>
-  <organization>
-    <name>Orne Developments</name>
-    <url>https://orne.dev</url>
-  </organization>
   <developers>
     <developer>
       <id>wamphiry</id>
       <name>(w) Iker Hernaez</name>
-      <email>i.hernaez@orne.dev</email>
+      <url>https://github.com/ihernaez</url>
     </developer>
   </developers>
 
-  <scm>
-    <url>http://github.com/orne-dev/maven-root/tree/master</url>
-    <connection>scm:git:git://github.com/orne-dev/maven-root.git</connection>
-    <developerConnection>scm:git:ssh://github.com:orne-dev/maven-root.git</developerConnection>
-    <tag>HEAD</tag>
-  </scm>
-
-  <distributionManagement>
-    <snapshotRepository>
-      <id>ossrh</id>
-      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-    </snapshotRepository>
-    <repository>
-      <id>ossrh</id>
-      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-    </repository>
-  </distributionManagement>
-
   <modules>
     <module>java-root-pom</module>
+    <module>archetype-pom</module>
   </modules>
 
   <properties>
@@ -59,23 +42,34 @@
     <plugins.clean.version>3.1.0</plugins.clean.version>
     <plugins.help.version>3.2.0</plugins.help.version>
     <plugins.antrun.version>3.0.0</plugins.antrun.version>
-    <plugins.resources.version>3.1.0</plugins.resources.version>
+    <plugins.resources.version>3.2.0</plugins.resources.version>
     <plugins.license.version>2.0.0</plugins.license.version>
-    <plugins.versions.version>2.7</plugins.versions.version>
+    <plugins.versions.version>2.8.1</plugins.versions.version>
     <plugins.dependency.version>3.1.2</plugins.dependency.version>
     <plugins.enforcer.version>3.0.0-M3</plugins.enforcer.version>
     <plugins.gpg.version>1.6</plugins.gpg.version>
-    <plugins.assembly.version>3.2.0</plugins.assembly.version>
+    <plugins.assembly.version>3.3.0</plugins.assembly.version>
     <plugins.install.version>3.0.0-M1</plugins.install.version>
-    <plugins.gitflow.version>1.14.0</plugins.gitflow.version>
+    <plugins.gitflow.version>1.15.1</plugins.gitflow.version>
     <plugins.deploy.version>3.0.0-M1</plugins.deploy.version>
-    <plugins.site.version>3.9.0</plugins.site.version>
-    <plugins.project-info-reports.version>3.0.0</plugins.project-info-reports.version>
+    <plugins.site.version>3.9.1</plugins.site.version>
+    <plugins.site.fluido.version>1.9</plugins.site.fluido.version>
+    <plugins.project-info-reports.version>3.1.1</plugins.project-info-reports.version>
+    <plugins.scm.publish.version>3.1.0</plugins.scm.publish.version>
+    <plugins.sonar.version>3.8.0.2131</plugins.sonar.version>
 
     <license.licenseName>gpl_v3</license.licenseName>
     <gpg.keyname>releases@orne.dev</gpg.keyname>
+    <release.verify.goals>clean verify -Ppre-release</release.verify.goals>
+    <release.perform.goals>clean verify deploy -Prelease</release.perform.goals>
+    <hotfix.verify.goals>clean verify -Ppre-release</hotfix.verify.goals>
+    <hotfix.perform.goals>clean verify deploy -Prelease</hotfix.perform.goals>
 
     <enforcer.dependencies.excludes>${project.groupId}:*</enforcer.dependencies.excludes>
+
+    <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+    <sonar.organization>orne-dev</sonar.organization>
+    <sonar.moduleKey>${project.groupId}:${project.artifactId}</sonar.moduleKey>
   </properties>
 
   <build>
@@ -154,10 +148,10 @@
             <digitsOnlyDevVersion>true</digitsOnlyDevVersion>
             <useSnapshotInRelease>true</useSnapshotInRelease>
             <useSnapshotInHotfix>true</useSnapshotInHotfix>
-            <preReleaseGoals>clean verify -Ppre-release</preReleaseGoals>
-            <postReleaseGoals>clean verify deploy -Prelease</postReleaseGoals>
-            <preHotfixGoals>clean verify -Ppre-release</preHotfixGoals>
-            <postHotfixGoals>clean verify deploy -Prelease</postHotfixGoals>
+            <preReleaseGoals>${release.verify.goals}</preReleaseGoals>
+            <postReleaseGoals>${release.perform.goals}</postReleaseGoals>
+            <preHotfixGoals>${hotfix.verify.goals}</preHotfixGoals>
+            <postHotfixGoals>${hotfix.perform.goals}</postHotfixGoals>
             <pushRemote>false</pushRemote>
           </configuration>
         </plugin>
@@ -170,11 +164,40 @@
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-site-plugin</artifactId>
           <version>${plugins.site.version}</version>
+          <dependencies>
+            <dependency>
+              <groupId>org.apache.maven.skins</groupId>
+              <artifactId>maven-fluido-skin</artifactId>
+              <version>${plugins.site.fluido.version}</version>
+            </dependency>
+          </dependencies>
+          <configuration>
+            <skipDeploy>true</skipDeploy>
+          </configuration>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-project-info-reports-plugin</artifactId>
           <version>${plugins.project-info-reports.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-scm-publish-plugin</artifactId>
+          <version>${plugins.scm.publish.version}</version>
+          <configuration>
+            <serverId>github</serverId>
+            <scmBranch>gh-pages</scmBranch>
+            <checkinComment>Project site version ${project.version}</checkinComment>
+            <tryUpdate>true</tryUpdate>
+          </configuration>
+        </plugin>
+        <plugin>
+          <groupId>org.sonarsource.scanner.maven</groupId>
+          <artifactId>sonar-maven-plugin</artifactId>
+          <version>${plugins.sonar.version}</version>
+          <configuration>
+            <goalPrefix>sonar</goalPrefix>
+          </configuration>
         </plugin>
       </plugins>
     </pluginManagement>
@@ -312,5 +335,30 @@
       </build>
     </profile>
   </profiles>
+
+  <scm>
+    <connection>scm:git:https://github.com/orne-dev/maven-root.git</connection>
+    <developerConnection>scm:git:ssh://github.com:orne-dev/maven-root.git</developerConnection>
+    <url>https://github.com/orne-dev/maven-root/</url>
+  </scm>
+  <issueManagement>
+    <system>GitHub Issues</system>
+    <url>http://github.com/orne-dev/maven-root/issues</url>
+  </issueManagement>
+  <distributionManagement>
+    <snapshotRepository>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+    </snapshotRepository>
+    <repository>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+    </repository>
+    <site>
+      <id>github</id>
+      <name>Github Project Pages</name>
+      <url>${project.scm.connection}</url>
+    </site>
+  </distributionManagement>
 
 </project>

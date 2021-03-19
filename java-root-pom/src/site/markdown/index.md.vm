@@ -1,0 +1,32 @@
+Basic configuration POM for Maven based Java projects of Orne.dev.
+
+## Usage
+
+```xml
+<project ...>
+...
+  <parent>
+    <groupId>${project.groupId}</groupId>
+    <artifactId>${project.artifactId}</artifactId>
+    <version>${project.version}</version>
+    <relativePath />
+  </parent>
+...
+</project>
+```
+
+## Features
+
+Provides the next features:
+
+- Version management
+- License management
+- Pre-release verifications on `pre-release` profile
+    - Dependency version upper bound verification
+    - Dependency release version verification
+- Release verifications and configurations on `release` profile
+    - Parent release version verification
+    - Dependency version upper bound verification
+    - Dependency release version verification
+    - GPG signing of released artifacts
+- Site generation configuration

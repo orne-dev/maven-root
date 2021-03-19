@@ -4,7 +4,7 @@
   <parent>
     <groupId>dev.orne</groupId>
     <artifactId>root-pom</artifactId>
-    <version>0.1.1</version>
+    <version>0.2.0</version>
   </parent>
 
   <artifactId>java-root-pom</artifactId>
@@ -12,6 +12,7 @@
 
   <name>Orne Java Root POM</name>
   <description>Orne Java Root POM</description>
+  <url>https://orne-dev.github.io/maven-root/java/</url>
 
   <properties>
     <java.version>1.8</java.version>
@@ -20,19 +21,22 @@
 
     <slf4j.version>1.7.30</slf4j.version>
     <logback.version>1.2.3</logback.version>
+    <apiguardian.version>1.1.1</apiguardian.version>
 
-    <junit.jupiter.version>5.6.2</junit.jupiter.version>
-    <mockito.version>3.3.3</mockito.version>
+    <junit.jupiter.version>5.7.1</junit.jupiter.version>
+    <junit.pioneer.version>1.3.0</junit.pioneer.version>
+    <mockito.version>3.7.7</mockito.version>
 
     <plugins.compiler.version>3.8.1</plugins.compiler.version>
-    <plugins.surefire.version>3.0.0-M4</plugins.surefire.version>
-    <plugins.failsafe.version>3.0.0-M4</plugins.failsafe.version>
-    <plugins.surefire-report.version>3.0.0-M4</plugins.surefire-report.version>
-    <plugins.jacoco.version>0.8.5</plugins.jacoco.version>
+    <plugins.surefire.version>3.0.0-M5</plugins.surefire.version>
+    <plugins.failsafe.version>3.0.0-M5</plugins.failsafe.version>
+    <plugins.surefire-report.version>3.0.0-M5</plugins.surefire-report.version>
+    <plugins.jacoco.version>0.8.6</plugins.jacoco.version>
     <plugins.jar.version>3.2.0</plugins.jar.version>
     <plugins.source.version>3.2.1</plugins.source.version>
     <plugins.javadoc.version>3.2.0</plugins.javadoc.version>
-    <plugins.clirr.version>2.8</plugins.clirr.version>
+    <plugins.revapi.version>0.13.2</plugins.revapi.version>
+    <plugins.revapi.java.version>0.23.2</plugins.revapi.java.version>
     <plugins.jxr.version>3.0.0</plugins.jxr.version>
 
     <ut.skip>false</ut.skip>
@@ -41,7 +45,16 @@
     <it.skip>false</it.skip>
     <it.reportDir>${project.build.directory}/it-reports</it.reportDir>
     <it.coverage.reportDir>${project.build.directory}/it-coverage-reports</it.coverage.reportDir>
-    <clirr.reportPath>${project.build.directory}/clirr-report.txt</clirr.reportPath>
+
+    <revapi.config.file>${project.basedir}/revapi.config.json</revapi.config.file>
+    <release.verify.goals>clean verify -Put,it,pre-release</release.verify.goals>
+    <release.perform.goals>clean verify deploy -Prelease</release.perform.goals>
+    <hotfix.verify.goals>clean verify -Put,it,pre-release</hotfix.verify.goals>
+    <hotfix.perform.goals>clean verify deploy -Prelease</hotfix.perform.goals>
+
+    <sonar.java.source>${java.version}</sonar.java.source>
+    <sonar.junit.reportPaths>${ut.reportDir},${it.reportDir}</sonar.junit.reportPaths>
+    <sonar.coverage.jacoco.xmlReportPaths>${ut.coverage.reportDir},${it.coverage.reportDir}</sonar.coverage.jacoco.xmlReportPaths>
   </properties>
 
   <dependencyManagement>
@@ -71,12 +84,29 @@
         <artifactId>logback-classic</artifactId>
         <version>${logback.version}</version>
       </dependency>
+      <dependency>
+        <groupId>org.apiguardian</groupId>
+        <artifactId>apiguardian-api</artifactId>
+        <version>${apiguardian.version}</version>
+      </dependency>
 
       <dependency>
         <groupId>org.junit.jupiter</groupId>
         <artifactId>junit-jupiter</artifactId>
         <version>${junit.jupiter.version}</version>
         <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.junit-pioneer</groupId>
+        <artifactId>junit-pioneer</artifactId>
+        <version>${junit.pioneer.version}</version>
+        <scope>test</scope>
+        <exclusions>
+          <exclusion>
+            <groupId>org.junit.platform</groupId>
+            <artifactId>junit-platform-commons</artifactId>
+          </exclusion>
+        </exclusions>
       </dependency>
       <dependency>
         <groupId>org.mockito</groupId>
@@ -93,6 +123,7 @@
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>license-maven-plugin</artifactId>
+          <version>${plugins.license.version}</version>
           <executions>
             <execution>
               <id>update-license-file</id>
@@ -205,19 +236,26 @@
           </configuration>
         </plugin>
         <plugin>
-          <groupId>org.codehaus.mojo</groupId>
-          <artifactId>clirr-maven-plugin</artifactId>
-          <version>${plugins.clirr.version}</version>
+          <groupId>org.revapi</groupId>
+          <artifactId>revapi-maven-plugin</artifactId>
+          <version>${plugins.revapi.version}</version>
+          <dependencies>
+            <dependency>
+              <groupId>org.revapi</groupId>
+              <artifactId>revapi-java</artifactId>
+              <version>${plugins.revapi.java.version}</version>
+            </dependency>
+          </dependencies>
           <configuration>
-            <textOutputFile>${clirr.reportPath}</textOutputFile>
-            <linkXRef>true</linkXRef>
-            <failOnError>false</failOnError>
+            <analysisConfigurationFiles>
+              <file>${revapi.config.file}</file>
+            </analysisConfigurationFiles>
           </configuration>
           <executions>
             <execution>
-              <id>check-api-compatibility</id>
+              <id>api-check</id>
               <goals>
-                <goal>check-no-fork</goal>
+                <goal>check</goal>
               </goals>
             </execution>
           </executions>
@@ -268,8 +306,8 @@
         <artifactId>jacoco-maven-plugin</artifactId>
       </plugin>
       <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>clirr-maven-plugin</artifactId>
+        <groupId>org.revapi</groupId>
+        <artifactId>revapi-maven-plugin</artifactId>
       </plugin>
     </plugins>
   </build>
@@ -285,8 +323,15 @@
         <artifactId>maven-jxr-plugin</artifactId>
       </plugin>
       <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>clirr-maven-plugin</artifactId>
+        <groupId>org.revapi</groupId>
+        <artifactId>revapi-maven-plugin</artifactId>
+        <reportSets>
+          <reportSet>
+            <reports>
+              <report>report</report>
+            </reports>
+          </reportSet>
+        </reportSets>
       </plugin>
     </plugins>
   </reporting>
@@ -476,54 +521,19 @@
         </plugins>
       </reporting>
     </profile>
-    <profile>
-      <id>pre-release</id>
-      <build>
-        <pluginManagement>
-          <plugins>
-            <plugin>
-              <groupId>org.codehaus.mojo</groupId>
-              <artifactId>clirr-maven-plugin</artifactId>
-              <configuration>
-                <failOnError>false</failOnError>
-              </configuration>
-            </plugin>
-          </plugins>
-        </pluginManagement>
-      </build>
-    </profile>
-    <profile>
-      <id>release</id>
-      <build>
-        <pluginManagement>
-          <plugins>
-            <plugin>
-              <groupId>org.codehaus.mojo</groupId>
-              <artifactId>clirr-maven-plugin</artifactId>
-              <configuration>
-                <failOnError>true</failOnError>
-              </configuration>
-            </plugin>
-          </plugins>
-        </pluginManagement>
-      </build>
-    </profile>
-    <profile>
-      <id>major-release</id>
-      <build>
-        <pluginManagement>
-          <plugins>
-            <plugin>
-              <groupId>org.codehaus.mojo</groupId>
-              <artifactId>clirr-maven-plugin</artifactId>
-              <configuration>
-                <failOnError>false</failOnError>
-              </configuration>
-            </plugin>
-          </plugins>
-        </pluginManagement>
-      </build>
-    </profile>
   </profiles>
+
+  <scm>
+    <connection>scm:git:https://github.com/orne-dev/maven-root.git</connection>
+    <developerConnection>scm:git:ssh://github.com:orne-dev/maven-root.git</developerConnection>
+    <url>https://github.com/orne-dev/maven-root/</url>
+  </scm>
+  <distributionManagement>
+    <site>
+      <id>github</id>
+      <name>Github Project Pages</name>
+      <url>${project.scm.connection}/java/</url>
+    </site>
+  </distributionManagement>
 
 </project>
