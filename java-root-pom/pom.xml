@@ -48,9 +48,13 @@
 
     <revapi.config.file>${project.basedir}/revapi.config.json</revapi.config.file>
     <release.verify.goals>clean verify -Put,it,pre-release</release.verify.goals>
-    <release.perform.goals>clean verify site site:stage scm-publish:publish-scm deploy -Put,it,release</release.perform.goals>
+    <release.perform.goals>clean verify deploy -Prelease</release.perform.goals>
     <hotfix.verify.goals>clean verify -Put,it,pre-release</hotfix.verify.goals>
-    <hotfix.perform.goals>clean verify deploy -Put,it,release</hotfix.perform.goals>
+    <hotfix.perform.goals>clean verify deploy -Prelease</hotfix.perform.goals>
+
+    <sonar.java.source>${java.version}</sonar.java.source>
+    <sonar.junit.reportPaths>${ut.reportDir},${it.reportDir}</sonar.junit.reportPaths>
+    <sonar.coverage.jacoco.xmlReportPaths>${ut.coverage.reportDir},${it.coverage.reportDir}</sonar.coverage.jacoco.xmlReportPaths>
   </properties>
 
   <dependencyManagement>
@@ -332,13 +336,6 @@
     </plugins>
   </reporting>
 
-  <distributionManagement>
-    <site>
-      <id>orne.projects</id>
-      <url>${project.url}</url>
-    </site>
-  </distributionManagement>
-
   <profiles>
     <profile>
       <id>ut</id>
@@ -525,5 +522,18 @@
       </reporting>
     </profile>
   </profiles>
+
+  <scm>
+    <connection>scm:git:https://github.com/orne-dev/maven-root.git</connection>
+    <developerConnection>scm:git:ssh://github.com:orne-dev/maven-root.git</developerConnection>
+    <url>https://github.com/orne-dev/maven-root/</url>
+  </scm>
+  <distributionManagement>
+    <site>
+      <id>github</id>
+      <name>Github Project Pages</name>
+      <url>${project.scm.connection}/java/</url>
+    </site>
+  </distributionManagement>
 
 </project>

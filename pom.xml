@@ -11,6 +11,10 @@
   <inceptionYear>2019</inceptionYear>
   <url>https://orne-dev.github.io/maven-root/</url>
 
+  <organization>
+    <name>Orne Developments</name>
+    <url>https://github.com/orne-dev</url>
+  </organization>
   <licenses>
     <license>
       <name>GNU General Public License (GPL) version 3.0</name>
@@ -18,10 +22,6 @@
       <distribution>repo</distribution>
     </license>
   </licenses>
-  <organization>
-    <name>Orne Developments</name>
-    <url>https://orne.dev</url>
-  </organization>
   <developers>
     <developer>
       <id>wamphiry</id>
@@ -29,13 +29,6 @@
       <url>https://github.com/ihernaez</url>
     </developer>
   </developers>
-
-  <scm>
-    <url>http://github.com/orne-dev/maven-root/</url>
-    <connection>scm:git:ssh://github.com/orne-dev/maven-root.git</connection>
-    <developerConnection>scm:git:ssh://github.com:orne-dev/maven-root.git</developerConnection>
-    <tag>HEAD</tag>
-  </scm>
 
   <modules>
     <module>java-root-pom</module>
@@ -68,7 +61,7 @@
     <license.licenseName>gpl_v3</license.licenseName>
     <gpg.keyname>releases@orne.dev</gpg.keyname>
     <release.verify.goals>clean verify -Ppre-release</release.verify.goals>
-    <release.perform.goals>clean verify site site:stage scm-publish:publish-scm deploy -Prelease</release.perform.goals>
+    <release.perform.goals>clean verify deploy -Prelease</release.perform.goals>
     <hotfix.verify.goals>clean verify -Ppre-release</hotfix.verify.goals>
     <hotfix.perform.goals>clean verify deploy -Prelease</hotfix.perform.goals>
 
@@ -192,7 +185,7 @@
           <artifactId>maven-scm-publish-plugin</artifactId>
           <version>${plugins.scm.publish.version}</version>
           <configuration>
-            <pubScmUrl>scm:git:file://localhost/${basedir}</pubScmUrl>
+            <serverId>github</serverId>
             <scmBranch>gh-pages</scmBranch>
             <checkinComment>Project site version ${project.version}</checkinComment>
             <tryUpdate>true</tryUpdate>
@@ -245,21 +238,6 @@
       </plugin>
     </plugins>
   </reporting>
-
-  <distributionManagement>
-    <snapshotRepository>
-      <id>ossrh</id>
-      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-    </snapshotRepository>
-    <repository>
-      <id>ossrh</id>
-      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-    </repository>
-    <site>
-      <id>orne.projects</id>
-      <url>${project.url}</url>
-    </site>
-  </distributionManagement>
 
   <profiles>
     <profile>
@@ -357,5 +335,30 @@
       </build>
     </profile>
   </profiles>
+
+  <scm>
+    <connection>scm:git:https://github.com/orne-dev/maven-root.git</connection>
+    <developerConnection>scm:git:ssh://github.com:orne-dev/maven-root.git</developerConnection>
+    <url>https://github.com/orne-dev/maven-root/</url>
+  </scm>
+  <issueManagement>
+    <system>GitHub Issues</system>
+    <url>http://github.com/orne-dev/maven-root/issues</url>
+  </issueManagement>
+  <distributionManagement>
+    <snapshotRepository>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+    </snapshotRepository>
+    <repository>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+    </repository>
+    <site>
+      <id>github</id>
+      <name>Github Project Pages</name>
+      <url>${project.scm.connection}</url>
+    </site>
+  </distributionManagement>
 
 </project>
