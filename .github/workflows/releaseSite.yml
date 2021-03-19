@@ -2,7 +2,7 @@ name: Release CI - Publish latest version site
 on:
   push:
     branches:
-      - $default-branch
+      - master
 jobs:
   build:
     runs-on: ubuntu-latest

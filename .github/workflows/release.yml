@@ -2,7 +2,7 @@ name: Release CI - Analisys
 on:
   push:
     branches:
-      - $default-branch
+      - master
       - 'support/*'
 jobs:
   build:
