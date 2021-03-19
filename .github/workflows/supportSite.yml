@@ -1,4 +1,4 @@
-name: Publish latest release site CI
+name: Release CI - Publish supports version site
 on:
   push:
     branches:

@@ -2,7 +2,7 @@ name: Release analysis CI
 on:
   push:
     branches:
-      - main
+      - $default-branch
       - 'support/*'
 jobs:
   build:

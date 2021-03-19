@@ -1,8 +1,8 @@
-name: Publish latest release site CI
+name: Release CI - Publish latest version site
 on:
   push:
     branches:
-      - main
+      - $default-branch
 jobs:
   build:
     runs-on: ubuntu-latest
