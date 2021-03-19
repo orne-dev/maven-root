@@ -1,4 +1,4 @@
-name: Pre-release analysis CI
+name: Pre-release CI - Analysis
 on:
   push:
     branches:

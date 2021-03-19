@@ -1,4 +1,4 @@
-name: Release analysis CI
+name: Release CI - Analisys
 on:
   push:
     branches:
