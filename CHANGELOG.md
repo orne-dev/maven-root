@@ -1,3 +1,9 @@
+# 0.3.0
+
+## :package: dev.orne:java-project-archetype
+
+01. :gift: Created module.
+
 # 0.2.0
 
 ## :package: dev.orne:root-pom
