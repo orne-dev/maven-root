@@ -15,6 +15,7 @@
   <url>https://orne-dev.github.io/maven-root/archetype/</url>
 
   <modules>
+    <module>pom-project</module>
     <module>java-project</module>
   </modules>
 

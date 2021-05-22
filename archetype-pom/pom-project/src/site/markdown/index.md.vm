@@ -1,0 +1,38 @@
+Archetype for POM projects and modules of Orne.dev.
+
+Used mainly for multi-module projects and nested POMs.
+
+# Usage
+
+```shell
+mvn archetype:generate                                  \
+      -DarchetypeGroupId=${project.groupId}             \
+      -DarchetypeArtifactId=${project.artifactId}       \
+      -DarchetypeVersion=${project.version}             \
+      -DgroupId=<my.groupid>                            \
+      -DartifactId=<my-artifactId>
+```
+
+## Features
+
+Generates a project/module with parent POM `dev.orne:root-pom.
+
+For full list of features see the [POM documentation][parent pom doc].
+
+### Notes on modules
+
+When used to generate modules the following files should be deleted, as their
+purpose is for usage from the root POM of a project:
+
+- .settings/<my-artifactId> - Finish Feature.launch
+- .settings/<my-artifactId> - Finish Hotfix.launch
+- .settings/<my-artifactId> - Finish Release.launch
+- .settings/<my-artifactId> - Start Feature.launch
+- .settings/<my-artifactId> - Start Hotfix.launch
+- .settings/<my-artifactId> - Start Release.launch
+- .settings/<my-artifactId> - Start Support.launch
+- .settings/<my-artifactId> - Update Version.launch
+- CHANGELOG.md
+- README.md
+
+[parent pom doc]: https://orne-dev.github.io/maven-root/

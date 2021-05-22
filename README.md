@@ -131,6 +131,40 @@ Provides the next features:
 - Maven archetypes packaging and testing
 - Automatic Maven site publishing in `gh-pages` branch
 
+## Archetype for POM projects and modules
+
+The `dev.orne:pom-project-archetype` artifact provides a basic archetype
+for generation of projects or modules base en POM `dev.orne:root-pom`.
+
+Usage:
+
+
+```shell
+mvn archetype:generate                              \
+      -DarchetypeGroupId=dev.orne                   \
+      -DarchetypeArtifactId=pom-project-archetype  \
+      -DarchetypeVersion=<archetype.version>        \
+      -DgroupId=<my.groupid>                        \
+      -DartifactId=<my-artifactId>
+```
+
+## Archetype for Java projects and modules
+
+The `dev.orne:java-project-archetype` artifact provides a basic archetype
+for generation of projects or modules base en POM `dev.orne:java-root-pom`.
+
+Usage:
+
+
+```shell
+mvn archetype:generate                              \
+      -DarchetypeGroupId=dev.orne                   \
+      -DarchetypeArtifactId=java-project-archetype  \
+      -DarchetypeVersion=<archetype.version>        \
+      -DgroupId=<my.groupid>                        \
+      -DartifactId=<my-artifactId>
+```
+
 [orne.dev]: https://orne.dev
 [project.license]: http://www.gnu.org/licenses/gpl-3.0.txt
 [project.license.badge]: https://img.shields.io/github/license/orne-dev/maven-root

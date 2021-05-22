@@ -1,0 +1,25 @@
+#set($dollarSign="$")
+#set($hashSign="#")
+${artifactId}
+
+${hashSign}${hashSign} Usage:
+
+```xml
+<project ...>
+...
+  <dependencies>
+    ...
+    <dependency>
+      <groupId>${dollarSign}{project.groupId}</groupId>
+      <artifactId>${dollarSign}{project.artifactId}</artifactId>
+      <version>${dollarSign}{project.version}</version>
+    </dependency>
+    ...
+  <dependencies>
+...
+</project>
+```
+
+${hashSign}${hashSign} Provides the next features:
+
+- [ ] Sample feature
