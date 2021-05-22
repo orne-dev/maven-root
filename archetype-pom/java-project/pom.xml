@@ -37,6 +37,7 @@
         <filtering>true</filtering>
         <includes>
           <include>projects/**/reference/pom.xml</include>
+          <include>projects/**/archetype.pom.properties</include>
         </includes>
       </testResource>
       <testResource>
@@ -44,6 +45,7 @@
         <filtering>false</filtering>
         <excludes>
           <exclude>projects/**/reference/pom.xml</exclude>
+          <exclude>projects/**/archetype.pom.properties</exclude>
         </excludes>
       </testResource>
     </testResources>
