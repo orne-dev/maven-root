@@ -32,15 +32,15 @@
 
 ## :package: dev.orne:java-root-pom
 
-01. :wrench: Updated `org.junit.jupiter:junit-jupiter` to version 5.7.1.
-01. :wrench: Updated `org.mockito:mockito-core` to version 3.7.7.
+01. :wrench: Updated `org.junit.jupiter:junit-jupiter` to version 5.8.0-M1.
+01. :wrench: Updated `org.mockito:mockito-core` to version 3.10.0.
 01. :wrench: Updated `org.apache.maven.plugins:maven-surefire-plugin` to version 3.0.0-M5.
 01. :wrench: Updated `org.apache.maven.plugins:maven-failsafe-plugin` to version 3.0.0-M5.
 01. :wrench: Updated `org.apache.maven.plugins:maven-surefire-report-plugin` to version 3.0.0-M5.
 01. :wrench: Updated `org.jacoco:jacoco-maven-plugin` to version 0.8.6.
-01. :gift: Added `org.junit-pioneer:junit-pioneer:1.3.0` dependency management.
-01. :gift: Added `org.revapi:revapi-maven-plugin:0.13.2` configuration.
-    01. Added `org.revapi:revapi-java:0.23.2` configuration.
+01. :gift: Added `org.junit-pioneer:junit-pioneer:1.4.2` dependency management.
+01. :gift: Added `org.revapi:revapi-maven-plugin:0.14.2` configuration.
+    01. Added `org.revapi:revapi-java:0.24.1` configuration.
     01. Publishes `revapi` report.
     01. :boom: Removed `org.codehaus.mojo:clirr-maven-plugin` configuration.
 
