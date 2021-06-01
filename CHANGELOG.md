@@ -1,3 +1,9 @@
+# 0.4.0
+
+## :package: dev.orne:java-project-archetype
+
+01. :gift: Added `logback-test.xml` to generated test resources.
+
 # 0.3.0
 
 ## :package: dev.orne:pom-project-archetype
