@@ -1,5 +1,9 @@
 # 0.4.0
 
+## :package: dev.orne:java-root-pom
+
+01. :gift: Added `org.apache.maven.plugins:>maven-toolchains-plugin:3.0.0` configuration.
+
 ## :package: dev.orne:java-module-root-pom
 
 01. :gift: Created module.
