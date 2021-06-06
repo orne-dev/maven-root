@@ -49,6 +49,7 @@
     <plugins.enforcer.version>3.0.0-M3</plugins.enforcer.version>
     <plugins.gpg.version>1.6</plugins.gpg.version>
     <plugins.assembly.version>3.3.0</plugins.assembly.version>
+    <plugins.invoker.version>3.2.2</plugins.invoker.version>
     <plugins.install.version>3.0.0-M1</plugins.install.version>
     <plugins.gitflow.version>1.15.1</plugins.gitflow.version>
     <plugins.deploy.version>3.0.0-M1</plugins.deploy.version>
@@ -132,6 +133,40 @@
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-assembly-plugin</artifactId>
           <version>${plugins.assembly.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-invoker-plugin</artifactId>
+          <version>${plugins.invoker.version}</version>
+          <configuration>
+            <cloneProjectsTo>${project.build.directory}/it</cloneProjectsTo>
+            <localRepositoryPath>${project.build.directory}/it-repo</localRepositoryPath>
+            <goals>verify</goals>
+            <streamLogsOnFailures>true</streamLogsOnFailures>
+          </configuration>
+          <executions>
+            <execution>
+              <id>install-integration-test-artifacts</id>
+              <phase>pre-integration-test</phase>
+              <goals>
+                <goal>install</goal>
+              </goals>
+            </execution>
+            <execution>
+              <id>invoke-integration-test</id>
+              <phase>integration-test</phase>
+              <goals>
+                <goal>integration-test</goal>
+              </goals>
+            </execution>
+            <execution>
+              <id>verify-integration-test</id>
+              <phase>verify</phase>
+              <goals>
+                <goal>verify</goal>
+              </goals>
+            </execution>
+          </executions>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>

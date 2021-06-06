@@ -1,8 +1,14 @@
 # 0.4.0
 
+## :package: dev.orne:root-pom
+
+01. :gift: Added `org.apache.maven.plugins:maven-invoker-plugin:3.2.2` managed configuration.
+
+    Requires per project plugin activation.
+
 ## :package: dev.orne:java-root-pom
 
-01. :gift: Added `org.apache.maven.plugins:>maven-toolchains-plugin:3.0.0` configuration.
+01. :gift: Added `org.apache.maven.plugins:maven-toolchains-plugin:3.0.0` configuration.
 
 ## :package: dev.orne:java-module-root-pom
 
