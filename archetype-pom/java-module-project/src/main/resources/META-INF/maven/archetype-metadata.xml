@@ -1,0 +1,63 @@
+<archetype-descriptor xmlns="https://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.1.0 http://maven.apache.org/xsd/archetype-descriptor-1.1.0.xsd"
+    name="orne-java-archetype">
+
+  <requiredProperties>
+    <requiredProperty key="gitignore">
+      <defaultValue>.gitignore</defaultValue>
+    </requiredProperty>
+  </requiredProperties>
+
+  <fileSets>
+    <fileSet filtered="true" packaged="false" encoding="UTF-8" >
+      <directory />
+      <includes>
+        <include>*</include>
+        <include>.settings/**</include>
+      </includes>
+      <excludes>
+        <exclude>pom.xml</exclude>
+      </excludes>
+    </fileSet>
+    <fileSet filtered="true" packaged="true" encoding="UTF-8" >
+      <directory>src/main/java</directory>
+      <includes>
+        <include>**/*</include>
+      </includes>
+      <excludes>
+        <exclude>module-info.java</exclude>
+      </excludes>
+    </fileSet>
+    <fileSet filtered="true" packaged="false" encoding="UTF-8" >
+      <directory>src/main/java</directory>
+      <includes>
+        <include>module-info.java</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true" packaged="false" encoding="UTF-8" >
+      <directory>src/main/resources</directory>
+      <includes>
+        <include>**/*</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true" packaged="false" encoding="UTF-8" >
+      <directory>src/site</directory>
+      <includes>
+        <include>**/*</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true" packaged="true" encoding="UTF-8" >
+      <directory>src/test/java</directory>
+      <includes>
+        <include>**/*</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true" packaged="false" encoding="UTF-8" >
+      <directory>src/test/resources</directory>
+      <includes>
+        <include>**/*</include>
+      </includes>
+    </fileSet>
+  </fileSets>
+
+</archetype-descriptor>

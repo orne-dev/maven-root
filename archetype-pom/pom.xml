@@ -17,6 +17,7 @@
   <modules>
     <module>pom-project</module>
     <module>java-project</module>
+    <module>java-module-project</module>
   </modules>
 
   <properties>

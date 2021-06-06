@@ -1,0 +1,36 @@
+Archetype for Java 9+ module projects and modules of Orne.dev.
+
+## Usage
+
+```shell
+mvn archetype:generate                                  \
+      -DarchetypeGroupId=${project.groupId}             \
+      -DarchetypeArtifactId=${project.artifactId}       \
+      -DarchetypeVersion=${project.version}             \
+      -DgroupId=<my.groupid>                            \
+      -DartifactId=<my-artifactId>
+```
+
+## Features
+
+Generates a project/module with parent POM `dev.orne:java-module-root-pom`.
+
+For full list of features see the [POM documentation][parent pom doc].
+
+### Notes on modules
+
+When used to generate submodules the following files should be deleted, as their
+purpose is for usage from the root POM of a project:
+
+- .settings/&lt;my-artifactId&gt; - Finish Feature.launch
+- .settings/&lt;my-artifactId&gt; - Finish Hotfix.launch
+- .settings/&lt;my-artifactId&gt; - Finish Release.launch
+- .settings/&lt;my-artifactId&gt; - Start Feature.launch
+- .settings/&lt;my-artifactId&gt; - Start Hotfix.launch
+- .settings/&lt;my-artifactId&gt; - Start Release.launch
+- .settings/&lt;my-artifactId&gt; - Start Support.launch
+- .settings/&lt;my-artifactId&gt; - Update Version.launch
+- CHANGELOG.md
+- README.md
+
+[parent pom doc]: https://orne-dev.github.io/maven-root/java/module/
