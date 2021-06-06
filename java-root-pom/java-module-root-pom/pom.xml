@@ -1,0 +1,72 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>dev.orne</groupId>
+    <artifactId>java-root-pom</artifactId>
+    <version>0.4.0-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>java-module-root-pom</artifactId>
+  <packaging>pom</packaging>
+
+  <name>Orne Java 9+ Module Root POM</name>
+  <description>Orne Java Root POM</description>
+  <url>https://orne-dev.github.io/maven-root/java/module/</url>
+
+  <properties>
+    <java.version>9</java.version>
+    <java.source.version>${java.version}</java.source.version>
+    <java.module.version>${java.version}</java.module.version>
+    <java.target.version>${java.version}</java.target.version>
+  </properties>
+
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>${plugins.compiler.version}</version>
+          <configuration>
+            <source>${java.source.version}</source>
+            <target>${java.source.version}</target>
+            <release>${java.module.version}</release>
+          </configuration>
+          <executions>
+            <execution>
+              <id>default-compile</id>
+            </execution>
+            <execution>
+              <id>base-compile</id>
+              <phase>compile</phase>
+              <goals>
+                <goal>compile</goal>
+              </goals>
+              <configuration>
+                <release>${java.target.version}</release>
+                <excludes>
+                  <exclude>module-info.java</exclude>
+                </excludes>
+              </configuration>
+            </execution>
+          </executions>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+
+  <scm>
+    <connection>scm:git:https://github.com/orne-dev/maven-root.git</connection>
+    <developerConnection>scm:git:ssh://github.com:orne-dev/maven-root.git</developerConnection>
+    <url>https://github.com/orne-dev/maven-root/</url>
+  </scm>
+  <distributionManagement>
+    <site>
+      <id>github</id>
+      <name>Github Project Pages</name>
+      <url>${project.scm.connection}/java/module/</url>
+    </site>
+  </distributionManagement>
+
+</project>

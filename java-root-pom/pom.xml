@@ -14,8 +14,12 @@
   <description>Orne Java Root POM</description>
   <url>https://orne-dev.github.io/maven-root/java/</url>
 
+  <modules>
+    <module>java-module-root-pom</module>
+  </modules>
+
   <properties>
-    <java.version>1.8</java.version>
+    <java.version>8</java.version>
     <java.source.version>${java.version}</java.source.version>
     <java.target.version>${java.version}</java.target.version>
 
