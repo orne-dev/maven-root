@@ -17,6 +17,7 @@
 ## :package: dev.orne:java-project-archetype
 
 01. :gift: Added `logback-test.xml` to generated test resources.
+01. :bug: Fixed Eclipse UT launcher configuration
 
 ## :package: dev.orne:java-module-project-archetype
 
