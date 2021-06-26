@@ -20,6 +20,7 @@
 
 01. :gift: Added `logback-test.xml` to generated test resources.
 01. :bug: Fixed Eclipse UT launcher configuration
+01. :gift: Updated `revapi` generated configuration.
 
 ## :package: dev.orne:java-module-project-archetype
 
