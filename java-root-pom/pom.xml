@@ -40,8 +40,8 @@
     <plugins.jar.version>3.2.0</plugins.jar.version>
     <plugins.source.version>3.2.1</plugins.source.version>
     <plugins.javadoc.version>3.2.0</plugins.javadoc.version>
-    <plugins.revapi.version>0.14.2</plugins.revapi.version>
-    <plugins.revapi.java.version>0.24.1</plugins.revapi.java.version>
+    <plugins.revapi.version>0.14.3</plugins.revapi.version>
+    <plugins.revapi.java.version>0.24.3</plugins.revapi.java.version>
     <plugins.jxr.version>3.0.0</plugins.jxr.version>
 
     <ut.skip>false</ut.skip>
