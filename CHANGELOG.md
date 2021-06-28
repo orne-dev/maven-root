@@ -9,8 +9,9 @@
 ## :package: dev.orne:java-root-pom
 
 01. :gift: Added `org.apache.maven.plugins:maven-toolchains-plugin:3.0.0` configuration.
+    01. Added `tools` profile to activate `maven-toolchains-plugin`
 01. :wrench: Updated `org.revapi:revapi-maven-plugin` to version 0.14.3.
-  01. :gift: Added `org.revapi:revapi-java` to version 0.24.3.
+    01. :gift: Added `org.revapi:revapi-java` to version 0.24.3.
 
 ## :package: dev.orne:java-module-root-pom
 
