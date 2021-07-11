@@ -141,8 +141,9 @@
           <configuration>
             <cloneProjectsTo>${project.build.directory}/it</cloneProjectsTo>
             <localRepositoryPath>${project.build.directory}/it-repo</localRepositoryPath>
-            <goals>verify</goals>
-            <streamLogsOnFailures>true</streamLogsOnFailures>
+            <goals>clean verify</goals>
+            <profiles>it</profiles>
+            <streamLogsOnFailures>false</streamLogsOnFailures>
           </configuration>
           <executions>
             <execution>
