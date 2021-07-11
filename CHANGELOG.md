@@ -23,6 +23,10 @@
 01. :bug: Fixed Eclipse UT launcher configuration
 01. :gift: Updated `revapi` generated configuration.
 
+## :package: dev.orne:java-project-archetype
+
+01. :bug: Fixed Eclipse classpath order.
+
 ## :package: dev.orne:java-module-project-archetype
 
 01. :gift: Created module.
