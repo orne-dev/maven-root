@@ -6,6 +6,8 @@
 
     Requires per project plugin activation.
 
+01. :gift: Added `clean verify` as default Maven goal.
+
 ## :package: dev.orne:java-root-pom
 
 01. :gift: Added `org.apache.maven.plugins:maven-toolchains-plugin:3.0.0` configuration.
