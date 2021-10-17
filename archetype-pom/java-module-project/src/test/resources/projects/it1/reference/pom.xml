@@ -40,6 +40,7 @@
   <properties>
     <java.version>11</java.version>
     <java.target.version>8</java.target.version>
+    <java.module.name>sample.group.simple-project</java.module.name>
     <license.licenseName>lgpl_v3</license.licenseName>
 
     <sonar.projectKey>simple-project</sonar.projectKey>
