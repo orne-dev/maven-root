@@ -173,6 +173,7 @@
           <configuration>
             <source>${java.source.version}</source>
             <target>${java.target.version}</target>
+            <release>${java.target.version}</release>
             <encoding>${project.build.sourceEncoding}</encoding>
           </configuration>
         </plugin>
