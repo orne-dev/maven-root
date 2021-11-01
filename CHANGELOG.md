@@ -10,8 +10,6 @@
 
 ## :package: dev.orne:java-root-pom
 
-01. :bug: Fixed `maven-compiler-plugin`
-    01. Configured `release` property with default value `${java.target.version}`
 01. :gift: Added `org.apache.maven.plugins:maven-toolchains-plugin:3.0.0` configuration.
     01. Added `tools` profile to activate `maven-toolchains-plugin`
 01. :wrench: Updated `org.revapi:revapi-maven-plugin` to version 0.14.3.
