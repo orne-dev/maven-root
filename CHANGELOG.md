@@ -14,6 +14,7 @@
     01. Added `tools` profile to activate `maven-toolchains-plugin`
 01. :wrench: Updated `org.revapi:revapi-maven-plugin` to version 0.14.3.
     01. :gift: Added `org.revapi:revapi-java` to version 0.24.3.
+01. :wrench: Updated `org.junit.jupiter:junit-jupiter` to version 5.8.1.
 
 ## :package: dev.orne:java-module-root-pom
 
