@@ -22,6 +22,7 @@
     <java.version>8</java.version>
     <java.source.version>${java.version}</java.source.version>
     <java.target.version>${java.version}</java.target.version>
+    <java.jdk.version>${java.version}</java.jdk.version>
 
     <slf4j.version>1.7.30</slf4j.version>
     <logback.version>1.2.3</logback.version>
@@ -161,7 +162,7 @@
           <configuration>
             <toolchains>
               <jdk>
-                <version>${java.version}</version>
+                <version>${java.jdk.version}</version>
               </jdk>
             </toolchains>
           </configuration>
@@ -354,6 +355,53 @@
   </reporting>
 
   <profiles>
+    <profile>
+      <id>jdk-release</id>
+      <activation>
+        <jdk>[9,)</jdk>
+      </activation>
+      <build>
+        <pluginManagement>
+          <plugins>
+            <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-compiler-plugin</artifactId>
+              <configuration>
+                <release>${java.target.version}</release>
+              </configuration>
+            </plugin>
+          </plugins>
+        </pluginManagement>
+      </build>
+    </profile>
+    <profile>
+      <id>jpms-auto-module</id>
+      <activation>
+        <file>
+          <missing>src/main/java/module-info.java</missing>
+        </file>
+      </activation>
+      <properties>
+        <java.module.name>${project.groupId}.${project.artifactId}</java.module.name>
+      </properties>
+      <build>
+        <pluginManagement>
+          <plugins>
+            <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-jar-plugin</artifactId>
+              <configuration>
+                <archive>
+                  <manifestEntries>
+                    <Automatic-Module-Name>${java.module.name}</Automatic-Module-Name>
+                  </manifestEntries>
+                </archive>
+              </configuration>
+            </plugin>
+          </plugins>
+        </pluginManagement>
+      </build>
+    </profile>
     <profile>
       <id>ut</id>
       <build>

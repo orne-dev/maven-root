@@ -19,23 +19,11 @@
     <java.source.version>${java.version}</java.source.version>
     <java.module.version>${java.version}</java.module.version>
     <java.target.version>${java.version}</java.target.version>
-    <java.module.name></java.module.name>
   </properties>
 
   <build>
     <pluginManagement>
       <plugins>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-jar-plugin</artifactId>
-          <configuration>
-            <archive>
-              <manifestEntries>
-                <Automatic-Module-Name>${java.module.name}</Automatic-Module-Name>
-              </manifestEntries>
-            </archive>
-          </configuration>
-        </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
