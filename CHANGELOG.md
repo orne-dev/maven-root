@@ -1,3 +1,48 @@
+# 0.4.0
+
+## :package: dev.orne:root-pom
+
+01. :gift: Added `org.apache.maven.plugins:maven-invoker-plugin:3.2.2` managed configuration.
+
+    Requires per project plugin activation.
+
+01. :gift: Added `clean verify` as default Maven goal.
+
+## :package: dev.orne:java-root-pom
+
+01. :gift: Added `org.apache.maven.plugins:maven-toolchains-plugin:3.0.0` configuration.
+    01. Added `java.jdk.version` property to specify JDK version. Defaults to `${java.version}`.
+    01. Added `tools` profile to activate `maven-toolchains-plugin`
+01. :gift: Added `jdk-release` profile.
+    01. Activated automatically on JDK 9 and above.
+    01. Configures `maven-compiler-plugin` plugin `release` option to `${java.target.version}`.
+01. :gift: Added `jpms-auto-module` profile.
+    01. Activated when file `src/main/java/module-info.java` is missing.
+    01. Added property `java.module.name`. Defaults to `${project.groupId}.${project.artifactId}`.
+    01. Adds entry `Automatic-Module-Name` with value `${java.module.name}` to manifest
+
+01. :wrench: Updated `org.revapi:revapi-maven-plugin` to version 0.14.3.
+    01. :gift: Added `org.revapi:revapi-java` to version 0.24.3.
+01. :wrench: Updated `org.junit.jupiter:junit-jupiter` to version 5.8.1.
+
+## :package: dev.orne:java-module-root-pom
+
+01. :gift: Created module.
+
+## :package: dev.orne:java-project-archetype
+
+01. :gift: Added `logback-test.xml` to generated test resources.
+01. :bug: Fixed Eclipse UT launcher configuration
+01. :gift: Updated `revapi` generated configuration.
+
+## :package: dev.orne:java-project-archetype
+
+01. :bug: Fixed Eclipse classpath order.
+
+## :package: dev.orne:java-module-project-archetype
+
+01. :gift: Created module.
+
 # 0.3.0
 
 ## :package: dev.orne:pom-project-archetype

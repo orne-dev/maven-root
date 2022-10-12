@@ -4,7 +4,7 @@
   <parent>
     <groupId>dev.orne</groupId>
     <artifactId>root-pom</artifactId>
-    <version>0.3.0</version>
+    <version>0.4.0</version>
   </parent>
 
   <artifactId>java-root-pom</artifactId>
@@ -14,19 +14,25 @@
   <description>Orne Java Root POM</description>
   <url>https://orne-dev.github.io/maven-root/java/</url>
 
+  <modules>
+    <module>java-module-root-pom</module>
+  </modules>
+
   <properties>
-    <java.version>1.8</java.version>
+    <java.version>8</java.version>
     <java.source.version>${java.version}</java.source.version>
     <java.target.version>${java.version}</java.target.version>
+    <java.jdk.version>${java.version}</java.jdk.version>
 
     <slf4j.version>1.7.30</slf4j.version>
     <logback.version>1.2.3</logback.version>
     <apiguardian.version>1.1.1</apiguardian.version>
 
-    <junit.jupiter.version>5.8.0-M1</junit.jupiter.version>
+    <junit.jupiter.version>5.8.1</junit.jupiter.version>
     <junit.pioneer.version>1.4.2</junit.pioneer.version>
     <mockito.version>3.10.0</mockito.version>
 
+    <plugins.toolchains.version>3.0.0</plugins.toolchains.version>
     <plugins.compiler.version>3.8.1</plugins.compiler.version>
     <plugins.surefire.version>3.0.0-M5</plugins.surefire.version>
     <plugins.failsafe.version>3.0.0-M5</plugins.failsafe.version>
@@ -35,8 +41,8 @@
     <plugins.jar.version>3.2.0</plugins.jar.version>
     <plugins.source.version>3.2.1</plugins.source.version>
     <plugins.javadoc.version>3.2.0</plugins.javadoc.version>
-    <plugins.revapi.version>0.14.2</plugins.revapi.version>
-    <plugins.revapi.java.version>0.24.1</plugins.revapi.java.version>
+    <plugins.revapi.version>0.14.3</plugins.revapi.version>
+    <plugins.revapi.java.version>0.24.3</plugins.revapi.java.version>
     <plugins.jxr.version>3.0.0</plugins.jxr.version>
 
     <ut.skip>false</ut.skip>
@@ -148,6 +154,18 @@
               </goals>
             </execution>
           </executions>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-toolchains-plugin</artifactId>
+          <version>${plugins.toolchains.version}</version>
+          <configuration>
+            <toolchains>
+              <jdk>
+                <version>${java.jdk.version}</version>
+              </jdk>
+            </toolchains>
+          </configuration>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -338,6 +356,53 @@
 
   <profiles>
     <profile>
+      <id>jdk-release</id>
+      <activation>
+        <jdk>[9,)</jdk>
+      </activation>
+      <build>
+        <pluginManagement>
+          <plugins>
+            <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-compiler-plugin</artifactId>
+              <configuration>
+                <release>${java.target.version}</release>
+              </configuration>
+            </plugin>
+          </plugins>
+        </pluginManagement>
+      </build>
+    </profile>
+    <profile>
+      <id>jpms-auto-module</id>
+      <activation>
+        <file>
+          <missing>src/main/java/module-info.java</missing>
+        </file>
+      </activation>
+      <properties>
+        <java.module.name>${project.groupId}.${project.artifactId}</java.module.name>
+      </properties>
+      <build>
+        <pluginManagement>
+          <plugins>
+            <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-jar-plugin</artifactId>
+              <configuration>
+                <archive>
+                  <manifestEntries>
+                    <Automatic-Module-Name>${java.module.name}</Automatic-Module-Name>
+                  </manifestEntries>
+                </archive>
+              </configuration>
+            </plugin>
+          </plugins>
+        </pluginManagement>
+      </build>
+    </profile>
+    <profile>
       <id>ut</id>
       <build>
         <pluginManagement>
@@ -520,6 +585,35 @@
           </plugin>
         </plugins>
       </reporting>
+    </profile>
+    <profile>
+      <id>tools</id>
+      <build>
+        <pluginManagement>
+          <plugins>
+            <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-invoker-plugin</artifactId>
+              <configuration>
+                <profiles>it,tools</profiles>
+              </configuration>
+            </plugin>
+          </plugins>
+        </pluginManagement>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-toolchains-plugin</artifactId>
+            <executions>
+              <execution>
+                <goals>
+                  <goal>toolchain</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
     </profile>
   </profiles>
 

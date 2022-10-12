@@ -22,14 +22,14 @@ For full list of features see the [POM documentation][parent pom doc].
 When used to generate modules the following files should be deleted, as their
 purpose is for usage from the root POM of a project:
 
-- .settings/<my-artifactId> - Finish Feature.launch
-- .settings/<my-artifactId> - Finish Hotfix.launch
-- .settings/<my-artifactId> - Finish Release.launch
-- .settings/<my-artifactId> - Start Feature.launch
-- .settings/<my-artifactId> - Start Hotfix.launch
-- .settings/<my-artifactId> - Start Release.launch
-- .settings/<my-artifactId> - Start Support.launch
-- .settings/<my-artifactId> - Update Version.launch
+- .settings/&lt;my-artifactId&gt; - Finish Feature.launch
+- .settings/&lt;my-artifactId&gt; - Finish Hotfix.launch
+- .settings/&lt;my-artifactId&gt; - Finish Release.launch
+- .settings/&lt;my-artifactId&gt; - Start Feature.launch
+- .settings/&lt;my-artifactId&gt; - Start Hotfix.launch
+- .settings/&lt;my-artifactId&gt; - Start Release.launch
+- .settings/&lt;my-artifactId&gt; - Start Support.launch
+- .settings/&lt;my-artifactId&gt; - Update Version.launch
 - CHANGELOG.md
 - README.md
 
