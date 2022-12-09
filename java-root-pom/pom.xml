@@ -48,9 +48,11 @@
     <ut.skip>false</ut.skip>
     <ut.reportDir>${project.build.directory}/ut-reports</ut.reportDir>
     <ut.coverage.reportDir>${project.build.directory}/ut-coverage-reports</ut.coverage.reportDir>
+    <ut.coverage.xmlReport>${ut.coverage.reportDir}/jacoco.xml</ut.coverage.xmlReport>
     <it.skip>false</it.skip>
     <it.reportDir>${project.build.directory}/it-reports</it.reportDir>
     <it.coverage.reportDir>${project.build.directory}/it-coverage-reports</it.coverage.reportDir>
+    <it.coverage.xmlReport>${it.coverage.reportDir}/jacoco.xml</it.coverage.xmlReport>
 
     <revapi.config.file>${project.basedir}/revapi.config.json</revapi.config.file>
     <release.verify.goals>clean verify -Put,it,pre-release</release.verify.goals>
@@ -60,7 +62,7 @@
 
     <sonar.java.source>${java.version}</sonar.java.source>
     <sonar.junit.reportPaths>${ut.reportDir},${it.reportDir}</sonar.junit.reportPaths>
-    <sonar.coverage.jacoco.xmlReportPaths>${ut.coverage.reportDir},${it.coverage.reportDir}</sonar.coverage.jacoco.xmlReportPaths>
+    <sonar.coverage.jacoco.xmlReportPaths>${ut.coverage.xmlReport},${it.coverage.xmlReport}</sonar.coverage.jacoco.xmlReportPaths>
   </properties>
 
   <dependencyManagement>

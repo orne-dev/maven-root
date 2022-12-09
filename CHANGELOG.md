@@ -1,3 +1,9 @@
+# 0.5.0
+
+## :package: dev.orne:java-root-pom
+
+01. :bug: Fixed Sonar Jacoco configuration.
+
 # 0.4.0
 
 ## :package: dev.orne:root-pom
