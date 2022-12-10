@@ -3,10 +3,10 @@
 [![Latest version](https://img.shields.io/maven-central/v/dev.orne/root-pom.svg?label=Maven%20Central)](https://search.maven.org/artifact/dev.orne/root-pom)
 [![License](https://img.shields.io/github/license/orne-dev/maven-root)](http://www.gnu.org/licenses/gpl-3.0.txt)
 [![Maven site](https://img.shields.io/website?url=https%3A%2F%2Forne-dev.github.io%2Fmaven-root%2F)](https://orne-dev.github.io/maven-root/)
-[![Latest version Sonar status](https://sonarcloud.io/api/project_badges/measure?organization=orne-dev&project=dev.orne:root-pom&metric=alert_status&branch=master)](https://sonarcloud.io/dashboard?id=dev.orne:root-pom&branch=master)
+[![Latest version Sonar status](https://sonarcloud.io/api/project_badges/measure?organization=orne-dev&project=orne-dev_maven-root&metric=alert_status&branch=master)](https://sonarcloud.io/dashboard?id=orne-dev_maven-root&branch=master)
 
 [![Development CI status](https://github.com/orne-dev/maven-root/actions/workflows/build.yml/badge.svg?branch=develop)](https://github.com/orne-dev/maven-root/actions/workflows/build.yml)
-[![Development Sonar status](https://sonarcloud.io/api/project_badges/measure?organization=orne-dev&project=dev.orne:root-pom&metric=alert_status&branch=develop)](https://sonarcloud.io/dashboard?id=dev.orne:root-pom&branch=develop)
+[![Development Sonar status](https://sonarcloud.io/api/project_badges/measure?organization=orne-dev&project=orne-dev_maven-root&metric=alert_status&branch=develop)](https://sonarcloud.io/dashboard?id=orne-dev_maven-root&branch=develop)
 
 This projects provides root POM artifacts to be used as parents by projects
 developed by [orne.dev][orne.dev].
