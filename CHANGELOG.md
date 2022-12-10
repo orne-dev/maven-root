@@ -1,3 +1,54 @@
+# 0.5.0
+
+## :package: dev.orne:root-pom
+
+01. :wrench: Updated Maven plugins to latests versions
+    01. Updated `maven-clean-plugin` to version 3.2.0.
+    01. Updated `maven-help-plugin` to version 3.3.0.
+    01. Updated `maven-antrun-plugin` to version 3.1.0.
+    01. Updated `maven-resources-plugin` to version 3.3.0.
+    01. Updated `org.codehaus.mojo:versions-maven-plugin` to version 2.13.0.
+    01. Updated `maven-dependency-plugin` to version 3.4.0.
+    01. Updated `maven-enforcer-plugin` to version 3.1.0.
+    01. Updated `maven-gpg-plugin` to version 3.0.1.
+    01. Updated `maven-assembly-plugin` to version 3.4.2.
+    01. Updated `maven-invoker-plugin` to version 3.3.0.
+    01. Updated `maven-install-plugin` to version 3.1.0.
+    01. Updated `com.amashchenko.maven.plugin:gitflow-maven-plugin` to version 1.19.0.
+    01. Updated `maven-deploy-plugin` to version 3.0.0.
+    01. Updated `maven-site-plugin` to version 3.12.1.
+        01. Updated `org.apache.maven.skins:maven-fluido-skin` to version 1.11.1.
+    01. Updated `maven-project-info-reports-plugin` to version 3.4.1.
+    01. Updated `org.sonarsource.scanner.maven:sonar-maven-plugin` to version 3.9.1.2184.
+
+## :package: dev.orne:java-root-pom
+
+01. :wrench: Updated Maven plugins to latests versions
+    01. Updated `maven-toolchains-plugin` to version 3.1.0.
+    01. Updated `maven-compiler-plugin` to version 3.10.1.
+    01. Updated `maven-surefire-plugin` to version 3.0.0-M7.
+    01. Updated `maven-failsafe-plugin` to version 3.0.0-M7.
+    01. Updated `jacoco-maven-plugin` to version 0.8.8.
+    01. Updated `maven-jar-plugin` to version 3.3.0.
+    01. Updated `maven-javadoc-plugin` to version 3.4.1.
+    01. Updated `revapi-maven-plugin` to version 0.15.0.
+        01. Updated `org.revapi:revapi-java` to version 0.28.0.
+    01. Updated `maven-jxr-plugin` to version 3.3.0.
+    01. Updated `maven-surefire-report-plugin` to version 3.0.0-M7.
+01. :wrench: Updated default dependencies versions
+    01. Updated `org.slf4j:slf4j-api` to version 2.0.5.
+    01. Updated `ch.qos.logback:logback-classic` to version 1.4.5.
+    01. Updated `org.apiguardian_apiguardian-api` to version 1.1.2.
+    01. Updated `org.junit.jupiter:junit-jupiter` to version 5.9.1.
+    01. Updated `org.junit-pioneer:junit-pioneer` to version 1.9.1.
+    01. Updated `org.mockito:mockito-core` to version 4.9.0.
+01. :bug: Fixed Sonar Jacoco configuration.
+
+## :package: dev.orne:archetype-root-pom
+
+01. :wrench: Updated Maven plugins to latests versions
+    01. Updated `maven-archetype-plugin` to version 3.2.1.
+
 # 0.4.0
 
 ## :package: dev.orne:root-pom
@@ -22,7 +73,7 @@
     01. Adds entry `Automatic-Module-Name` with value `${java.module.name}` to manifest
 
 01. :wrench: Updated `org.revapi:revapi-maven-plugin` to version 0.14.3.
-    01. :gift: Added `org.revapi:revapi-java` to version 0.24.3.
+    01. Updated `org.revapi:revapi-java` to version 0.24.3.
 01. :wrench: Updated `org.junit.jupiter:junit-jupiter` to version 5.8.1.
 
 ## :package: dev.orne:java-module-root-pom
