@@ -21,7 +21,7 @@
   </modules>
 
   <properties>
-    <plugin.maven-archetype-plugin.version>3.2.0</plugin.maven-archetype-plugin.version>
+    <plugin.maven-archetype-plugin.version>3.2.1</plugin.maven-archetype-plugin.version>
   </properties>
 
   <build>
