@@ -1,3 +1,10 @@
+# 0.5.1
+
+## :package: dev.orne:java-root-pom
+
+01. :bug: Reverted default dependencies to latest with Java 8 support
+    01. Updated `ch.qos.logback:logback-classic` to version 1.3.5.
+
 # 0.5.0
 
 ## :package: dev.orne:root-pom
