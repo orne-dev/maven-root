@@ -1,5 +1,9 @@
 # 0.5.2
 
+## :package: dev.orne:java-root-pom
+
+01. :bug: Added `source` configuration option to `javadoc` plugin.
+
 ## :package: dev.orne:pom-project-archetype
 
 01. :bug: Fixed Maven site distribution management.
