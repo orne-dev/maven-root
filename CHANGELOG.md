@@ -7,6 +7,7 @@
 ## :package: dev.orne:pom-project-archetype
 
 01. :bug: Fixed Maven site distribution management.
+01. :gift: Added predefined `install.skip` and `deploy.skip` properties.
 
 ## :package: dev.orne:java-project-archetype
 

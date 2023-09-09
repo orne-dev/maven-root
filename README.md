@@ -165,5 +165,42 @@ mvn archetype:generate                              \
       -DartifactId=<my-artifactId>
 ```
 
+## Example
+
+Create a new Git repository with a private, unpublished, root POM project,
+and a public JAR module and a GitHub pages orphan branch:
+
+```shell
+mvn archetype:generate                              \
+      -DarchetypeGroupId=dev.orne                   \
+      -DarchetypeArtifactId=pom-project-archetype   \
+      -DarchetypeVersion=RELEASE                    \
+      -DgroupId=my.groupid                          \
+      -DartifactId=my-root                          \
+      -Dversion=0.1.0-SNAPSHOT
+cd my-parent
+mvn versions:set-property -Dproperty=install.skip -DnewVersion=true
+mvn versions:set-property -Dproperty=deploy.skip -DnewVersion=true
+git init .
+git flow init -d
+git add .
+git commit -a -m "Created root POM"
+mvn archetype:generate                              \
+      -DarchetypeGroupId=dev.orne                   \
+      -DarchetypeArtifactId=java-project-archetype  \
+      -DarchetypeVersion=RELEASE                    \
+      -DgroupId=my.groupid                          \
+      -DartifactId=my-artifact                      \
+      -Dversion=0.1.0-SNAPSHOT
+git add .
+git commit -a -m "Created my-artifact module"
+git checkout --orphan gh-pages
+git rm -rf .
+echo "" > .gitignore
+git add .
+git commit -a -m "Created GitHub site branch"
+git checkout develop
+```
+
 [orne.dev]: https://orne.dev
 [project.maven.site]: https://orne-dev.github.io/maven-root/

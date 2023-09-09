@@ -41,6 +41,9 @@
     <license.licenseName>lgpl_v3</license.licenseName>
 
     <sonar.projectKey>simple-module</sonar.projectKey>
+
+    <install.skip>false</install.skip>
+    <deploy.skip>false</deploy.skip>
   </properties>
 
   <distributionManagement>
