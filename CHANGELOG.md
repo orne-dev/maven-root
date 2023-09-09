@@ -1,11 +1,30 @@
-# 0.5.1
+# 0.5.2
+
+## :package: dev.orne:java-root-pom
+
+01. :bug: Added `source` configuration option to `javadoc` plugin.
+
+## :package: dev.orne:pom-project-archetype
+
+01. :bug: Fixed Maven site distribution management.
+01. :gift: Added predefined `install.skip` and `deploy.skip` properties.
+
+## :package: dev.orne:java-project-archetype
+
+01. :bug: Fixed Maven site distribution management.
+
+## :package: dev.orne:java-module-project-archetype
+
+01. :bug: Fixed Maven site distribution management.
+
+# 0.5.1 (2022-12-11)
 
 ## :package: dev.orne:java-root-pom
 
 01. :bug: Reverted default dependencies to latest with Java 8 support
     01. Updated `ch.qos.logback:logback-classic` to version 1.3.5.
 
-# 0.5.0
+# 0.5.0 (2022-12-10)
 
 ## :package: dev.orne:root-pom
 
@@ -56,7 +75,7 @@
 01. :wrench: Updated Maven plugins to latests versions
     01. Updated `maven-archetype-plugin` to version 3.2.1.
 
-# 0.4.0
+# 0.4.0 (2022-10-12)
 
 ## :package: dev.orne:root-pom
 
@@ -92,16 +111,13 @@
 01. :gift: Added `logback-test.xml` to generated test resources.
 01. :bug: Fixed Eclipse UT launcher configuration
 01. :gift: Updated `revapi` generated configuration.
-
-## :package: dev.orne:java-project-archetype
-
 01. :bug: Fixed Eclipse classpath order.
 
 ## :package: dev.orne:java-module-project-archetype
 
 01. :gift: Created module.
 
-# 0.3.0
+# 0.3.0 (2021-05-30)
 
 ## :package: dev.orne:pom-project-archetype
 
@@ -111,7 +127,7 @@
 
 01. :gift: Created module.
 
-# 0.2.0
+# 0.2.0 (2021-03-19)
 
 ## :package: dev.orne:root-pom
 
