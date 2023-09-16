@@ -1,3 +1,17 @@
+# 0.6.0
+
+## :package: dev.orne:pom-project-archetype
+
+01. :beetle: Fixed generated SCM configuration.
+
+## :package: dev.orne:pom-project-archetype
+
+01. :beetle: Fixed generated SCM configuration.
+
+## :package: dev.orne:pom-project-archetype
+
+01. :beetle: Fixed generated SCM configuration.
+
 # 0.5.3
 
 ## :package: dev.orne:root-pom

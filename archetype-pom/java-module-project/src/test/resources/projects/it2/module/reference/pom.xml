@@ -31,13 +31,6 @@
   <developers>
   </developers>
 
-  <scm>
-    <url>https://github.com/orne-dev/simple-module/tree/master</url>
-    <connection>scm:git:git://github.com/orne-dev/simple-module.git</connection>
-    <developerConnection>scm:git:ssh://github.com:orne-dev/simple-module.git</developerConnection>
-    <tag>HEAD</tag>
-  </scm>
-
   <properties>
     <java.version>9</java.version>
     <java.target.version>8</java.target.version>
@@ -88,6 +81,11 @@
     </pluginManagement>
   </build>
 
+  <scm>
+    <connection>scm:git:https://github.com/orne-dev/simple-module.git</connection>
+    <developerConnection>scm:git:ssh://github.com:orne-dev/simple-module.git</developerConnection>
+    <url>https://github.com/orne-dev/simple-module/</url>
+  </scm>
   <distributionManagement>
     <site>
       <id>github</id>
