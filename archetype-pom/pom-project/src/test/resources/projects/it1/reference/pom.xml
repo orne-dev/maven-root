@@ -31,13 +31,6 @@
   <developers>
   </developers>
 
-  <scm>
-    <url>https://github.com/orne-dev/simple-project/tree/master</url>
-    <connection>scm:git:git://github.com/orne-dev/simple-project.git</connection>
-    <developerConnection>scm:git:ssh://github.com:orne-dev/simple-project.git</developerConnection>
-    <tag>HEAD</tag>
-  </scm>
-
   <properties>
     <license.licenseName>lgpl_v3</license.licenseName>
 
@@ -61,6 +54,11 @@
     </pluginManagement>
   </build>
 
+  <scm>
+    <connection>scm:git:https://github.com/orne-dev/simple-project.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com:orne-dev/simple-project.git</developerConnection>
+    <url>https://github.com/orne-dev/simple-project/</url>
+  </scm>
   <distributionManagement>
     <site>
       <id>github</id>

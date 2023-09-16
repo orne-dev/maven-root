@@ -4,7 +4,7 @@
   <parent>
     <groupId>dev.orne</groupId>
     <artifactId>java-root-pom</artifactId>
-    <version>0.5.3</version>
+    <version>0.5.4</version>
   </parent>
 
   <artifactId>java-module-root-pom</artifactId>
@@ -71,11 +71,6 @@
     </pluginManagement>
   </build>
 
-  <scm>
-    <connection>scm:git:https://github.com/orne-dev/maven-root.git</connection>
-    <developerConnection>scm:git:ssh://github.com:orne-dev/maven-root.git</developerConnection>
-    <url>https://github.com/orne-dev/maven-root/</url>
-  </scm>
   <distributionManagement>
     <site>
       <id>github</id>

@@ -3,7 +3,7 @@
 
   <groupId>dev.orne</groupId>
   <artifactId>root-pom</artifactId>
-  <version>0.5.3</version>
+  <version>0.5.4</version>
   <packaging>pom</packaging>
 
   <name>Orne Root POM</name>
@@ -377,7 +377,7 @@
 
   <scm>
     <connection>scm:git:https://github.com/orne-dev/maven-root.git</connection>
-    <developerConnection>scm:git:ssh://github.com:orne-dev/maven-root.git</developerConnection>
+    <developerConnection>scm:git:ssh://git@github.com:orne-dev/maven-root.git</developerConnection>
     <url>https://github.com/orne-dev/maven-root/</url>
   </scm>
   <issueManagement>
