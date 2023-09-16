@@ -1,8 +1,16 @@
 # 0.5.3
 
-## :package: dev.orne:java-root-pom
+## :package: dev.orne:root-pom
 
 01. :beetle: Fixed Maven site distribution management.
+
+## :package: dev.orne:java-root-pom
+
+01. :wrench: Updated default dependencies.
+    01. Updated `ch.qos.logbacklogback-classic` to 1.4.11.
+    01. Updated `org.junit.jupiter:junit-jupiter` to 5.10.0.
+    01. Updated `org.junit-pioneer:junit-pioneer` to 2.1.0.
+    01. Updated `org.mockito:mockito-core` to 5.5.0.
 
 ## :package: dev.orne:pom-project-archetype
 
