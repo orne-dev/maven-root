@@ -41,25 +41,9 @@
   <properties>
     <license.licenseName>lgpl_v3</license.licenseName>
 
-    <sonar.projectKey>orne-dev_simple-module</sonar.projectKey>
-
     <install.skip>false</install.skip>
     <deploy.skip>false</deploy.skip>
   </properties>
-
-  <build>
-    <pluginManagement>
-      <plugins>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-site-plugin</artifactId>
-          <configuration>
-            <topSiteURL>https://orne-dev.github.io/simple-module/</topSiteURL>
-          </configuration>
-        </plugin>
-      </plugins>
-    </pluginManagement>
-  </build>
 
   <distributionManagement>
     <site>
