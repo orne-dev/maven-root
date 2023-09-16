@@ -8,16 +8,19 @@
 
 01. :beetle: Fixed Maven site distribution management.
 01. :beetle: Fixed Sonar project key.
+01. :gift: Added GitHub workflows.
 
 ## :package: dev.orne:java-project-archetype
 
 01. :beetle: Fixed Maven site distribution management.
 01. :beetle: Fixed Sonar project key.
+01. :gift: Added GitHub workflows.
 
 ## :package: dev.orne:java-module-project-archetype
 
 01. :beetle: Fixed Maven site distribution management.
 01. :beetle: Fixed Sonar project key.
+01. :gift: Added GitHub workflows.
 
 # 0.5.2
 
