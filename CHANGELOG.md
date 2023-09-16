@@ -1,4 +1,4 @@
-# 0.6.0
+# 0.5.4
 
 ## :package: dev.orne:pom-project-archetype
 
