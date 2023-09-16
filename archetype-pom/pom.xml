@@ -4,7 +4,7 @@
   <parent>
     <groupId>dev.orne</groupId>
     <artifactId>root-pom</artifactId>
-    <version>0.5.2</version>
+    <version>0.5.3</version>
   </parent>
 
   <artifactId>archetype-root-pom</artifactId>
@@ -64,7 +64,7 @@
     <site>
       <id>github</id>
       <name>Github Project Pages</name>
-      <url>${project.scm.connection}/archetype/</url>
+      <url>${project.url}</url>
     </site>
   </distributionManagement>
 

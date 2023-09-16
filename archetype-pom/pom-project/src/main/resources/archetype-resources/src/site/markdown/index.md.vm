@@ -2,7 +2,7 @@
 #set($hashSign="#")
 ${artifactId}
 
-${hashSign}${hashSign} Usage:
+${hashSign}${hashSign} Usage
 
 ```xml
 <project ...>
@@ -20,6 +20,6 @@ ${hashSign}${hashSign} Usage:
 </project>
 ```
 
-${hashSign}${hashSign} Provides the next features:
+${hashSign}${hashSign} Features
 
-- [ ] Sample feature
+- TODO

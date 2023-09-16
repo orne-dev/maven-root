@@ -1,6 +1,6 @@
 simple-project
 
-## Usage:
+## Usage
 
 ```xml
 <project ...>
@@ -18,6 +18,6 @@ simple-project
 </project>
 ```
 
-## Provides the next features:
+## Features
 
-- [ ] Sample feature
+- TODO
