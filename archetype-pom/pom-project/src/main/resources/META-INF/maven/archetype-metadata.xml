@@ -6,6 +6,9 @@
     <requiredProperty key="gitignore">
       <defaultValue>.gitignore</defaultValue>
     </requiredProperty>
+    <requiredProperty key="gitattributes">
+      <defaultValue>.gitattributes</defaultValue>
+    </requiredProperty>
   </requiredProperties>
 
   <fileSets>

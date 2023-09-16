@@ -8,6 +8,7 @@
 
 01. :beetle: Fixed Maven site distribution management.
 01. :beetle: Fixed Sonar project key.
+01. :beetle: Fixed `.gitignore` and `.gitattributes` generation.
 01. :gift: Added GitHub workflows.
 01. :gift: Added automatic nested module clean up post-script.
 
@@ -15,6 +16,7 @@
 
 01. :beetle: Fixed Maven site distribution management.
 01. :beetle: Fixed Sonar project key.
+01. :beetle: Fixed `.gitignore` and `.gitattributes` generation.
 01. :gift: Added GitHub workflows.
 01. :gift: Added Eclipse Java 17 tests launchers.
 01. :gift: Added automatic nested module clean up post-script.
@@ -23,6 +25,7 @@
 
 01. :beetle: Fixed Maven site distribution management.
 01. :beetle: Fixed Sonar project key.
+01. :beetle: Fixed `.gitignore` and `.gitattributes` generation.
 01. :gift: Added GitHub workflows.
 01. :gift: Added Eclipse Java 17 tests launchers.
 01. :gift: Added automatic nested module clean up post-script.
