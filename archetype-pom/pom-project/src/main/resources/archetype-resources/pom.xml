@@ -18,20 +18,21 @@
   <name>\${artifactId}</name>
   <description>\${artifactId}</description>
   <inceptionYear>2021</inceptionYear>
-  <url>http://orne-dev.github.io/\${artifactId}/</url>
+  <url>https://orne-dev.github.io/\${artifactId}/</url>
 
   <licenses>
     <license>
       <name>GNU Lesser General Public License (LGPL) version 3.0</name>
-      <url>http://www.gnu.org/licenses/lgpl-3.0.txt</url>
+      <url>https://www.gnu.org/licenses/lgpl-3.0.txt</url>
       <distribution>repo</distribution>
     </license>
   </licenses>
+
   <developers>
   </developers>
 
   <scm>
-    <url>http://github.com/orne-dev/\${artifactId}/tree/master</url>
+    <url>https://github.com/orne-dev/\${artifactId}/tree/master</url>
     <connection>scm:git:git://github.com/orne-dev/\${artifactId}.git</connection>
     <developerConnection>scm:git:ssh://github.com:orne-dev/\${artifactId}.git</developerConnection>
     <tag>HEAD</tag>
@@ -40,17 +41,31 @@
   <properties>
     <license.licenseName>lgpl_v3</license.licenseName>
 
-    <sonar.projectKey>\${artifactId}</sonar.projectKey>
+    <sonar.projectKey>orne-dev_\${artifactId}</sonar.projectKey>
 
     <install.skip>false</install.skip>
     <deploy.skip>false</deploy.skip>
   </properties>
 
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-site-plugin</artifactId>
+          <configuration>
+            <topSiteURL>https://orne-dev.github.io/\${artifactId}/</topSiteURL>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+
   <distributionManagement>
     <site>
       <id>github</id>
       <name>Github Project Pages</name>
-      <url>${project.scm.connection}</url>
+      <url>${project.url}</url>
     </site>
   </distributionManagement>
 

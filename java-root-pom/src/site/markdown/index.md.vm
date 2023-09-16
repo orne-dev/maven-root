@@ -17,16 +17,23 @@ Basic configuration POM for Maven based Java projects of Orne.dev.
 
 ## Features
 
-Provides the next features:
-
 - Version management
 - License management
+    - Automatic update of source files headers
+- Java 9 automatic module name management
+- Unit tests execution configuration on `ut` profile
+    - Automatic unit test execution
+    - Automatic unit test coverage reports
+- Integration tests execution configuration on `it` profile
+    - Automatic integration test execution
+    - Automatic integration test coverage reports
+- API compatibility automatic checks based on `revapi` and `apiguardian`
 - Pre-release verifications on `pre-release` profile
-    - Dependency version upper bound verification
-    - Dependency release version verification
+    - Dependency version upper bound verifications
+    - External dependency release version verification
 - Release verifications and configurations on `release` profile
     - Parent release version verification
     - Dependency version upper bound verification
     - Dependency release version verification
     - GPG signing of released artifacts
-- Site generation configuration
+- Automatic Maven site publishing in `gh-pages` branch

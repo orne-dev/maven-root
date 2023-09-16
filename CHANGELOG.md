@@ -1,27 +1,68 @@
-# 0.5.2
+# 0.5.3
+
+## :package: dev.orne:root-pom
+
+01. :beetle: Fixed Maven site distribution management.
 
 ## :package: dev.orne:java-root-pom
 
-01. :bug: Added `source` configuration option to `javadoc` plugin.
+01. :wrench: Updated default dependencies.
+    01. Updated `org.slf4j:slf4j-api` to 2.0.9.
+    01. Updated `ch.qos.logbacklogback-classic` to 1.4.11.
+    01. Updated `org.junit.jupiter:junit-jupiter` to 5.10.0.
+    01. Updated `org.junit-pioneer:junit-pioneer` to 2.1.0.
+    01. Updated `org.mockito:mockito-core` to 4.11.0.
 
 ## :package: dev.orne:pom-project-archetype
 
-01. :bug: Fixed Maven site distribution management.
+01. :beetle: Fixed Maven site distribution management.
+01. :beetle: Fixed Sonar project key.
+01. :beetle: Fixed `.gitignore` and `.gitattributes` generation.
+01. :gift: Added GitHub workflows.
+01. :gift: Added automatic nested module clean up post-script.
+
+## :package: dev.orne:java-project-archetype
+
+01. :beetle: Fixed Maven site distribution management.
+01. :beetle: Fixed Sonar project key.
+01. :beetle: Fixed `.gitignore` and `.gitattributes` generation.
+01. :gift: Added GitHub workflows.
+01. :gift: Added Eclipse Java 17 tests launchers.
+01. :gift: Added automatic nested module clean up post-script.
+
+## :package: dev.orne:java-module-project-archetype
+
+01. :beetle: Fixed Maven site distribution management.
+01. :beetle: Fixed Sonar project key.
+01. :beetle: Fixed `.gitignore` and `.gitattributes` generation.
+01. :gift: Added GitHub workflows.
+01. :gift: Added Eclipse Java 17 tests launchers.
+01. :gift: Added automatic nested module clean up post-script.
+
+# 0.5.2 (2023-09-09)
+
+## :package: dev.orne:java-root-pom
+
+01. :beetle: Added `source` configuration option to `javadoc` plugin.
+
+## :package: dev.orne:pom-project-archetype
+
+01. :beetle: Fixed Maven site distribution management.
 01. :gift: Added predefined `install.skip` and `deploy.skip` properties.
 
 ## :package: dev.orne:java-project-archetype
 
-01. :bug: Fixed Maven site distribution management.
+01. :beetle: Fixed Maven site distribution management.
 
 ## :package: dev.orne:java-module-project-archetype
 
-01. :bug: Fixed Maven site distribution management.
+01. :beetle: Fixed Maven site distribution management.
 
 # 0.5.1 (2022-12-11)
 
 ## :package: dev.orne:java-root-pom
 
-01. :bug: Reverted default dependencies to latest with Java 8 support
+01. :beetle: Reverted default dependencies to latest with Java 8 support
     01. Updated `ch.qos.logback:logback-classic` to version 1.3.5.
 
 # 0.5.0 (2022-12-10)
@@ -68,7 +109,7 @@
     01. Updated `org.junit.jupiter:junit-jupiter` to version 5.9.1.
     01. Updated `org.junit-pioneer:junit-pioneer` to version 1.9.1.
     01. Updated `org.mockito:mockito-core` to version 4.9.0.
-01. :bug: Fixed Sonar Jacoco configuration.
+01. :beetle: Fixed Sonar Jacoco configuration.
 
 ## :package: dev.orne:archetype-root-pom
 
@@ -109,9 +150,9 @@
 ## :package: dev.orne:java-project-archetype
 
 01. :gift: Added `logback-test.xml` to generated test resources.
-01. :bug: Fixed Eclipse UT launcher configuration
+01. :beetle: Fixed Eclipse UT launcher configuration
 01. :gift: Updated `revapi` generated configuration.
-01. :bug: Fixed Eclipse classpath order.
+01. :beetle: Fixed Eclipse classpath order.
 
 ## :package: dev.orne:java-module-project-archetype
 
@@ -170,7 +211,7 @@
 01. :gift: Added `java.version` property
     01. Property `java.source.version` now inherits from `java.version` by default
     01. Property `java.target.version` now inherits from `java.version` by default
-01. :bug: Fixed `jacoco-maven-plugin` configuration
+01. :beetle: Fixed `jacoco-maven-plugin` configuration
 
 # 0.1.0 (2020-04-28)
 
