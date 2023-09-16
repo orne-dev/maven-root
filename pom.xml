@@ -377,7 +377,7 @@
 
   <scm>
     <connection>scm:git:https://github.com/orne-dev/maven-root.git</connection>
-    <developerConnection>scm:git:ssh://github.com:orne-dev/maven-root.git</developerConnection>
+    <developerConnection>scm:git:ssh://git@github.com:orne-dev/maven-root.git</developerConnection>
     <url>https://github.com/orne-dev/maven-root/</url>
   </scm>
   <issueManagement>

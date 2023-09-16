@@ -18,7 +18,6 @@
   <name>simple-module</name>
   <description>simple-module</description>
   <inceptionYear>2021</inceptionYear>
-  <url>https://orne-dev.github.io/simple-module/</url>
 
   <licenses>
     <license>
@@ -30,13 +29,6 @@
 
   <developers>
   </developers>
-
-  <scm>
-    <url>https://github.com/orne-dev/simple-module/tree/master</url>
-    <connection>scm:git:git://github.com/orne-dev/simple-module.git</connection>
-    <developerConnection>scm:git:ssh://github.com:orne-dev/simple-module.git</developerConnection>
-    <tag>HEAD</tag>
-  </scm>
 
   <properties>
     <license.licenseName>lgpl_v3</license.licenseName>
