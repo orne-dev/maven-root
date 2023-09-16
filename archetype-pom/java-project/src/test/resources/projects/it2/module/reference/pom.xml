@@ -43,7 +43,7 @@
     <java.module.name>my.pck.simple.module</java.module.name>
     <license.licenseName>lgpl_v3</license.licenseName>
 
-    <sonar.projectKey>simple-module</sonar.projectKey>
+    <sonar.projectKey>orne-dev_simple-module</sonar.projectKey>
   </properties>
 
   <dependencies>

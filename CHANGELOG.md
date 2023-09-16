@@ -7,14 +7,17 @@
 ## :package: dev.orne:pom-project-archetype
 
 01. :beetle: Fixed Maven site distribution management.
+01. :beetle: Fixed Sonar project key.
 
 ## :package: dev.orne:java-project-archetype
 
 01. :beetle: Fixed Maven site distribution management.
+01. :beetle: Fixed Sonar project key.
 
 ## :package: dev.orne:java-module-project-archetype
 
 01. :beetle: Fixed Maven site distribution management.
+01. :beetle: Fixed Sonar project key.
 
 # 0.5.2
 

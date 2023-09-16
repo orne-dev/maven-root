@@ -41,7 +41,7 @@
   <properties>
     <license.licenseName>lgpl_v3</license.licenseName>
 
-    <sonar.projectKey>\${artifactId}</sonar.projectKey>
+    <sonar.projectKey>orne-dev_\${artifactId}</sonar.projectKey>
 
     <install.skip>false</install.skip>
     <deploy.skip>false</deploy.skip>
