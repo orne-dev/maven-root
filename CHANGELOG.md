@@ -15,12 +15,14 @@
 01. :beetle: Fixed Maven site distribution management.
 01. :beetle: Fixed Sonar project key.
 01. :gift: Added GitHub workflows.
+01. :gift: Added Eclipse Java 17 tests launchers.
 
 ## :package: dev.orne:java-module-project-archetype
 
 01. :beetle: Fixed Maven site distribution management.
 01. :beetle: Fixed Sonar project key.
 01. :gift: Added GitHub workflows.
+01. :gift: Added Eclipse Java 17 tests launchers.
 
 # 0.5.2
 
