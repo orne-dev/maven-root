@@ -24,7 +24,7 @@
 01. :gift: Added GitHub workflows.
 01. :gift: Added Eclipse Java 17 tests launchers.
 
-# 0.5.2
+# 0.5.2 (2023-09-09)
 
 ## :package: dev.orne:java-root-pom
 
