@@ -17,16 +17,15 @@ Basic configuration POM for Maven archetype projects of Orne.dev.
 
 ## Features
 
-Provides the next features:
-
 - Version management
 - License management
 - Pre-release verifications on `pre-release` profile
     - Dependency version upper bound verification
-    - Dependency release version verification
+    - External dependency release version verification
 - Release verifications and configurations on `release` profile
     - Parent release version verification
     - Dependency version upper bound verification
     - Dependency release version verification
     - GPG signing of released artifacts
-- Site generation configuration
+- Maven archetypes packaging and testing
+- Automatic Maven site publishing in `gh-pages` branch

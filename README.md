@@ -41,7 +41,7 @@ Provides the next features:
 - License management
 - Pre-release verifications on `pre-release` profile
     - Dependency version upper bound verification
-    - Dependency release version verification
+    - External dependency release version verification
 - Release verifications and configurations on `release` profile
     - Parent release version verification
     - Dependency version upper bound verification
@@ -71,11 +71,12 @@ Usage:
 </project>
 ```
 
-Provides the next features:
+Provided features:
 
 - Version management
 - License management
     - Automatic update of source files headers
+- Java 9 automatic module name management
 - Unit tests execution configuration on `ut` profile
     - Automatic unit test execution
     - Automatic unit test coverage reports
@@ -85,6 +86,54 @@ Provides the next features:
 - API compatibility automatic checks based on `revapi` and `apiguardian`
 - Pre-release verifications on `pre-release` profile
     - Dependency version upper bound verifications
+    - External dependency release version verification
+- Release verifications and configurations on `release` profile
+    - Parent release version verification
+    - Dependency version upper bound verification
+    - Dependency release version verification
+    - GPG signing of released artifacts
+- Automatic Maven site publishing in `gh-pages` branch
+
+## Root POM for Java 9 module projects
+
+The `dev.orne:java-module-root-pom` artifact provides general configuration for
+Maven based Java 9+ module projects.
+
+Usage:
+
+```xml
+<project ...>
+...
+  <parent>
+    <groupId>dev.orne</groupId>
+    <artifactId>java-module-root-pom</artifactId>
+    <version>RELEASE</version>
+    <relativePath />
+  </parent>
+...
+  <packaging>jar</packaging>
+...
+</project>
+```
+
+Provided features:
+
+- Version management
+- License management
+    - Automatic update of source files headers
+- Two phase compilation
+    - Module descriptor compilation for target module Java version
+    - Regular classes compilation for target library Java version
+- Unit tests execution configuration on `ut` profile
+    - Automatic unit test execution
+    - Automatic unit test coverage reports
+- Integration tests execution configuration on `it` profile
+    - Automatic integration test execution
+    - Automatic integration test coverage reports
+- API compatibility automatic checks based on `revapi` and `apiguardian`
+- Pre-release verifications on `pre-release` profile
+    - Dependency version upper bound verifications
+    - External dependency release version verification
 - Release verifications and configurations on `release` profile
     - Parent release version verification
     - Dependency version upper bound verification
@@ -116,13 +165,13 @@ Usage:
 </project>
 ```
 
-Provides the next features:
+Provided features:
 
 - Version management
 - License management
 - Pre-release verifications on `pre-release` profile
     - Dependency version upper bound verification
-    - Dependency release version verification
+    - External dependency release version verification
 - Release verifications and configurations on `release` profile
     - Parent release version verification
     - Dependency version upper bound verification
@@ -145,8 +194,12 @@ mvn archetype:generate                              \
       -DarchetypeArtifactId=pom-project-archetype   \
       -DarchetypeVersion=RELEASE                    \
       -DgroupId=<my.groupid>                        \
-      -DartifactId=<my-artifactId>
+      -DartifactId=<my-artifactId>                  \
+      -Dversion=<my.version>
 ```
+
+When use to create modules of multi-module Maven projects automatically cleans
+the additional configuration and launchers intended for root projects.
 
 ## Archetype for Java projects and modules
 
@@ -162,8 +215,33 @@ mvn archetype:generate                              \
       -DarchetypeArtifactId=java-project-archetype  \
       -DarchetypeVersion=RELEASE                    \
       -DgroupId=<my.groupid>                        \
-      -DartifactId=<my-artifactId>
+      -DartifactId=<my-artifactId>                  \
+      -Dversion=<my.version>
 ```
+
+When use to create modules of multi-module Maven projects automatically cleans
+the additional configuration and launchers intended for root projects.
+
+## Archetype for Java 9 module projects and modules
+
+The `dev.orne:java-project-archetype` artifact provides a basic archetype
+for generation of projects or modules base en POM `dev.orne:java-root-pom`.
+
+Usage:
+
+
+```shell
+mvn archetype:generate                                     \
+      -DarchetypeGroupId=dev.orne                          \
+      -DarchetypeArtifactId=java-module-project-archetype  \
+      -DarchetypeVersion=RELEASE                           \
+      -DgroupId=<my.groupid>                               \
+      -DartifactId=<my-artifactId>                         \
+      -Dversion=<my.version>
+```
+
+When use to create modules of multi-module Maven projects automatically cleans
+the additional configuration and launchers intended for root projects.
 
 ## Example
 
