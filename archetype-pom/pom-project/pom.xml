@@ -80,7 +80,7 @@
     <site>
       <id>github</id>
       <name>Github Project Pages</name>
-      <url>${project.scm.connection}/archetype/pom-project/</url>
+      <url>${project.url}</url>
     </site>
   </distributionManagement>
 

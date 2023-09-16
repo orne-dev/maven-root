@@ -223,6 +223,7 @@
           <artifactId>maven-scm-publish-plugin</artifactId>
           <version>${plugins.scm.publish.version}</version>
           <configuration>
+            <pubScmUrl>${project.scm.connection}</pubScmUrl>
             <serverId>github</serverId>
             <scmBranch>gh-pages</scmBranch>
             <checkinComment>Project site version ${project.version}</checkinComment>
@@ -395,7 +396,7 @@
     <site>
       <id>github</id>
       <name>Github Project Pages</name>
-      <url>${project.scm.connection}</url>
+      <url>${project.url}</url>
     </site>
   </distributionManagement>
 
