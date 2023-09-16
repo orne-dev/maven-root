@@ -24,7 +24,7 @@
     <java.target.version>${java.version}</java.target.version>
     <java.jdk.version>${java.version}</java.jdk.version>
 
-    <slf4j.version>2.0.5</slf4j.version>
+    <slf4j.version>2.0.9</slf4j.version>
     <logback.version>1.4.11</logback.version>
     <apiguardian.version>1.1.2</apiguardian.version>
 
@@ -42,7 +42,7 @@
     <plugins.source.version>3.2.1</plugins.source.version>
     <plugins.javadoc.version>3.4.1</plugins.javadoc.version>
     <plugins.revapi.version>0.15.0</plugins.revapi.version>
-    <plugins.revapi.java.version>0.28.0</plugins.revapi.java.version>
+    <plugins.revapi.java.version>0.28.1</plugins.revapi.java.version>
     <plugins.jxr.version>3.3.0</plugins.jxr.version>
 
     <ut.skip>false</ut.skip>

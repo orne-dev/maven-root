@@ -7,6 +7,7 @@
 ## :package: dev.orne:java-root-pom
 
 01. :wrench: Updated default dependencies.
+    01. Updated `org.slf4j:slf4j-api` to 2.0.9.
     01. Updated `ch.qos.logbacklogback-classic` to 1.4.11.
     01. Updated `org.junit.jupiter:junit-jupiter` to 5.10.0.
     01. Updated `org.junit-pioneer:junit-pioneer` to 2.1.0.
