@@ -56,7 +56,7 @@
 
   <scm>
     <connection>scm:git:https://github.com/orne-dev/simple-project.git</connection>
-    <developerConnection>scm:git:ssh://github.com:orne-dev/simple-project.git</developerConnection>
+    <developerConnection>scm:git:ssh://git@github.com:orne-dev/simple-project.git</developerConnection>
     <url>https://github.com/orne-dev/simple-project/</url>
   </scm>
   <distributionManagement>

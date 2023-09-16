@@ -36,6 +36,10 @@ def removeRootProjectLaunchers() {
 def removeRootProjectPomConfiguration() {
     projectPom = projectDir.resolve("pom.xml")
     out = Files.readAllLines(projectPom)
+    // Remove SCM configuration
+    for (int i = 96; i >= 92; i--) {
+        out.remove(i);
+    }
     // Remove maven-site-plugin configuration
     for (int i = 87; i >= 81; i--) {
         out.remove(i);
@@ -43,6 +47,8 @@ def removeRootProjectPomConfiguration() {
     // Remove Sonar project key configuration
     out.remove(38);
     out.remove(37);
+    // Remove project URL configuration
+    out.remove(20);
     Files.write(projectPom, out, StandardOpenOption.WRITE, StandardOpenOption.TRUNCATE_EXISTING)
 }
 

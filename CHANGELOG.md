@@ -3,14 +3,17 @@
 ## :package: dev.orne:pom-project-archetype
 
 01. :beetle: Fixed generated SCM configuration.
+01. :beetle: Removed SCM and URL configuration on module generation.
 
 ## :package: dev.orne:pom-project-archetype
 
 01. :beetle: Fixed generated SCM configuration.
+01. :beetle: Removed SCM and URL configuration on module generation.
 
 ## :package: dev.orne:pom-project-archetype
 
 01. :beetle: Fixed generated SCM configuration.
+01. :beetle: Removed SCM and URL configuration on module generation.
 
 # 0.5.3
 

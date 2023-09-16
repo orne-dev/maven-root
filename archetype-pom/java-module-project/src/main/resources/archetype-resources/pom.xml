@@ -92,7 +92,7 @@
 
   <scm>
     <connection>scm:git:https://github.com/orne-dev/\${artifactId}.git</connection>
-    <developerConnection>scm:git:ssh://github.com:orne-dev/\${artifactId}.git</developerConnection>
+    <developerConnection>scm:git:ssh://git@github.com:orne-dev/\${artifactId}.git</developerConnection>
     <url>https://github.com/orne-dev/\${artifactId}/</url>
   </scm>
   <distributionManagement>
