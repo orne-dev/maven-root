@@ -51,9 +51,23 @@ def removeRootProjectDoc() {
     Files.deleteIfExists projectDir.resolve("CHANGELOG.md")
 }
 
+def removeRootProjectSiteConfiguration() {
+    siteDesc = projectDir.resolve("src").resolve("site").resolve("site.xml")
+    out = Files.readAllLines(siteDesc)
+    // Remove inherited menus
+    out.remove(25);
+    out.remove(24);
+    // Remove skin configuration
+    for (int i = 19; i >= 6; i--) {
+        out.remove(i);
+    }
+    Files.write(siteDesc, out, StandardOpenOption.WRITE, StandardOpenOption.TRUNCATE_EXISTING)
+}
+
 if (isModule) {
     removeRootProjectGitHubActions()
     removeRootProjectLaunchers()
     removeRootProjectPomConfiguration()
     removeRootProjectDoc()
+    removeRootProjectSiteConfiguration();
 }
