@@ -11,7 +11,7 @@
     01. Updated `ch.qos.logbacklogback-classic` to 1.4.11.
     01. Updated `org.junit.jupiter:junit-jupiter` to 5.10.0.
     01. Updated `org.junit-pioneer:junit-pioneer` to 2.1.0.
-    01. Updated `org.mockito:mockito-core` to 5.5.0.
+    01. Updated `org.mockito:mockito-core` to 4.11.0.
 
 ## :package: dev.orne:pom-project-archetype
 
