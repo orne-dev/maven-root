@@ -18,6 +18,7 @@ def removeRootProjectGitHubActions() {
         }
     })
     Files.deleteIfExists workflowsDir
+    Files.deleteIfExists githubDir.resolve("toolchains.xml")
     Files.deleteIfExists githubDir
 }
 

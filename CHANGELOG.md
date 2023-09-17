@@ -1,3 +1,17 @@
+# 0.6.0
+
+## :package: dev.orne:pom-project-archetype
+
+01. :gift: Added `toolchains` configuration to GitHub actions.
+
+## :package: dev.orne:pom-project-archetype
+
+01. :gift: Added `toolchains` configuration to GitHub actions.
+
+## :package: dev.orne:pom-project-archetype
+
+01. :gift: Added `toolchains` configuration to GitHub actions.
+
 # 0.5.4
 
 ## :package: dev.orne:pom-project-archetype
