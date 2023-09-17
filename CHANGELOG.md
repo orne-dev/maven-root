@@ -1,16 +1,30 @@
 # 0.6.0
 
+## :package: dev.orne:root-pom
+
+01. :gift: Simplified URL, SCM and site distribution configuration.
+    01. Added `github.namespace.id` property.
+    01. Added `github.project.id` property.
+    01. Added derived `github.project.url` property.
+    01. Added derived `github.page.url` property.
+    01. Added derived `github.scm.url` property.
+    01. Added derived `github.scm.connection` property.
+    01. Added derived `github.scm.connection.dev` property.
+
 ## :package: dev.orne:pom-project-archetype
 
 01. :gift: Added `toolchains` configuration to GitHub actions.
+01. :wrench: Adapted to `root-pom` changes.
 
 ## :package: dev.orne:pom-project-archetype
 
 01. :gift: Added `toolchains` configuration to GitHub actions.
+01. :wrench: Adapted to `root-pom` changes.
 
 ## :package: dev.orne:pom-project-archetype
 
 01. :gift: Added `toolchains` configuration to GitHub actions.
+01. :wrench: Adapted to `root-pom` changes.
 
 # 0.5.4
 

@@ -18,6 +18,7 @@
   <name>simple-module</name>
   <description>simple-module</description>
   <inceptionYear>2021</inceptionYear>
+  <url>\${github.page.url}simple-module/</url>
 
   <licenses>
     <license>
@@ -34,6 +35,9 @@
     <java.version>9</java.version>
     <java.target.version>8</java.target.version>
     <license.licenseName>lgpl_v3</license.licenseName>
+
+    <github.project.id>simple-module</github.project.id>
+    <sonar.projectKey>orne-dev_simple-module</sonar.projectKey>
   </properties>
 
   <dependencies>
@@ -80,11 +84,16 @@
     </pluginManagement>
   </build>
 
+  <scm>
+    <connection>\${github.scm.connection}</connection>
+    <developerConnection>\${github.scm.connection.dev}</developerConnection>
+    <url>\${github.scm.url}</url>
+  </scm>
   <distributionManagement>
     <site>
       <id>github</id>
       <name>Github Project Pages</name>
-      <url>${project.url}</url>
+      <url>\${project.url}</url>
     </site>
   </distributionManagement>
 

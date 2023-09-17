@@ -1,3 +1,4 @@
+#set($dollarSign="$")
 <project xmlns="http://maven.apache.org/POM/4.0.0"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -18,7 +19,7 @@
   <name>\${artifactId}</name>
   <description>\${artifactId}</description>
   <inceptionYear>2021</inceptionYear>
-  <url>https://orne-dev.github.io/\${artifactId}/</url>
+  <url>${dollarSign}{github.page.url}\${artifactId}/</url>
 
   <licenses>
     <license>
@@ -36,6 +37,7 @@
     <java.target.version>8</java.target.version>
     <license.licenseName>lgpl_v3</license.licenseName>
 
+    <github.project.id>\${artifactId}</github.project.id>
     <sonar.projectKey>orne-dev_\${artifactId}</sonar.projectKey>
   </properties>
 
@@ -79,27 +81,20 @@
             <groups>it</groups>
           </configuration>
         </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-site-plugin</artifactId>
-          <configuration>
-            <topSiteURL>https://orne-dev.github.io/\${artifactId}/</topSiteURL>
-          </configuration>
-        </plugin>
       </plugins>
     </pluginManagement>
   </build>
 
   <scm>
-    <connection>scm:git:https://github.com/orne-dev/\${artifactId}.git</connection>
-    <developerConnection>scm:git:ssh://git@github.com:orne-dev/\${artifactId}.git</developerConnection>
-    <url>https://github.com/orne-dev/\${artifactId}/</url>
+    <connection>${dollarSign}{github.scm.connection}</connection>
+    <developerConnection>${dollarSign}{github.scm.connection.dev}</developerConnection>
+    <url>${dollarSign}{github.scm.url}</url>
   </scm>
   <distributionManagement>
     <site>
       <id>github</id>
       <name>Github Project Pages</name>
-      <url>${project.url}</url>
+      <url>${dollarSign}{project.url}</url>
     </site>
   </distributionManagement>
 

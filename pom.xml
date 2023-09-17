@@ -9,7 +9,7 @@
   <name>Orne Root POM</name>
   <description>Orne Root POM</description>
   <inceptionYear>2019</inceptionYear>
-  <url>https://orne-dev.github.io/maven-root/</url>
+  <url>${github.page.url}</url>
 
   <organization>
     <name>Orne Developments</name>
@@ -68,6 +68,13 @@
 
     <enforcer.dependencies.excludes>${project.groupId}:*</enforcer.dependencies.excludes>
 
+    <github.namespace.id>orne-dev</github.namespace.id>
+    <github.project.id>maven-root</github.project.id>
+    <github.project.url>https://github.com/${github.namespace.id}/${github.project.id}/</github.project.url>
+    <github.page.url>https://${github.namespace.id}.github.io/${github.project.id}/</github.page.url>
+    <github.scm.url>${github.project.url}tree/master</github.scm.url>
+    <github.scm.connection>scm:git:https://github.com/${github.namespace.id}/${github.project.id}.git</github.scm.connection>
+    <github.scm.connection.dev>scm:git:ssh://git@github.com:${github.namespace.id}/${github.project.id}.git</github.scm.connection.dev>
     <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     <sonar.organization>orne-dev</sonar.organization>
     <sonar.projectKey>orne-dev_maven-root</sonar.projectKey>
@@ -210,6 +217,7 @@
             </dependency>
           </dependencies>
           <configuration>
+            <topSiteURL>${github.page.url}</topSiteURL>
             <skipDeploy>true</skipDeploy>
           </configuration>
         </plugin>
@@ -376,13 +384,13 @@
   </profiles>
 
   <scm>
-    <connection>scm:git:https://github.com/orne-dev/maven-root.git</connection>
-    <developerConnection>scm:git:ssh://git@github.com:orne-dev/maven-root.git</developerConnection>
-    <url>https://github.com/orne-dev/maven-root/</url>
+    <connection>${github.scm.connection}</connection>
+    <developerConnection>${github.scm.connection.dev}</developerConnection>
+    <url>${github.scm.url}</url>
   </scm>
   <issueManagement>
     <system>GitHub Issues</system>
-    <url>http://github.com/orne-dev/maven-root/issues</url>
+    <url>${github.project.url}issues</url>
   </issueManagement>
   <distributionManagement>
     <snapshotRepository>

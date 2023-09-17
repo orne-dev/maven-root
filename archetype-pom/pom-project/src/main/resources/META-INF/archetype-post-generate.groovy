@@ -38,18 +38,29 @@ def removeRootProjectPomConfiguration() {
     projectPom = projectDir.resolve("pom.xml")
     out = Files.readAllLines(projectPom)
     // Remove SCM configuration
-    for (int i = 60; i >= 56; i--) {
+    for (int i = 50; i >= 46; i--) {
         out.remove(i);
     }
-    // Remove maven-site-plugin configuration
-    for (int i = 55; i >= 42; i--) {
-        out.remove(i);
-    }
-    // Remove Sonar project key configuration
-    out.remove(37);
-    out.remove(36);
+    // Remove GitHub and Sonar project configuration
+    out.remove(40)
+    out.remove(39)
+    out.remove(38)
     // Remove project URL configuration
-    out.remove(20);
+    out.remove(26)
+    // Fix parent configuration
+    for (int i = 16; i >= 8; i--) {
+        out.remove(i)
+    }
+    out.add(3, "")
+    Files.write(projectPom, out, StandardOpenOption.WRITE, StandardOpenOption.TRUNCATE_EXISTING)
+}
+
+def removeModuleProjectPomConfiguration() {
+    projectPom = projectDir.resolve("pom.xml")
+    out = Files.readAllLines(projectPom)
+    // Fix parent configuration
+    out.remove(12)
+    out.remove(5)
     Files.write(projectPom, out, StandardOpenOption.WRITE, StandardOpenOption.TRUNCATE_EXISTING)
 }
 
@@ -62,12 +73,12 @@ def removeRootProjectSiteConfiguration() {
     siteDesc = projectDir.resolve("src").resolve("site").resolve("site.xml")
     out = Files.readAllLines(siteDesc)
     // Remove inherited menus
-    out.remove(26);
-    out.remove(25);
-    out.remove(24);
+    out.remove(26)
+    out.remove(25)
+    out.remove(24)
     // Remove skin configuration
     for (int i = 19; i >= 6; i--) {
-        out.remove(i);
+        out.remove(i)
     }
     Files.write(siteDesc, out, StandardOpenOption.WRITE, StandardOpenOption.TRUNCATE_EXISTING)
 }
@@ -77,5 +88,7 @@ if (isModule) {
     removeRootProjectLaunchers()
     removeRootProjectPomConfiguration()
     removeRootProjectDoc()
-    removeRootProjectSiteConfiguration();
+    removeRootProjectSiteConfiguration()
+} else {
+    removeModuleProjectPomConfiguration()
 }

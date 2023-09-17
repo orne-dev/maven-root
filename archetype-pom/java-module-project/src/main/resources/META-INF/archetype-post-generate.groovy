@@ -35,21 +35,15 @@ def removeRootProjectLaunchers() {
 }
 
 def removeRootProjectPomConfiguration() {
+    // NOP
+}
+
+def removeModuleProjectPomConfiguration() {
     projectPom = projectDir.resolve("pom.xml")
     out = Files.readAllLines(projectPom)
-    // Remove SCM configuration
-    for (int i = 96; i >= 92; i--) {
-        out.remove(i);
-    }
-    // Remove maven-site-plugin configuration
-    for (int i = 87; i >= 81; i--) {
-        out.remove(i);
-    }
-    // Remove Sonar project key configuration
-    out.remove(38);
-    out.remove(37);
-    // Remove project URL configuration
-    out.remove(20);
+    // Fix project URL configuration
+    out.remove(20)
+    out.add(20, "  <url>\${github.page.url}</url>")
     Files.write(projectPom, out, StandardOpenOption.WRITE, StandardOpenOption.TRUNCATE_EXISTING)
 }
 
@@ -62,11 +56,11 @@ def removeRootProjectSiteConfiguration() {
     siteDesc = projectDir.resolve("src").resolve("site").resolve("site.xml")
     out = Files.readAllLines(siteDesc)
     // Remove inherited menus
-    out.remove(25);
-    out.remove(24);
+    out.remove(25)
+    out.remove(24)
     // Remove skin configuration
     for (int i = 19; i >= 6; i--) {
-        out.remove(i);
+        out.remove(i)
     }
     Files.write(siteDesc, out, StandardOpenOption.WRITE, StandardOpenOption.TRUNCATE_EXISTING)
 }
@@ -76,5 +70,7 @@ if (isModule) {
     removeRootProjectLaunchers()
     removeRootProjectPomConfiguration()
     removeRootProjectDoc()
-    removeRootProjectSiteConfiguration();
+    removeRootProjectSiteConfiguration()
+} else {
+    removeModuleProjectPomConfiguration()
 }
