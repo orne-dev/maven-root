@@ -4,7 +4,7 @@
   <parent>
     <groupId>dev.orne</groupId>
     <artifactId>root-pom</artifactId>
-    <version>0.5.4</version>
+    <version>0.6.0</version>
   </parent>
 
   <artifactId>archetype-root-pom</artifactId>
@@ -12,7 +12,7 @@
 
   <name>Orne Archetype Root POM</name>
   <description>Orne Archetype Root POM</description>
-  <url>https://orne-dev.github.io/maven-root/archetype/</url>
+  <url>${github.page.url}archetype/</url>
 
   <modules>
     <module>pom-project</module>
@@ -55,6 +55,9 @@
     </pluginManagement>
   </build>
 
+  <scm>
+    <url>${github.scm.url}/archetype-pom</url>
+  </scm>
   <distributionManagement>
     <site>
       <id>github</id>

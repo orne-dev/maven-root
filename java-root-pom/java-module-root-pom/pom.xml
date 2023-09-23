@@ -4,7 +4,7 @@
   <parent>
     <groupId>dev.orne</groupId>
     <artifactId>java-root-pom</artifactId>
-    <version>0.5.4</version>
+    <version>0.6.0</version>
   </parent>
 
   <artifactId>java-module-root-pom</artifactId>
@@ -12,7 +12,7 @@
 
   <name>Orne Java 9+ Module Root POM</name>
   <description>Orne Java Root POM</description>
-  <url>https://orne-dev.github.io/maven-root/java/module/</url>
+  <url>${github.page.url}java/module/</url>
 
   <properties>
     <java.version>9</java.version>

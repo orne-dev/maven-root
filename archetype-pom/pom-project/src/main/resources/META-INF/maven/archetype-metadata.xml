@@ -16,6 +16,7 @@
       <directory />
       <includes>
         <include>*</include>
+        <include>.github/**</include>
         <include>.github/workflows/**</include>
         <include>.settings/**</include>
       </includes>

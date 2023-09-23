@@ -18,7 +18,7 @@
   <name>simple-project</name>
   <description>simple-project</description>
   <inceptionYear>2021</inceptionYear>
-  <url>https://orne-dev.github.io/simple-project/</url>
+  <url>\${github.page.url}</url>
 
   <licenses>
     <license>
@@ -36,6 +36,7 @@
     <java.target.version>8</java.target.version>
     <license.licenseName>lgpl_v3</license.licenseName>
 
+    <github.project.id>simple-project</github.project.id>
     <sonar.projectKey>orne-dev_simple-project</sonar.projectKey>
   </properties>
 
@@ -79,27 +80,20 @@
             <groups>it</groups>
           </configuration>
         </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-site-plugin</artifactId>
-          <configuration>
-            <topSiteURL>https://orne-dev.github.io/simple-project/</topSiteURL>
-          </configuration>
-        </plugin>
       </plugins>
     </pluginManagement>
   </build>
 
   <scm>
-    <connection>scm:git:https://github.com/orne-dev/simple-project.git</connection>
-    <developerConnection>scm:git:ssh://git@github.com:orne-dev/simple-project.git</developerConnection>
-    <url>https://github.com/orne-dev/simple-project/</url>
+    <connection>\${github.scm.connection}</connection>
+    <developerConnection>\${github.scm.connection.dev}</developerConnection>
+    <url>\${github.scm.url}</url>
   </scm>
   <distributionManagement>
     <site>
       <id>github</id>
       <name>Github Project Pages</name>
-      <url>${project.url}</url>
+      <url>\${project.url}</url>
     </site>
   </distributionManagement>
 
