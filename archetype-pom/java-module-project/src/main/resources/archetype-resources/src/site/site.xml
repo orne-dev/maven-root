@@ -23,7 +23,9 @@
     <menu name="Overview">
       <item name="Introduction" href="index.html"/>
     </menu>
-    <menu ref="parent" inherit="bottom" />
+    <menu name="Parent project">
+      <item name="FIX-ME" href="../index.html"/>
+    </menu>
     <menu ref="reports" inherit="bottom" />
   </body>
 </project>
