@@ -11,6 +11,11 @@
     01. Added derived `github.scm.connection` property.
     01. Added derived `github.scm.connection.dev` property.
 
+## :package: dev.orne:java-root-pom
+
+01. :beetle: Reverted Logback version update.
+    01. Reverted `ch.qos.logbacklogback-classic` to 1.3.11.
+
 ## :package: dev.orne:pom-project-archetype
 
 01. :gift: Added `toolchains` configuration to GitHub actions.
