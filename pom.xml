@@ -242,9 +242,6 @@
           <groupId>org.sonarsource.scanner.maven</groupId>
           <artifactId>sonar-maven-plugin</artifactId>
           <version>${plugins.sonar.version}</version>
-          <configuration>
-            <goalPrefix>sonar</goalPrefix>
-          </configuration>
         </plugin>
       </plugins>
     </pluginManagement>
