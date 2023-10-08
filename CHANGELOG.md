@@ -1,4 +1,10 @@
-# 0.6.0
+# 0.7.0
+
+## :package: dev.orne:java-root-pom
+
+01. :gift: Added `org.mockito:mockito-junit-jupiter` dependency management.
+
+# 0.6.0 (2023-09-23)
 
 ## :package: dev.orne:root-pom
 
@@ -31,7 +37,7 @@
 01. :gift: Added `toolchains` configuration to GitHub actions.
 01. :wrench: Adapted to `root-pom` changes.
 
-# 0.5.4
+# 0.5.4 (2023-09-16)
 
 ## :package: dev.orne:pom-project-archetype
 
@@ -48,7 +54,7 @@
 01. :beetle: Fixed generated SCM configuration.
 01. :beetle: Removed SCM and URL configuration on module generation.
 
-# 0.5.3
+# 0.5.3 (2023-09-16)
 
 ## :package: dev.orne:root-pom
 
