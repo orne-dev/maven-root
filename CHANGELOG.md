@@ -3,6 +3,10 @@
 ## :package: dev.orne:java-root-pom
 
 01. :gift: Added `org.mockito:mockito-junit-jupiter` dependency management.
+01. :wrench: Updated default dependencies.
+    01. Updated `ch.qos.logback:logback-classic` to 1.3.14.
+    01. Updated `org.junit.jupiter:junit-jupiter` to 5.10.1.
+    01. Updated `org.junit-pioneer:junit-pioneer` to 2.2.0.
 
 # 0.6.0 (2023-09-23)
 
@@ -64,7 +68,7 @@
 
 01. :wrench: Updated default dependencies.
     01. Updated `org.slf4j:slf4j-api` to 2.0.9.
-    01. Updated `ch.qos.logbacklogback-classic` to 1.4.11.
+    01. Updated `ch.qos.logback:logback-classic` to 1.4.11.
     01. Updated `org.junit.jupiter:junit-jupiter` to 5.10.0.
     01. Updated `org.junit-pioneer:junit-pioneer` to 2.1.0.
     01. Updated `org.mockito:mockito-core` to 4.11.0.
