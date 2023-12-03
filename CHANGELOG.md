@@ -1,4 +1,16 @@
-# 0.6.0
+# 0.7.0
+
+## :package: dev.orne:java-root-pom
+
+01. :gift: Added `org.mockito:mockito-junit-jupiter` dependency management.
+01. :wrench: Updated default dependencies.
+    01. Updated `ch.qos.logback:logback-classic` to 1.3.14. Fixes CVE-2023-6378.
+    01. Updated `org.junit.jupiter:junit-jupiter` to 5.10.1.
+    01. Updated `org.junit-pioneer:junit-pioneer` to 2.2.0.
+01. :wrench: Updated Maven plugins to latest versions
+    01. Updated `jacoco-maven-plugin` to version 0.8.8. Fixes Java 21 instrumentation.
+
+# 0.6.0 (2023-09-23)
 
 ## :package: dev.orne:root-pom
 
@@ -31,7 +43,7 @@
 01. :gift: Added `toolchains` configuration to GitHub actions.
 01. :wrench: Adapted to `root-pom` changes.
 
-# 0.5.4
+# 0.5.4 (2023-09-16)
 
 ## :package: dev.orne:pom-project-archetype
 
@@ -48,7 +60,7 @@
 01. :beetle: Fixed generated SCM configuration.
 01. :beetle: Removed SCM and URL configuration on module generation.
 
-# 0.5.3
+# 0.5.3 (2023-09-16)
 
 ## :package: dev.orne:root-pom
 
@@ -58,7 +70,7 @@
 
 01. :wrench: Updated default dependencies.
     01. Updated `org.slf4j:slf4j-api` to 2.0.9.
-    01. Updated `ch.qos.logbacklogback-classic` to 1.4.11.
+    01. Updated `ch.qos.logback:logback-classic` to 1.4.11.
     01. Updated `org.junit.jupiter:junit-jupiter` to 5.10.0.
     01. Updated `org.junit-pioneer:junit-pioneer` to 2.1.0.
     01. Updated `org.mockito:mockito-core` to 4.11.0.
@@ -119,7 +131,7 @@
 
 ## :package: dev.orne:root-pom
 
-01. :wrench: Updated Maven plugins to latests versions
+01. :wrench: Updated Maven plugins to latest versions
     01. Updated `maven-clean-plugin` to version 3.2.0.
     01. Updated `maven-help-plugin` to version 3.3.0.
     01. Updated `maven-antrun-plugin` to version 3.1.0.
