@@ -37,7 +37,7 @@
     <plugins.surefire.version>3.0.0-M7</plugins.surefire.version>
     <plugins.failsafe.version>3.0.0-M7</plugins.failsafe.version>
     <plugins.surefire-report.version>3.0.0-M7</plugins.surefire-report.version>
-    <plugins.jacoco.version>0.8.8</plugins.jacoco.version>
+    <plugins.jacoco.version>0.8.11</plugins.jacoco.version>
     <plugins.jar.version>3.3.0</plugins.jar.version>
     <plugins.source.version>3.2.1</plugins.source.version>
     <plugins.javadoc.version>3.4.1</plugins.javadoc.version>
