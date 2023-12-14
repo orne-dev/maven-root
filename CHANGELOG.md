@@ -1,4 +1,14 @@
-# 0.7.0
+# 0.8.0
+
+## :package: dev.orne:java-project-archetype
+
+01. :gift: Added Eclipse Java 21 tests launchers.
+
+## :package: dev.orne:java-module-project-archetype
+
+01. :gift: Added Eclipse Java 21 tests launchers.
+
+# 0.7.0 (2023-12-03)
 
 ## :package: dev.orne:java-root-pom
 
