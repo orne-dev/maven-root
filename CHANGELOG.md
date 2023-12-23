@@ -1,5 +1,12 @@
 # 0.8.0
 
+## :package: dev.orne:java-root-pom
+
+01. :gift: Added `org.eclipse.transformer:transformer-maven-plugin:0.5.0` configuration.
+    01. Added execution to transform `javax` references to `jakarta` references.
+    01. Added `jakarta-transform-jdk21` profile to fix `transformer-maven-plugin` on JDK 21.
+        See [transformer-maven-plugin issue #519](https://github.com/eclipse/transformer/issues/519).
+
 ## :package: dev.orne:java-project-archetype
 
 01. :gift: Added Eclipse Java 21 tests launchers.
