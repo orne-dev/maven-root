@@ -39,7 +39,7 @@
     <plugins.surefire-report.version>3.0.0-M7</plugins.surefire-report.version>
     <plugins.jacoco.version>0.8.11</plugins.jacoco.version>
     <plugins.jar.version>3.3.0</plugins.jar.version>
-    <plugins.eclipse.transform.version>0.5.0</plugins.eclipse.transform.version>
+    <plugins.eclipse.transform.version>1.0.0</plugins.eclipse.transform.version>
     <plugins.source.version>3.2.1</plugins.source.version>
     <plugins.javadoc.version>3.4.1</plugins.javadoc.version>
     <plugins.revapi.version>0.15.0</plugins.revapi.version>
@@ -648,32 +648,6 @@
             </executions>
           </plugin>
         </plugins>
-      </build>
-    </profile>
-    <profile>
-      <id>jakarta-transform-jdk21</id>
-      <activation>
-        <jdk>[21,)</jdk>
-      </activation>
-      <properties>
-        <aqute.bnd.version>7.0.0</aqute.bnd.version>
-      </properties>
-      <build>
-        <pluginManagement>
-          <plugins>
-            <plugin>
-              <groupId>org.eclipse.transformer</groupId>
-              <artifactId>transformer-maven-plugin</artifactId>
-              <dependencies>
-                <dependency>
-                  <groupId>biz.aQute.bnd</groupId>
-                  <artifactId>biz.aQute.bndlib</artifactId>
-                  <version>${aqute.bnd.version}</version>
-                </dependency>
-              </dependencies>
-            </plugin>
-          </plugins>
-        </pluginManagement>
       </build>
     </profile>
   </profiles>

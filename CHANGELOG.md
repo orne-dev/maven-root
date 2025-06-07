@@ -13,13 +13,10 @@
 
 #### Added
 
-- Add `org.eclipse.transformer:transformer-maven-plugin:0.5.0` plugin configuration.
+- Add `org.eclipse.transformer:transformer-maven-plugin:1.0.0` plugin configuration.
     - Transforms `javax` references to `jakarta` references.
 
 _  _Requires per project plugin activation._
-
-- Add `jakarta-transform-jdk21` profile to fix `transformer-maven-plugin` on JDK 21.
-  See [transformer-maven-plugin issue #519](https://github.com/eclipse/transformer/issues/519).
 
 ### dev.orne:java-project-archetype
 
