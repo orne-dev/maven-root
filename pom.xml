@@ -3,7 +3,7 @@
 
   <groupId>dev.orne</groupId>
   <artifactId>root-pom</artifactId>
-  <version>0.7.0</version>
+  <version>0.8.0</version>
   <packaging>pom</packaging>
 
   <name>Orne Root POM</name>
@@ -39,6 +39,8 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     
+    <maven.required.version>3.6.3</maven.required.version>
+    
     <plugins.clean.version>3.2.0</plugins.clean.version>
     <plugins.help.version>3.3.0</plugins.help.version>
     <plugins.antrun.version>3.1.0</plugins.antrun.version>
@@ -53,8 +55,9 @@
     <plugins.install.version>3.1.0</plugins.install.version>
     <plugins.gitflow.version>1.19.0</plugins.gitflow.version>
     <plugins.deploy.version>3.0.0</plugins.deploy.version>
-    <plugins.site.version>3.12.1</plugins.site.version>
-    <plugins.site.fluido.version>1.12.0</plugins.site.fluido.version>
+    <plugins.central.publishing.version>0.7.0</plugins.central.publishing.version>
+    <plugins.site.version>3.21.0</plugins.site.version>
+    <plugins.site.fluido.version>2.0.0</plugins.site.fluido.version>
     <plugins.project-info-reports.version>3.4.1</plugins.project-info-reports.version>
     <plugins.scm.publish.version>3.1.0</plugins.scm.publish.version>
     <plugins.sonar.version>3.9.1.2184</plugins.sonar.version>
@@ -206,6 +209,15 @@
           <version>${plugins.deploy.version}</version>
         </plugin>
         <plugin>
+          <groupId>org.sonatype.central</groupId>
+          <artifactId>central-publishing-maven-plugin</artifactId>
+          <version>${plugins.central.publishing.version}</version>
+          <extensions>true</extensions>
+          <configuration>
+            <publishingServerId>central</publishingServerId>
+          </configuration>
+        </plugin>
+        <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-site-plugin</artifactId>
           <version>${plugins.site.version}</version>
@@ -260,7 +272,7 @@
               <fail>true</fail>
               <rules>
                 <requireMavenVersion>
-                  <version>3.5.4</version>
+                  <version>${maven.required.version}</version>
                 </requireMavenVersion>
               </rules>
             </configuration>
@@ -375,6 +387,10 @@
               </execution>
             </executions>
           </plugin>
+          <plugin>
+            <groupId>org.sonatype.central</groupId>
+            <artifactId>central-publishing-maven-plugin</artifactId>
+          </plugin>
         </plugins>
       </build>
     </profile>
@@ -390,14 +406,6 @@
     <url>${github.project.url}issues</url>
   </issueManagement>
   <distributionManagement>
-    <snapshotRepository>
-      <id>ossrh</id>
-      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-    </snapshotRepository>
-    <repository>
-      <id>ossrh</id>
-      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-    </repository>
     <site>
       <id>github</id>
       <name>Github Project Pages</name>
