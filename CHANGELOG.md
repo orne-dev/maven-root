@@ -2,14 +2,21 @@
 
 ## 0.8.0
 
+### dev.orne:root-pom
+
+#### Changed
+
+- Update `maven-site-plugin` to version 3.21.0.
+- Update `org.apache.maven.skins:maven-fluido-skin` to version 2.0.0.
+
 ### dev.orne:java-root-pom
 
 #### Changed
 
 - Update `jacoco-maven-plugin` to version 0.8.13. Fixes Java 24 instrumentation.
-- Update `ch.qos.logback:logback-classic` to 1.3.14. Fixes CVE-2023-6378.
-- Update `org.junit.jupiter:junit-jupiter` to 5.10.1.
-- Update `org.junit-pioneer:junit-pioneer` to 2.2.0.
+- Update `ch.qos.logback:logback-classic` to 1.3.15. Fixes CVE-2023-6378.
+- Update `org.junit.jupiter:junit-jupiter` to 5.13.1.
+- Update `org.junit-pioneer:junit-pioneer` to 2.3.0.
 
 #### Added
 
