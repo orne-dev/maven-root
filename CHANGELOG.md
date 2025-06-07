@@ -7,12 +7,14 @@
 #### Changed
 
 - Update required Maven version to 3.6.3.
+- Migrate `dev.orne` namespace publishing to `central.sonatype.com`
 - Update `maven-site-plugin` to version 3.21.0.
 - Update `org.apache.maven.skins:maven-fluido-skin` to version 2.0.0.
 
 #### Added
 
 - Add `maven.required.version` property to enforce minimum Maven version.
+- Add `org.sonatype.central:central-publishing-maven-plugin:0.7.0` plugin configuration.
 
 ### dev.orne:java-root-pom
 
