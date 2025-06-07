@@ -1,5 +1,31 @@
 # Root POMs for `orne.dev` Maven projects - Changelog
 
+## 0.8.2
+
+### dev.orne:root-pom
+
+#### Changed
+
+- Update `org.apache.maven.skins:maven-fluido-skin` to version 2.1.0.
+
+### dev.orne:pom-project-archetype
+
+#### Fixed
+
+- Fixed Maven site descriptor.
+
+### dev.orne:java-project-archetype
+
+#### Fixed
+
+- Fixed Maven site descriptor.
+
+### dev.orne:java-module-project-archetype
+
+#### Fixed
+
+- Fixed Maven site descriptor.
+
 ## 0.8.1 - 2025-06-07
 
 ### dev.orne:pom-project-archetype

@@ -73,7 +73,7 @@ def removeRootProjectSiteConfiguration() {
     siteDesc = projectDir.resolve("src").resolve("site").resolve("site.xml")
     out = Files.readAllLines(siteDesc)
     // Remove skin configuration
-    for (int i = 19; i >= 6; i--) {
+    for (int i = 18; i >= 5; i--) {
         out.remove(i)
     }
     Files.write(siteDesc, out, StandardOpenOption.WRITE, StandardOpenOption.TRUNCATE_EXISTING)
@@ -83,7 +83,7 @@ def removeModuleProjectSiteConfiguration() {
     siteDesc = projectDir.resolve("src").resolve("site").resolve("site.xml")
     out = Files.readAllLines(siteDesc)
     // Remove parent menu
-    out.remove(24)
+    out.remove(23)
     Files.write(siteDesc, out, StandardOpenOption.WRITE, StandardOpenOption.TRUNCATE_EXISTING)
 }
 

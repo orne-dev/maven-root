@@ -63,9 +63,9 @@ def removeModuleProjectSiteConfiguration() {
     siteDesc = projectDir.resolve("src").resolve("site").resolve("site.xml")
     out = Files.readAllLines(siteDesc)
     // Remove inherited menus
-    out.remove(26)
     out.remove(25)
     out.remove(24)
+    out.remove(23)
     Files.write(siteDesc, out, StandardOpenOption.WRITE, StandardOpenOption.TRUNCATE_EXISTING)
 }
 

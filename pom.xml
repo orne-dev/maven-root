@@ -57,7 +57,7 @@
     <plugins.deploy.version>3.0.0</plugins.deploy.version>
     <plugins.central.publishing.version>0.7.0</plugins.central.publishing.version>
     <plugins.site.version>3.21.0</plugins.site.version>
-    <plugins.site.fluido.version>2.0.0</plugins.site.fluido.version>
+    <plugins.site.fluido.version>2.1.0</plugins.site.fluido.version>
     <plugins.project-info-reports.version>3.4.1</plugins.project-info-reports.version>
     <plugins.scm.publish.version>3.1.0</plugins.scm.publish.version>
     <plugins.sonar.version>3.9.1.2184</plugins.sonar.version>
