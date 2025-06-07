@@ -6,13 +6,19 @@
 
 #### Changed
 
+- Update required Maven version to 3.6.3.
 - Update `maven-site-plugin` to version 3.21.0.
 - Update `org.apache.maven.skins:maven-fluido-skin` to version 2.0.0.
+
+#### Added
+
+- Add `maven.required.version` property to enforce minimum Maven version.
 
 ### dev.orne:java-root-pom
 
 #### Changed
 
+- Update required Maven version to 3.8.1.
 - Update `jacoco-maven-plugin` to version 0.8.13. Fixes Java 24 instrumentation.
 - Update `ch.qos.logback:logback-classic` to 1.3.15. Fixes CVE-2023-6378.
 - Update `org.junit.jupiter:junit-jupiter` to 5.13.1.
@@ -30,6 +36,10 @@ _  _Requires per project plugin activation._
 #### Added
 
 - Add Eclipse Java 21 tests launchers.
+
+#### Changed
+
+- Update `maven-archetype-plugin` to version 3.3.1.
 
 ### dev.orne:java-module-project-archetype
 

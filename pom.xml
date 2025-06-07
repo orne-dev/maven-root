@@ -39,6 +39,8 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     
+    <maven.required.version>3.6.3</maven.required.version>
+    
     <plugins.clean.version>3.2.0</plugins.clean.version>
     <plugins.help.version>3.3.0</plugins.help.version>
     <plugins.antrun.version>3.1.0</plugins.antrun.version>
@@ -260,7 +262,7 @@
               <fail>true</fail>
               <rules>
                 <requireMavenVersion>
-                  <version>3.5.4</version>
+                  <version>${maven.required.version}</version>
                 </requireMavenVersion>
               </rules>
             </configuration>

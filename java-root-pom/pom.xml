@@ -19,6 +19,8 @@
   </modules>
 
   <properties>
+    <maven.required.version>3.8.1</maven.required.version>
+    
     <java.version>8</java.version>
     <java.source.version>${java.version}</java.source.version>
     <java.target.version>${java.version}</java.target.version>
