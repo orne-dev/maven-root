@@ -1,6 +1,26 @@
 # Root POMs for `orne.dev` Maven projects - Changelog
 
-## 0.8.0
+## 0.8.1 - 2025-06-07
+
+### dev.orne:pom-project-archetype
+
+#### Fixed
+
+- Update GitHub actions workflows.
+
+### dev.orne:java-project-archetype
+
+#### Fixed
+
+- Update GitHub actions workflows.
+
+### dev.orne:java-module-project-archetype
+
+#### Fixed
+
+- Update GitHub actions workflows.
+
+## 0.8.0 - 2025-06-07
 
 ### dev.orne:root-pom
 
