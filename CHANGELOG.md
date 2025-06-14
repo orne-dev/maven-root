@@ -9,6 +9,12 @@
 - Update `license-maven-plugin` to version 2.5.0.
 - Update `org.apache.maven.skins:maven-fluido-skin` to version 2.1.0.
 
+### dev.orne:archetype-root-pom
+
+#### Changed
+
+- Configure `license-maven-plugin` to exclude archetype resources and IT projects references.
+
 ### dev.orne:pom-project-archetype
 
 #### Fixed
