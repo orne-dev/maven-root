@@ -11,6 +11,12 @@
 - Configure `maven-project-info-reports-plugin` to generate link in license report
   to prevent [ban from gnu.org](https://github.com/mojohaus/license-maven-plugin/issues/626).
 
+### dev.orne:java-root-pom
+
+#### Changed
+
+- Update `org.revapi:revapi-java` to version 0.28.4.
+
 ### dev.orne:archetype-root-pom
 
 #### Changed
