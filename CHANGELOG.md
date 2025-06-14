@@ -6,6 +6,7 @@
 
 #### Changed
 
+- Update `license-maven-plugin` to version 2.5.0.
 - Update `org.apache.maven.skins:maven-fluido-skin` to version 2.1.0.
 
 ### dev.orne:pom-project-archetype
