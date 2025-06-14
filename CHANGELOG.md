@@ -1,5 +1,58 @@
 # Root POMs for `orne.dev` Maven projects - Changelog
 
+## 0.8.2 - 2025-06-14
+
+### dev.orne:root-pom
+
+#### Changed
+
+- Update `license-maven-plugin` to version 2.5.0.
+- Update `org.apache.maven.skins:maven-fluido-skin` to version 2.1.0.
+- Configure `maven-project-info-reports-plugin` to generate link in license report
+  to prevent [ban from gnu.org](https://github.com/mojohaus/license-maven-plugin/issues/626).
+
+### dev.orne:java-root-pom
+
+#### Changed
+
+- Update `org.revapi:revapi-java` to version 0.28.4.
+
+### dev.orne:archetype-root-pom
+
+#### Changed
+
+- Configure `license-maven-plugin` to exclude archetype resources and IT projects references.
+
+### dev.orne:pom-project-archetype
+
+#### Fixed
+
+- Fix Maven site descriptor.
+
+#### Added
+
+- Add Eclipse update license headers launchers.
+
+### dev.orne:java-project-archetype
+
+#### Fixed
+
+- Fix Maven site descriptor.
+
+#### Added
+
+- Add Eclipse update license headers launchers.
+
+### dev.orne:java-module-project-archetype
+
+#### Fixed
+
+- Fix Maven site descriptor.
+
+#### Added
+
+- Add Eclipse update license headers launchers.
+
 ## 0.8.1 - 2025-06-07
 
 ### dev.orne:pom-project-archetype

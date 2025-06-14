@@ -3,7 +3,7 @@
   #%L
   Orne Java Root POM
   %%
-  Copyright (C) 2019 - 2021 Orne Developments
+  Copyright (C) 2019 - 2025 Orne Developments
   %%
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as
@@ -20,14 +20,13 @@
   <http://www.gnu.org/licenses/gpl-3.0.html>.
   #L%
   -->
-<project xmlns="http://maven.apache.org/DECORATION/1.6.0"
+<site xmlns="http://maven.apache.org/SITE/2.0.0"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://maven.apache.org/DECORATION/1.6.0
-            http://maven.apache.org/xsd/decoration-1.6.0.xsd"
+        xsi:schemaLocation="http://maven.apache.org/SITE/2.0.0 https://maven.apache.org/xsd/site-2.0.0.xsd"
         name="${this.name}" >
   <body>
     <menu name="Overview">
       <item name="Introduction" href="index.html"/>
     </menu>
   </body>
-</project>
+</site>

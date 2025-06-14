@@ -51,6 +51,18 @@
             <includeEmptyDirs>true</includeEmptyDirs>
           </configuration>
         </plugin>
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>license-maven-plugin</artifactId>
+          <version>${plugins.license.version}</version>
+          <configuration>
+            <excludes>
+              <exclude>main/resources/archetype-resources/**/*.*</exclude>
+              <exclude>test/resources/projects/*/reference/**/*.*</exclude>
+              <exclude>test/resources/projects/*/module/reference/**/*.*</exclude>
+            </excludes>
+          </configuration>
+        </plugin>
       </plugins>
     </pluginManagement>
   </build>

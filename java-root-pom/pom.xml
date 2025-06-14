@@ -45,7 +45,7 @@
     <plugins.source.version>3.2.1</plugins.source.version>
     <plugins.javadoc.version>3.4.1</plugins.javadoc.version>
     <plugins.revapi.version>0.15.0</plugins.revapi.version>
-    <plugins.revapi.java.version>0.28.1</plugins.revapi.java.version>
+    <plugins.revapi.java.version>0.28.4</plugins.revapi.java.version>
     <plugins.jxr.version>3.3.0</plugins.jxr.version>
 
     <ut.skip>false</ut.skip>
