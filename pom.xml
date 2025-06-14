@@ -3,7 +3,7 @@
 
   <groupId>dev.orne</groupId>
   <artifactId>root-pom</artifactId>
-  <version>0.8.1</version>
+  <version>0.8.2</version>
   <packaging>pom</packaging>
 
   <name>Orne Root POM</name>
@@ -45,7 +45,7 @@
     <plugins.help.version>3.3.0</plugins.help.version>
     <plugins.antrun.version>3.1.0</plugins.antrun.version>
     <plugins.resources.version>3.3.0</plugins.resources.version>
-    <plugins.license.version>2.0.0</plugins.license.version>
+    <plugins.license.version>2.5.0</plugins.license.version>
     <plugins.versions.version>2.13.0</plugins.versions.version>
     <plugins.dependency.version>3.4.0</plugins.dependency.version>
     <plugins.enforcer.version>3.1.0</plugins.enforcer.version>
@@ -57,7 +57,7 @@
     <plugins.deploy.version>3.0.0</plugins.deploy.version>
     <plugins.central.publishing.version>0.7.0</plugins.central.publishing.version>
     <plugins.site.version>3.21.0</plugins.site.version>
-    <plugins.site.fluido.version>2.0.0</plugins.site.fluido.version>
+    <plugins.site.fluido.version>2.1.0</plugins.site.fluido.version>
     <plugins.project-info-reports.version>3.4.1</plugins.project-info-reports.version>
     <plugins.scm.publish.version>3.1.0</plugins.scm.publish.version>
     <plugins.sonar.version>3.9.1.2184</plugins.sonar.version>
@@ -287,10 +287,17 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-project-info-reports-plugin</artifactId>
+        <configuration>
+          <linkOnly>true</linkOnly>
+        </configuration>
       </plugin>
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>versions-maven-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>license-maven-plugin</artifactId>
       </plugin>
     </plugins>
   </reporting>
