@@ -13,19 +13,31 @@
 
 #### Fixed
 
-- Fixed Maven site descriptor.
+- Fix Maven site descriptor.
+
+#### Added
+
+- Add Eclipse update license headers launchers.
 
 ### dev.orne:java-project-archetype
 
 #### Fixed
 
-- Fixed Maven site descriptor.
+- Fix Maven site descriptor.
+
+#### Added
+
+- Add Eclipse update license headers launchers.
 
 ### dev.orne:java-module-project-archetype
 
 #### Fixed
 
-- Fixed Maven site descriptor.
+- Fix Maven site descriptor.
+
+#### Added
+
+- Add Eclipse update license headers launchers.
 
 ## 0.8.1 - 2025-06-07
 
