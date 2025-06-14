@@ -31,6 +31,7 @@ def removeRootProjectLaunchers() {
     Files.deleteIfExists projectSettings.resolve(request.artifactId + " - Start Hotfix.launch")
     Files.deleteIfExists projectSettings.resolve(request.artifactId + " - Start Release.launch")
     Files.deleteIfExists projectSettings.resolve(request.artifactId + " - Start Support.launch")
+    Files.deleteIfExists projectSettings.resolve(request.artifactId + " - Update License Headers.launch")
     Files.deleteIfExists projectSettings.resolve(request.artifactId + " - Update Version.launch")
 }
 
