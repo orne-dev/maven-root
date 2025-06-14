@@ -8,6 +8,8 @@
 
 - Update `license-maven-plugin` to version 2.5.0.
 - Update `org.apache.maven.skins:maven-fluido-skin` to version 2.1.0.
+- Configure `maven-project-info-reports-plugin` to generate link in license report
+  to prevent [ban from gnu.org](https://github.com/mojohaus/license-maven-plugin/issues/626).
 
 ### dev.orne:archetype-root-pom
 
