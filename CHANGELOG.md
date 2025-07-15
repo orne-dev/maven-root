@@ -1,5 +1,15 @@
 # Root POMs for `orne.dev` Maven projects - Changelog
 
+## 0.8.3 - 2025-07-15
+
+### dev.orne:java-root-pom
+
+#### Fixed
+
+- Revert `org.junit-pioneer:junit-pioneer` version back to 1.9.1 to maintain JDK 8 support.
+    - Exclude `org.junit.platform:junit-platform-launcher` transitive dependency to prevent
+      engine and launcher version misalignment.
+
 ## 0.8.2 - 2025-06-14
 
 ### dev.orne:root-pom
@@ -160,7 +170,7 @@ _  _Requires per project plugin activation._
 
 #### Fixed
 
-- Revert `ch.qos.logback:logback-classic` Logback version update back to 1.3.11.
+- Revert `ch.qos.logback:logback-classic` version back to 1.3.11.
 
 ### dev.orne:pom-project-archetype
 
