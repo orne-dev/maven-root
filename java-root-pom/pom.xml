@@ -31,7 +31,7 @@
     <apiguardian.version>1.1.2</apiguardian.version>
 
     <junit.jupiter.version>5.13.1</junit.jupiter.version>
-    <junit.pioneer.version>2.3.0</junit.pioneer.version>
+    <junit.pioneer.version>1.9.1</junit.pioneer.version>
     <mockito.version>4.11.0</mockito.version>
 
     <plugins.toolchains.version>3.1.0</plugins.toolchains.version>
@@ -115,7 +115,7 @@
         <exclusions>
           <exclusion>
             <groupId>org.junit.platform</groupId>
-            <artifactId>junit-platform-commons</artifactId>
+            <artifactId>junit-platform-launcher</artifactId>
           </exclusion>
         </exclusions>
       </dependency>
