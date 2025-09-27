@@ -10,14 +10,12 @@
   <artifactId>java-module-root-pom</artifactId>
   <packaging>pom</packaging>
 
-  <name>Orne Java 9+ Module Root POM</name>
+  <name>Orne JPMS Named Module Root POM</name>
   <description>Orne Java Root POM</description>
   <url>${github.page.url}java/module/</url>
 
   <properties>
-    <java.version>9</java.version>
-    <java.source.version>${java.version}</java.source.version>
-    <java.module.version>${java.version}</java.module.version>
+    <java.version>11</java.version>
     <java.target.version>${java.version}</java.target.version>
   </properties>
 
@@ -29,43 +27,8 @@
           <artifactId>maven-compiler-plugin</artifactId>
           <version>${plugins.compiler.version}</version>
           <configuration>
-            <source>${java.source.version}</source>
-            <target>${java.source.version}</target>
-            <release>${java.module.version}</release>
+            <release>${java.target.version}</release>
           </configuration>
-          <executions>
-            <execution>
-              <id>default-compile</id>
-              <configuration>
-                <release>${java.module.version}</release>
-              </configuration>
-            </execution>
-            <execution>
-              <id>bc-compile</id>
-              <phase>compile</phase>
-              <goals>
-                <goal>compile</goal>
-              </goals>
-              <configuration>
-                <release>${java.target.version}</release>
-                <excludes>
-                  <exclude>module-info.java</exclude>
-                </excludes>
-              </configuration>
-            </execution>
-            <execution>
-              <!-- Used for trick Eclipse m2e -->
-              <id>full-compile</id>
-              <phase>compile</phase>
-              <goals>
-                <goal>compile</goal>
-              </goals>
-              <configuration>
-                <release>${java.module.version}</release>
-                <skipMain>true</skipMain>
-              </configuration>
-            </execution>
-          </executions>
         </plugin>
       </plugins>
     </pluginManagement>
