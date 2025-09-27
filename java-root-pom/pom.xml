@@ -56,6 +56,7 @@
     <it.coverage.reportDir>${project.build.directory}/it-coverage-reports</it.coverage.reportDir>
     <it.coverage.xmlReport>${it.coverage.reportDir}/jacoco.xml</it.coverage.xmlReport>
 
+    <jakarta.transform.skip>false</jakarta.transform.skip>
     <revapi.config.file>${project.basedir}/revapi.config.json</revapi.config.file>
     <release.verify.goals>clean verify -Put,it,pre-release</release.verify.goals>
     <release.perform.goals>clean verify deploy -Prelease</release.perform.goals>
@@ -246,6 +247,7 @@
                 <goal>jar</goal>
               </goals>
               <configuration>
+                <skip>${jakarta.transform.skip}</skip>
                 <rules>
                   <jakartaDefaults>true</jakartaDefaults>
                 </rules>
@@ -337,6 +339,10 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-jar-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.eclipse.transformer</groupId>
+        <artifactId>transformer-maven-plugin</artifactId>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>

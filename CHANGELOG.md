@@ -47,6 +47,14 @@
 - Update `org.junit-pioneer:junit-pioneer` to 2.3.0.
 - Update `org.mockito:*` to 5.20.0.
 
+#### Added
+
+- Enabled `transformer-maven-plugin` by default to generate JakartaEE artifact with classifier `jakarta`.
+
+  Note that `sources` and `javadoc` artifacts are not transformed, and thus remain `javax` based.
+
+    - Add `jakarta.transform.skip` property to skip JakartaEE artifact generation.
+
 #### Removed
 
 - Remove `jdk-release` profile.
