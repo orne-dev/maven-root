@@ -94,10 +94,10 @@ Provided features:
     - GPG signing of released artifacts
 - Automatic Maven site publishing in `gh-pages` branch
 
-## Root POM for Java 9 module projects
+## Root POM for JPMS named module projects
 
 The `dev.orne:java-module-root-pom` artifact provides general configuration for
-Maven based Java 9+ module projects.
+Maven based JPMS named module projects.
 
 Usage:
 
@@ -222,7 +222,7 @@ mvn archetype:generate                              \
 When use to create modules of multi-module Maven projects automatically cleans
 the additional configuration and launchers intended for root projects.
 
-## Archetype for Java 9 module projects and modules
+## Archetype for JPMS named module projects and modules
 
 The `dev.orne:java-project-archetype` artifact provides a basic archetype
 for generation of projects or modules base en POM `dev.orne:java-root-pom`.

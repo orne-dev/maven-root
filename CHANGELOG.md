@@ -2,6 +2,8 @@
 
 ## 1.0.0 - [Unreleased]
 
+**Breaking changes: Dropped Java 8 support. Requires Java 11 or newer.**
+
 ### dev.orne:root-pom
 
 #### Changed
@@ -28,6 +30,7 @@
 
 #### Changed
 
+- **Breaking change:** Requires Java 11 or newer.
 - Update `maven-toolchains-plugin` to version 3.2.0.
 - Update `maven-compiler-plugin` to version 3.14.0.
 - Update `maven-surefire-plugin` to version 3.5.4.
@@ -44,11 +47,29 @@
 - Update `org.junit-pioneer:junit-pioneer` to 2.3.0.
 - Update `org.mockito:*` to 5.20.0.
 
+#### Removed
+
+- Remove `jdk-release` profile.
+
 ### dev.orne:archetype-root-pom
 
 #### Changed
 
 - Update `maven-archetype-plugin` to version 3.4.0.
+
+### dev.orne:java-project-archetype
+
+#### Changed
+
+- **Breaking change:** Requires Java 11 or newer.
+- Change default Java version to 11.
+
+### dev.orne:java-module-project-archetype
+
+#### Changed
+
+- **Breaking change:** Requires Java 11 or newer.
+- Change default Java version to 11.
 
 ## 0.8.3 - 2025-07-15
 
