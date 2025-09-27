@@ -18,7 +18,7 @@
 
   <name>\${artifactId}</name>
   <description>\${artifactId}</description>
-  <inceptionYear>2021</inceptionYear>
+  <inceptionYear>2025</inceptionYear>
   <url>${dollarSign}{github.page.url}\${artifactId}/</url>
 
   <licenses>
@@ -33,7 +33,7 @@
   </developers>
 
   <properties>
-    <java.version>8</java.version>
+    <java.version>11</java.version>
     <java.module.name>${package}</java.module.name>
     <license.licenseName>lgpl_v3</license.licenseName>
 

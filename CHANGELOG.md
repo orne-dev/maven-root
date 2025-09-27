@@ -1,5 +1,92 @@
 # Root POMs for `orne.dev` Maven projects - Changelog
 
+## 1.0.0 - [Unreleased]
+
+**Breaking changes: Dropped Java 8 support. Requires Java 11 or newer.**
+
+### dev.orne:root-pom
+
+#### Changed
+
+- Update `maven-clean-plugin` to version 3.5.0.
+- Update `maven-help-plugin` to version 3.5.1.
+- Update `maven-resources-plugin` to version 3.3.1.
+- Update `license-maven-plugin` to version 2.7.0.
+- Update `versions-maven-plugin` to version 2.19.1.
+- Update `maven-dependency-plugin` to version 3.8.1.
+- Update `maven-enforcer-plugin` to version 3.6.1.
+- Update `maven-gpg-plugin` to version 3.2.8.
+- Update `maven-assembly-plugin` to version 3.7.1.
+- Update `maven-invoker-plugin` to version 3.9.1.
+- Update `maven-install-plugin` to version 3.1.4.
+- Update `gitflow-maven-plugin` to version 1.21.0.
+- Update `maven-deploy-plugin` to version 3.1.4.
+- Update `central-publishing-maven-plugin` to version 0.9.0.
+- Update `maven-project-info-reports-plugin` to version 3.9.0.
+- Update `maven-scm-publish-plugin` to version 3.3.0.
+- Update `sonar-maven-plugin` to version 5.2.0.4988.
+
+### dev.orne:java-root-pom
+
+#### Changed
+
+- **Breaking change:** Requires Java 11 or newer.
+- Update `maven-toolchains-plugin` to version 3.2.0.
+- Update `maven-compiler-plugin` to version 3.14.0.
+- Update `maven-surefire-plugin` to version 3.5.4.
+- Update `maven-failsafe-plugin` to version 3.5.4.
+- Update `maven-surefire-report-plugin` to version 3.5.4.
+- Update `maven-jar-plugin` to version 3.4.2.
+- Update `maven-source-plugin` to version 3.3.1.
+- Update `maven-javadoc-plugin` to version 3.12.0.
+- Update `revapi-maven-plugin` to version 0.15.1.
+- Update `maven-jxr-plugin` to version 3.6.0.
+- Update `org.slf4j:*` to 2.0.17.
+- Update `ch.qos.logback:logback-classic` to 1.5.18.
+- Update `org.junit.jupiter:junit-jupiter` to 5.13.4.
+- Update `org.junit-pioneer:junit-pioneer` to 2.3.0.
+- Update `org.mockito:*` to 5.20.0.
+
+#### Added
+
+- Enabled `transformer-maven-plugin` by default to generate JakartaEE artifact with classifier `jakarta`.
+
+  Note that `sources` and `javadoc` artifacts are not transformed, and thus remain `javax` based.
+
+    - Add `jakarta.transform.skip` property to skip JakartaEE artifact generation.
+
+#### Removed
+
+- Remove `jdk-release` profile.
+
+### dev.orne:archetype-root-pom
+
+#### Changed
+
+- Update `maven-archetype-plugin` to version 3.4.0.
+
+### pom-project-archetype
+
+#### Changed
+
+- Update generated inception year to 2025.
+
+### dev.orne:java-project-archetype
+
+#### Changed
+
+- **Breaking change:** Requires Java 11 or newer.
+- Change default Java version to 11.
+- Update generated inception year to 2025.
+
+### dev.orne:java-module-project-archetype
+
+#### Changed
+
+- **Breaking change:** Requires Java 11 or newer.
+- Change default Java version to 11.
+- Update generated inception year to 2025.
+
 ## 0.8.3 - 2025-07-15
 
 ### dev.orne:java-root-pom

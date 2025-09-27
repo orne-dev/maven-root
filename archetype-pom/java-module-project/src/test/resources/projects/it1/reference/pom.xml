@@ -17,7 +17,7 @@
 
   <name>simple-project</name>
   <description>simple-project</description>
-  <inceptionYear>2021</inceptionYear>
+  <inceptionYear>2025</inceptionYear>
   <url>\${github.page.url}</url>
 
   <licenses>
@@ -32,8 +32,7 @@
   </developers>
 
   <properties>
-    <java.version>9</java.version>
-    <java.target.version>8</java.target.version>
+    <java.version>11</java.version>
     <license.licenseName>lgpl_v3</license.licenseName>
 
     <github.project.id>simple-project</github.project.id>
