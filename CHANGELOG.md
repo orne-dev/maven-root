@@ -57,12 +57,19 @@
 
 - Update `maven-archetype-plugin` to version 3.4.0.
 
+### pom-project-archetype
+
+#### Changed
+
+- Update generated inception year to 2025.
+
 ### dev.orne:java-project-archetype
 
 #### Changed
 
 - **Breaking change:** Requires Java 11 or newer.
 - Change default Java version to 11.
+- Update generated inception year to 2025.
 
 ### dev.orne:java-module-project-archetype
 
@@ -70,6 +77,7 @@
 
 - **Breaking change:** Requires Java 11 or newer.
 - Change default Java version to 11.
+- Update generated inception year to 2025.
 
 ## 0.8.3 - 2025-07-15
 

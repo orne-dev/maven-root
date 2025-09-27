@@ -20,7 +20,7 @@
 
   <name>\${artifactId}</name>
   <description>\${artifactId}</description>
-  <inceptionYear>2021</inceptionYear>
+  <inceptionYear>2025</inceptionYear>
   <url>${dollarSign}{github.page.url}</url>
 
   <licenses>
