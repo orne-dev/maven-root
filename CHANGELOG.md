@@ -2,11 +2,20 @@
 
 ## 1.1.1 - [Unreleased]
 
-### dev.orne:java-root-pom
-
-- Fix `maven-surefire-report-plugin` plugin configuration.
+### dev.orne:root-pom
 
 #### Fixed
+
+- Fix `gitflow-maven-plugin` plugin configuration.
+    - Prevent duplicated execution of `maven-source-plugin` during releases.
+
+### dev.orne:java-root-pom
+
+#### Fixed
+
+- Fix `maven-surefire-report-plugin` plugin configuration.
+- Fix `gitflow-maven-plugin` plugin configuration.
+    - Prevent duplicated execution of `maven-source-plugin` during releases.
 
 ## 1.1.0 - 2025-11-10
 
