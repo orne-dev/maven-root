@@ -3,7 +3,7 @@
 
   <groupId>dev.orne</groupId>
   <artifactId>root-pom</artifactId>
-  <version>1.1.0</version>
+  <version>1.1.1</version>
   <packaging>pom</packaging>
 
   <name>Orne Root POM</name>
@@ -65,9 +65,9 @@
     <license.licenseName>gpl_v3</license.licenseName>
     <gpg.keyname>releases@orne.dev</gpg.keyname>
     <release.verify.goals>clean verify -Ppre-release</release.verify.goals>
-    <release.perform.goals>clean verify deploy -Prelease</release.perform.goals>
+    <release.perform.goals>clean deploy -Prelease</release.perform.goals>
     <hotfix.verify.goals>clean verify -Ppre-release</hotfix.verify.goals>
-    <hotfix.perform.goals>clean verify deploy -Prelease</hotfix.perform.goals>
+    <hotfix.perform.goals>clean deploy -Prelease</hotfix.perform.goals>
 
     <enforcer.dependencies.excludes>${project.groupId}:*</enforcer.dependencies.excludes>
 
