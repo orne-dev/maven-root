@@ -309,6 +309,12 @@
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-surefire-report-plugin</artifactId>
           <version>${plugins.surefire-report.version}</version>
+          <configuration>
+            <reportsDirectories>
+              <reportsDirectory>${ut.reportDir}</reportsDirectory>
+              <reportsDirectory>${it.reportDir}</reportsDirectory>
+            </reportsDirectories>
+          </configuration>
         </plugin>
       </plugins>
     </pluginManagement>

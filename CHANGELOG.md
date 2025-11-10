@@ -1,5 +1,13 @@
 # Root POMs for `orne.dev` Maven projects - Changelog
 
+## 1.1.1 - [Unreleased]
+
+### dev.orne:java-root-pom
+
+- Fix `maven-surefire-report-plugin` plugin configuration.
+
+#### Fixed
+
 ## 1.1.0 - 2025-11-10
 
 ### dev.orne:root-pom
