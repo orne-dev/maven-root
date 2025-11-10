@@ -59,9 +59,9 @@
     <jakarta.transform.skip>false</jakarta.transform.skip>
     <revapi.config.file>${project.basedir}/revapi.config.json</revapi.config.file>
     <release.verify.goals>clean verify -Put,it,pre-release</release.verify.goals>
-    <release.perform.goals>clean verify deploy -Prelease</release.perform.goals>
+    <release.perform.goals>clean deploy -Prelease</release.perform.goals>
     <hotfix.verify.goals>clean verify -Put,it,pre-release</hotfix.verify.goals>
-    <hotfix.perform.goals>clean verify deploy -Prelease</hotfix.perform.goals>
+    <hotfix.perform.goals>clean deploy -Prelease</hotfix.perform.goals>
 
     <sonar.java.source>${java.version}</sonar.java.source>
     <sonar.junit.reportPaths>${ut.reportDir},${it.reportDir}</sonar.junit.reportPaths>
@@ -309,6 +309,12 @@
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-surefire-report-plugin</artifactId>
           <version>${plugins.surefire-report.version}</version>
+          <configuration>
+            <reportsDirectories>
+              <reportsDirectory>${ut.reportDir}</reportsDirectory>
+              <reportsDirectory>${it.reportDir}</reportsDirectory>
+            </reportsDirectories>
+          </configuration>
         </plugin>
       </plugins>
     </pluginManagement>

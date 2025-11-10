@@ -1,5 +1,22 @@
 # Root POMs for `orne.dev` Maven projects - Changelog
 
+## 1.1.1 - 2025-11-10
+
+### dev.orne:root-pom
+
+#### Fixed
+
+- Fix `gitflow-maven-plugin` plugin configuration.
+    - Prevent duplicated execution of `maven-source-plugin` during releases.
+
+### dev.orne:java-root-pom
+
+#### Fixed
+
+- Fix `maven-surefire-report-plugin` plugin configuration.
+- Fix `gitflow-maven-plugin` plugin configuration.
+    - Prevent duplicated execution of `maven-source-plugin` during releases.
+
 ## 1.1.0 - 2025-11-10
 
 ### dev.orne:root-pom
