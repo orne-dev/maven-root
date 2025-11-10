@@ -1,6 +1,34 @@
 # Root POMs for `orne.dev` Maven projects - Changelog
 
-## 1.0.0 - [Unreleased]
+## 1.1.0 - 2025-11-10
+
+### dev.orne:root-pom
+
+#### Changed
+
+- Update `maven-antrun-plugin` to version 3.2.0.
+- Update `maven-dependency-plugin` to version 3.9.0.
+- Update `maven-enforcer-plugin` to version 3.6.2.
+
+### dev.orne:java-root-pom
+
+#### Changed
+
+- Disabled `transformer-maven-plugin` by default.
+
+#### Removed
+
+- Remove `jakarta.transform.skip` property support.
+- Remove test source report.
+- Remove test javadoc report.
+
+### dev.orne:archetype-root-pom
+
+#### Changed
+
+- Update `maven-archetype-plugin` to version 3.4.1.
+
+## 1.0.0 - 2025-09-27
 
 **Breaking changes: Dropped Java 8 support. Requires Java 11 or newer.**
 
