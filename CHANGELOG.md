@@ -8,6 +8,12 @@
 
 - Disabled `transformer-maven-plugin` by default.
 
+### dev.orne:archetype-root-pom
+
+#### Changed
+
+- Update `maven-archetype-plugin` to version 3.4.1.
+
 ## 1.0.0 - 2025-09-27
 
 **Breaking changes: Dropped Java 8 support. Requires Java 11 or newer.**
