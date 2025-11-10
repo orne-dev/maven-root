@@ -1,6 +1,6 @@
 # Root POMs for `orne.dev` Maven projects - Changelog
 
-## 1.1.1 - [Unreleased]
+## 1.1.1 - 2025-11-10
 
 ### dev.orne:root-pom
 
