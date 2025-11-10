@@ -2,6 +2,14 @@
 
 ## 1.0.1 - [Unreleased]
 
+### dev.orne:root-pom
+
+#### Changed
+
+- Update `maven-antrun-plugin` to version 3.2.0.
+- Update `maven-dependency-plugin` to version 3.9.0.
+- Update `maven-enforcer-plugin` to version 3.6.2.
+
 ### dev.orne:java-root-pom
 
 #### Changed
