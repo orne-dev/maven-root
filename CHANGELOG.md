@@ -1,6 +1,14 @@
 # Root POMs for `orne.dev` Maven projects - Changelog
 
-## 1.0.0 - [Unreleased]
+## 1.0.1 - [Unreleased]
+
+### dev.orne:java-root-pom
+
+#### Changed
+
+- Disabled `transformer-maven-plugin` by default.
+
+## 1.0.0 - 2025-09-27
 
 **Breaking changes: Dropped Java 8 support. Requires Java 11 or newer.**
 
