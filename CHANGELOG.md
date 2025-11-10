@@ -16,6 +16,12 @@
 
 - Disabled `transformer-maven-plugin` by default.
 
+#### Removed
+
+- Remove `jakarta.transform.skip` property support.
+- Remove test source report.
+- Remove test javadoc report.
+
 ### dev.orne:archetype-root-pom
 
 #### Changed
