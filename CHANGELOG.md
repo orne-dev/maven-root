@@ -8,6 +8,23 @@
 
 - Add `org.jspecify:jspecify:1.0.0` dependency management.
 
+### dev.orne:java-project-archetype
+
+#### Added
+
+- Add `org.apiguardian:apiguardian-api` dependency.
+- Add `org.jspecify:jspecify` dependency.
+
+### dev.orne:java-module-project-archetype
+
+#### Added
+
+- Add `org.apiguardian:apiguardian-api` dependency.
+- Add `org.jspecify:jspecify` dependency.
+- Add `requires transitive org.apiguardian.api` to generated `module-info.java`.
+- Add `requires transitive org.jspecify` to generated `module-info.java`.
+- Add `requires transitive org.slf4j` to generated `module-info.java`.
+
 ## 1.1.1 - 2025-11-10
 
 ### dev.orne:root-pom
