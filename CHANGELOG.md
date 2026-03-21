@@ -1,5 +1,13 @@
 # Root POMs for `orne.dev` Maven projects - Changelog
 
+## 1.1.1 - *Unreleased*
+
+### dev.orne:java-root-pom
+
+#### Added
+
+- Add `org.jspecify:jspecify:1.0.0` dependency management.
+
 ## 1.1.1 - 2025-11-10
 
 ### dev.orne:root-pom
