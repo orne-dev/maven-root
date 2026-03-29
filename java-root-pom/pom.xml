@@ -28,21 +28,21 @@
     <apiguardian.version>1.1.2</apiguardian.version>
     <jspecify.version>1.0.0</jspecify.version>
     <slf4j.version>2.0.17</slf4j.version>
-    <logback.version>1.5.18</logback.version>
+    <logback.version>1.5.32</logback.version>
 
     <junit.jupiter.version>5.13.4</junit.jupiter.version>
     <junit.pioneer.version>2.3.0</junit.pioneer.version>
-    <mockito.version>5.20.0</mockito.version>
+    <mockito.version>5.23.0</mockito.version>
 
     <plugins.toolchains.version>3.2.0</plugins.toolchains.version>
-    <plugins.compiler.version>3.14.0</plugins.compiler.version>
-    <plugins.surefire.version>3.5.4</plugins.surefire.version>
-    <plugins.failsafe.version>3.5.4</plugins.failsafe.version>
-    <plugins.surefire-report.version>3.5.4</plugins.surefire-report.version>
-    <plugins.jacoco.version>0.8.13</plugins.jacoco.version>
-    <plugins.jar.version>3.4.2</plugins.jar.version>
+    <plugins.compiler.version>3.15.0</plugins.compiler.version>
+    <plugins.surefire.version>3.5.5</plugins.surefire.version>
+    <plugins.failsafe.version>3.5.5</plugins.failsafe.version>
+    <plugins.surefire-report.version>3.5.5</plugins.surefire-report.version>
+    <plugins.jacoco.version>0.8.14</plugins.jacoco.version>
+    <plugins.jar.version>3.5.0</plugins.jar.version>
     <plugins.eclipse.transform.version>1.0.0</plugins.eclipse.transform.version>
-    <plugins.source.version>3.3.1</plugins.source.version>
+    <plugins.source.version>3.4.0</plugins.source.version>
     <plugins.javadoc.version>3.12.0</plugins.javadoc.version>
     <plugins.revapi.version>0.15.1</plugins.revapi.version>
     <plugins.revapi.java.version>0.28.4</plugins.revapi.java.version>
