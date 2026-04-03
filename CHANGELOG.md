@@ -1,6 +1,6 @@
 # Root POMs for `orne.dev` Maven projects - Changelog
 
-## 1.2.0 - *Unreleased*
+## 1.2.0 - 2026-04-03
 
 ### dev.orne:root-pom
 
@@ -32,6 +32,16 @@
 - Update `ch.qos.logback:logback-classic` to 1.5.32.
 - Update `org.mockito:*` to 5.23.0.
 
+### dev.orne:java-module-root-pom
+
+#### Changed
+
+- **Deprecated** in favor of `dev.orne:java-root-pom`.
+
+  This artifact does not provide any additional configuration or features
+  compared to `dev.orne:java-root-pom` since drop of Java 8 support,
+  and thus is no longer necessary.
+
 ### dev.orne:java-project-archetype
 
 #### Added
@@ -40,6 +50,14 @@
 - Add `org.jspecify:jspecify` dependency.
 
 ### dev.orne:java-module-project-archetype
+
+#### Changed
+
+- **Deprecated** in favor of `dev.orne:java-project-archetype`.
+
+  This artifact does not provide any additional configuration or features
+  compared to `dev.orne:java-project-archetype` since drop of Java 8 support,
+  and thus is no longer necessary.
 
 #### Added
 

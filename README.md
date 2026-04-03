@@ -76,7 +76,7 @@ Provided features:
 - Version management
 - License management
     - Automatic update of source files headers
-- Java 9 automatic module name management
+- Java 9 automatic module name management if `module-info.java` is missing
 - Unit tests execution configuration on `ut` profile
     - Automatic unit test execution
     - Automatic unit test coverage reports
@@ -96,8 +96,8 @@ Provided features:
 
 ## Root POM for JPMS named module projects
 
-The `dev.orne:java-module-root-pom` artifact provides general configuration for
-Maven based JPMS named module projects.
+**Warning**: This artifact is deprecated since drop of Java 8 support.
+Please use [dev.orne:java-root-pom](#root-pom-for-java-projects) instead.
 
 Usage:
 
@@ -118,28 +118,7 @@ Usage:
 
 Provided features:
 
-- Version management
-- License management
-    - Automatic update of source files headers
-- Two phase compilation
-    - Module descriptor compilation for target module Java version
-    - Regular classes compilation for target library Java version
-- Unit tests execution configuration on `ut` profile
-    - Automatic unit test execution
-    - Automatic unit test coverage reports
-- Integration tests execution configuration on `it` profile
-    - Automatic integration test execution
-    - Automatic integration test coverage reports
-- API compatibility automatic checks based on `revapi` and `apiguardian`
-- Pre-release verifications on `pre-release` profile
-    - Dependency version upper bound verifications
-    - External dependency release version verification
-- Release verifications and configurations on `release` profile
-    - Parent release version verification
-    - Dependency version upper bound verification
-    - Dependency release version verification
-    - GPG signing of released artifacts
-- Automatic Maven site publishing in `gh-pages` branch
+- Same as [dev.orne:java-root-pom](#root-pom-for-java-projects).
 
 ## Root POM for Maven archetype projects
 
@@ -224,11 +203,10 @@ the additional configuration and launchers intended for root projects.
 
 ## Archetype for JPMS named module projects and modules
 
-The `dev.orne:java-project-archetype` artifact provides a basic archetype
-for generation of projects or modules base en POM `dev.orne:java-root-pom`.
+**Warning**: This artifact is deprecated since drop of Java 8 support.
+Please use [dev.orne:java-root-pom](#archetype-for-java-projects-and-modules) instead.
 
 Usage:
-
 
 ```shell
 mvn archetype:generate                                     \
@@ -239,9 +217,6 @@ mvn archetype:generate                                     \
       -DartifactId=<my-artifactId>                         \
       -Dversion=<my.version>
 ```
-
-When use to create modules of multi-module Maven projects automatically cleans
-the additional configuration and launchers intended for root projects.
 
 ## Example
 

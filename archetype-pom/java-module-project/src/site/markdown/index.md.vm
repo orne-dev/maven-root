@@ -1,5 +1,9 @@
 Archetype for Java 9+ module projects and modules of Orne.dev.
 
+**Warning**: This artifact is deprecated since drop of Java 8 support.
+Please use [dev.orne:java-project-archetype][java archetype doc] instead
+and add `module-info.java` manually.
+
 ## Usage
 
 ```shell
@@ -22,3 +26,4 @@ the additional configuration and launchers intended for root projects.
 For full list of features see the [parent POM documentation][parent pom doc].
 
 [parent pom doc]: https://orne-dev.github.io/maven-root/java/module/
+[java archetype doc]: https://orne-dev.github.io/maven-root/archetype/java-project/
