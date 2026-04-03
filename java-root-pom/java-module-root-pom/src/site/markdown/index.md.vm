@@ -1,6 +1,6 @@
 Basic configuration POM for Maven based Java 9+ module projects of Orne.dev.
 
-**Warnig**: This artifact is deprecated since drop of Java 8 support.
+**Warning**: This artifact is deprecated since drop of Java 8 support.
 Please use [dev.orne:java-root-pom][java pom doc] instead.
 
 ## Usage
@@ -23,9 +23,7 @@ Please use [dev.orne:java-root-pom][java pom doc] instead.
 - Version management
 - License management
     - Automatic update of source files headers
-- Two phase compilation
-    - Module descriptor compilation for target module Java version
-    - Regular classes compilation for target library Java version
+- Java 9 automatic module name management if `module-info.java` is missing
 - Unit tests execution configuration on `ut` profile
     - Automatic unit test execution
     - Automatic unit test coverage reports

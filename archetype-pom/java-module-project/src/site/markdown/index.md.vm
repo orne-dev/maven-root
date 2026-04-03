@@ -1,6 +1,6 @@
 Archetype for Java 9+ module projects and modules of Orne.dev.
 
-**Warnig**: This artifact is deprecated since drop of Java 8 support.
+**Warning**: This artifact is deprecated since drop of Java 8 support.
 Please use [dev.orne:java-project-archetype][java archetype doc] instead
 and add `module-info.java` manually.
 
