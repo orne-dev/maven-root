@@ -20,7 +20,7 @@ Basic configuration POM for Maven based Java projects of Orne.dev.
 - Version management
 - License management
     - Automatic update of source files headers
-- Java 9 automatic module name management
+- Java 9 automatic module name management if `module-info.java` is missing
 - Unit tests execution configuration on `ut` profile
     - Automatic unit test execution
     - Automatic unit test coverage reports

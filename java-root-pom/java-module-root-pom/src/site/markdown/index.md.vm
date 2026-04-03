@@ -1,5 +1,8 @@
 Basic configuration POM for Maven based Java 9+ module projects of Orne.dev.
 
+**Warnig**: This artifact is deprecated since drop of Java 8 support.
+Please use [dev.orne:java-root-pom][java pom doc] instead.
+
 ## Usage
 
 ```xml
@@ -39,3 +42,5 @@ Basic configuration POM for Maven based Java 9+ module projects of Orne.dev.
     - Dependency release version verification
     - GPG signing of released artifacts
 - Automatic Maven site publishing in `gh-pages` branch
+
+[java pom doc]: https://orne-dev.github.io/maven-root/java/
