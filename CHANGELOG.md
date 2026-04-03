@@ -1,5 +1,72 @@
 # Root POMs for `orne.dev` Maven projects - Changelog
 
+## 1.2.0 - 2026-04-03
+
+### dev.orne:root-pom
+
+#### Changed
+
+- Update `maven-resources-plugin` to version 3.5.0.
+- Update `license-maven-plugin` to version 2.7.1.
+- Update `versions-maven-plugin` to version 2.21.0.
+- Update `maven-dependency-plugin` to version 3.10.0.
+- Update `maven-assembly-plugin` to version 3.8.0.
+- Update `central-publishing-maven-plugin` to version 0.10.0.
+- Update `sonar-maven-plugin` to version 5.5.0.6356.
+
+### dev.orne:java-root-pom
+
+#### Added
+
+- Add `org.jspecify:jspecify:1.0.0` dependency management.
+
+#### Changed
+
+- Update `maven-compiler-plugin` to version 3.15.0.
+- Update `maven-surefire-plugin` to version 3.5.5.
+- Update `maven-failsafe-plugin` to version 3.5.5.
+- Update `maven-surefire-report-plugin` to version 3.5.5.
+- Update `jacoco-maven-plugin` to version 0.8.14.
+- Update `maven-jar-plugin` to version 3.5.0.
+- Update `maven-source-plugin` to version 3.4.0.
+- Update `ch.qos.logback:logback-classic` to 1.5.32.
+- Update `org.mockito:*` to 5.23.0.
+
+### dev.orne:java-module-root-pom
+
+#### Changed
+
+- **Deprecated** in favor of `dev.orne:java-root-pom`.
+
+  This artifact does not provide any additional configuration or features
+  compared to `dev.orne:java-root-pom` since drop of Java 8 support,
+  and thus is no longer necessary.
+
+### dev.orne:java-project-archetype
+
+#### Added
+
+- Add `org.apiguardian:apiguardian-api` dependency.
+- Add `org.jspecify:jspecify` dependency.
+
+### dev.orne:java-module-project-archetype
+
+#### Changed
+
+- **Deprecated** in favor of `dev.orne:java-project-archetype`.
+
+  This artifact does not provide any additional configuration or features
+  compared to `dev.orne:java-project-archetype` since drop of Java 8 support,
+  and thus is no longer necessary.
+
+#### Added
+
+- Add `org.apiguardian:apiguardian-api` dependency.
+- Add `org.jspecify:jspecify` dependency.
+- Add `requires transitive org.apiguardian.api` to generated `module-info.java`.
+- Add `requires transitive org.jspecify` to generated `module-info.java`.
+- Add `requires transitive org.slf4j` to generated `module-info.java`.
+
 ## 1.1.1 - 2025-11-10
 
 ### dev.orne:root-pom
