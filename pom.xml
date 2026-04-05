@@ -49,6 +49,7 @@
     <plugins.versions.version>2.21.0</plugins.versions.version>
     <plugins.dependency.version>3.10.0</plugins.dependency.version>
     <plugins.enforcer.version>3.6.2</plugins.enforcer.version>
+    <plugins.flatten.version>1.7.3</plugins.flatten.version>
     <plugins.gpg.version>3.2.8</plugins.gpg.version>
     <plugins.assembly.version>3.8.0</plugins.assembly.version>
     <plugins.invoker.version>3.9.1</plugins.invoker.version>
@@ -135,6 +136,20 @@
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-enforcer-plugin</artifactId>
           <version>${plugins.enforcer.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>flatten-maven-plugin</artifactId>
+          <version>${plugins.flatten.version}</version>
+          <configuration>
+            <outputDirectory>${project.build.directory}</outputDirectory>
+            <flattenedPomFilename>${project.artifactId}-${project.version}.pom</flattenedPomFilename>
+            <flattenMode>ossrh</flattenMode>
+            <pomElements>
+              <organization/>
+              <issueManagement />
+            </pomElements>
+          </configuration>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
