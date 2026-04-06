@@ -1,5 +1,15 @@
 # Root POMs for `orne.dev` Maven projects - Changelog
 
+## 1.3.0 - 2026-04-06
+
+### dev.orne:root-pom
+
+#### Added
+
+- Add `org.codehaus.mojo:flatten-maven-plugin:1.7.3` plugin configuration.
+
+  Disabled by default. Requires per project plugin activation.
+
 ## 1.2.0 - 2026-04-03
 
 ### dev.orne:root-pom
