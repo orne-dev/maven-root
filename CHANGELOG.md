@@ -11,6 +11,24 @@
   Still requires per project plugin activation, but now generates flattened POM
   by default when activated.
 
+### dev.orne:pom-project-archetype
+
+#### Changed
+
+- Changed JDK version to 17 in Eclipse launchers.
+
+### dev.orne:java-project-archetype
+
+#### Changed
+
+- Changed JDK version to 17 in Eclipse launchers.
+
+### dev.orne:java-module-project-archetype
+
+#### Changed
+
+- Changed JDK version to 17 in Eclipse launchers.
+
 ## 1.3.0 - 2026-04-06
 
 ### dev.orne:root-pom
