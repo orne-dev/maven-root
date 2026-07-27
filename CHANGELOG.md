@@ -1,5 +1,40 @@
 # Root POMs for `orne.dev` Maven projects - Changelog
 
+## 1.3.1 - 2026-07-27
+
+### dev.orne:root-pom
+
+#### Changed
+
+- Add default `flatten` execution to `org.codehaus.mojo:flatten-maven-plugin` plugin configuration.
+
+  Still requires per project plugin activation, but now generates flattened POM
+  by default when activated.
+
+### dev.orne:pom-project-archetype
+
+#### Changed
+
+- Change JDK version to 17 in Eclipse launchers.
+
+#### Fixed
+
+- Fix Maven site generation GitHub workflow for multi-module projects.
+
+  Split site generation into two phases: `site` and `stage`.
+
+### dev.orne:java-project-archetype
+
+#### Changed
+
+- Change JDK version to 17 in Eclipse launchers.
+
+### dev.orne:java-module-project-archetype
+
+#### Changed
+
+- Change JDK version to 17 in Eclipse launchers.
+
 ## 1.3.0 - 2026-04-06
 
 ### dev.orne:root-pom

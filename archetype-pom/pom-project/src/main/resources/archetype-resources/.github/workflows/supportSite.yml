@@ -28,7 +28,8 @@ jobs:
       - name: Generate site
         run: |
           echo "Generating test site for latest support release of branch ${symbol_dollar}{GITHUB_REF#refs/heads/support/}"
-          mvn -B clean verify site site:stage -Put,it,release
+          mvn -B clean verify site -Put,it,release -Dgpg.skip=true
+          mvn -B site:stage
       - name: Publish site
         if: success()
         env:
