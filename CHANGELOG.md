@@ -15,19 +15,25 @@
 
 #### Changed
 
-- Changed JDK version to 17 in Eclipse launchers.
+- Change JDK version to 17 in Eclipse launchers.
+
+#### Fixed
+
+- Fix Maven site generation GitHub workflow for multi-module projects.
+
+  Split site generation into two phases: `site` and `stage`.
 
 ### dev.orne:java-project-archetype
 
 #### Changed
 
-- Changed JDK version to 17 in Eclipse launchers.
+- Change JDK version to 17 in Eclipse launchers.
 
 ### dev.orne:java-module-project-archetype
 
 #### Changed
 
-- Changed JDK version to 17 in Eclipse launchers.
+- Change JDK version to 17 in Eclipse launchers.
 
 ## 1.3.0 - 2026-04-06
 
